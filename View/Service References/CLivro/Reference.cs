@@ -15,11 +15,43 @@ namespace View.CLivro {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CLivro.ICLivro")]
     public interface ICLivro {
         
+<<<<<<< HEAD
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/DoWork", ReplyAction="http://tempuri.org/ICLivro/DoWorkResponse")]
         void DoWork();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/DoWork", ReplyAction="http://tempuri.org/ICLivro/DoWorkResponse")]
         System.Threading.Tasks.Task DoWorkAsync();
+=======
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/Cadastrar", ReplyAction="http://tempuri.org/ICLivro/CadastrarResponse")]
+        bool Cadastrar(Model.LIVRO oLivro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/Cadastrar", ReplyAction="http://tempuri.org/ICLivro/CadastrarResponse")]
+        System.Threading.Tasks.Task<bool> CadastrarAsync(Model.LIVRO oLivro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/Alterar", ReplyAction="http://tempuri.org/ICLivro/AlterarResponse")]
+        bool Alterar(Model.LIVRO oLivro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/Alterar", ReplyAction="http://tempuri.org/ICLivro/AlterarResponse")]
+        System.Threading.Tasks.Task<bool> AlterarAsync(Model.LIVRO oLivro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/SelecionarID", ReplyAction="http://tempuri.org/ICLivro/SelecionarIDResponse")]
+        Model.LIVRO SelecionarID(int IDLivro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/SelecionarID", ReplyAction="http://tempuri.org/ICLivro/SelecionarIDResponse")]
+        System.Threading.Tasks.Task<Model.LIVRO> SelecionarIDAsync(int IDLivro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/SelecionarTitulo", ReplyAction="http://tempuri.org/ICLivro/SelecionarTituloResponse")]
+        Model.LIVRO SelecionarTitulo(string LivroTit);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/SelecionarTitulo", ReplyAction="http://tempuri.org/ICLivro/SelecionarTituloResponse")]
+        System.Threading.Tasks.Task<Model.LIVRO> SelecionarTituloAsync(string LivroTit);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/Deletar", ReplyAction="http://tempuri.org/ICLivro/DeletarResponse")]
+        bool Deletar(int IDLivro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/Deletar", ReplyAction="http://tempuri.org/ICLivro/DeletarResponse")]
+        System.Threading.Tasks.Task<bool> DeletarAsync(int IDLivro);
+>>>>>>> origin/master
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +81,53 @@ namespace View.CLivro {
                 base(binding, remoteAddress) {
         }
         
+<<<<<<< HEAD
         public void DoWork() {
             base.Channel.DoWork();
         }
         
         public System.Threading.Tasks.Task DoWorkAsync() {
             return base.Channel.DoWorkAsync();
+=======
+        public bool Cadastrar(Model.LIVRO oLivro) {
+            return base.Channel.Cadastrar(oLivro);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CadastrarAsync(Model.LIVRO oLivro) {
+            return base.Channel.CadastrarAsync(oLivro);
+        }
+        
+        public bool Alterar(Model.LIVRO oLivro) {
+            return base.Channel.Alterar(oLivro);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AlterarAsync(Model.LIVRO oLivro) {
+            return base.Channel.AlterarAsync(oLivro);
+        }
+        
+        public Model.LIVRO SelecionarID(int IDLivro) {
+            return base.Channel.SelecionarID(IDLivro);
+        }
+        
+        public System.Threading.Tasks.Task<Model.LIVRO> SelecionarIDAsync(int IDLivro) {
+            return base.Channel.SelecionarIDAsync(IDLivro);
+        }
+        
+        public Model.LIVRO SelecionarTitulo(string LivroTit) {
+            return base.Channel.SelecionarTitulo(LivroTit);
+        }
+        
+        public System.Threading.Tasks.Task<Model.LIVRO> SelecionarTituloAsync(string LivroTit) {
+            return base.Channel.SelecionarTituloAsync(LivroTit);
+        }
+        
+        public bool Deletar(int IDLivro) {
+            return base.Channel.Deletar(IDLivro);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeletarAsync(int IDLivro) {
+            return base.Channel.DeletarAsync(IDLivro);
+>>>>>>> origin/master
         }
     }
 }

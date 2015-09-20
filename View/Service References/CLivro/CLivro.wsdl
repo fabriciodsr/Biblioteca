@@ -3,6 +3,7 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:26759/CLivro.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+<<<<<<< HEAD
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICLivro_DoWork_InputMessage">
@@ -15,12 +16,109 @@
     <wsdl:operation name="DoWork">
       <wsdl:input wsaw:Action="http://tempuri.org/ICLivro/DoWork" message="tns:ICLivro_DoWork_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICLivro/DoWorkResponse" message="tns:ICLivro_DoWork_OutputMessage" />
+=======
+      <xsd:import schemaLocation="http://localhost:26759/CLivro.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:26759/CLivro.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICLivro_Cadastrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Cadastrar" />
+  </wsdl:message>
+  <wsdl:message name="ICLivro_Cadastrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICLivro_Alterar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Alterar" />
+  </wsdl:message>
+  <wsdl:message name="ICLivro_Alterar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICLivro_SelecionarID_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionarID" />
+  </wsdl:message>
+  <wsdl:message name="ICLivro_SelecionarID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionarIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICLivro_SelecionarTitulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionarTitulo" />
+  </wsdl:message>
+  <wsdl:message name="ICLivro_SelecionarTitulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionarTituloResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICLivro_Deletar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Deletar" />
+  </wsdl:message>
+  <wsdl:message name="ICLivro_Deletar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICLivro">
+    <wsdl:operation name="Cadastrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICLivro/Cadastrar" message="tns:ICLivro_Cadastrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICLivro/CadastrarResponse" message="tns:ICLivro_Cadastrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Alterar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICLivro/Alterar" message="tns:ICLivro_Alterar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICLivro/AlterarResponse" message="tns:ICLivro_Alterar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionarID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICLivro/SelecionarID" message="tns:ICLivro_SelecionarID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICLivro/SelecionarIDResponse" message="tns:ICLivro_SelecionarID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionarTitulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICLivro/SelecionarTitulo" message="tns:ICLivro_SelecionarTitulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICLivro/SelecionarTituloResponse" message="tns:ICLivro_SelecionarTitulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Deletar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICLivro/Deletar" message="tns:ICLivro_Deletar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICLivro/DeletarResponse" message="tns:ICLivro_Deletar_OutputMessage" />
+>>>>>>> origin/master
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICLivro" type="tns:ICLivro">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+<<<<<<< HEAD
     <wsdl:operation name="DoWork">
       <soap:operation soapAction="http://tempuri.org/ICLivro/DoWork" style="document" />
+=======
+    <wsdl:operation name="Cadastrar">
+      <soap:operation soapAction="http://tempuri.org/ICLivro/Cadastrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Alterar">
+      <soap:operation soapAction="http://tempuri.org/ICLivro/Alterar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionarID">
+      <soap:operation soapAction="http://tempuri.org/ICLivro/SelecionarID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionarTitulo">
+      <soap:operation soapAction="http://tempuri.org/ICLivro/SelecionarTitulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deletar">
+      <soap:operation soapAction="http://tempuri.org/ICLivro/Deletar" style="document" />
+>>>>>>> origin/master
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

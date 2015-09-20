@@ -137,11 +137,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Service References\CEditora\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+=======
+>>>>>>> origin/master
     <Compile Include="Service References\CLivro\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -189,7 +192,11 @@
     <None Include="App.config" />
     <None Include="Properties\DataSources\Model.ALUNO.datasource" />
     <None Include="Properties\DataSources\Model.AUTOR.datasource" />
+<<<<<<< HEAD
     <None Include="Properties\DataSources\Model.EDITORA.datasource" />
+=======
+    <None Include="Properties\DataSources\Model.LIVRO.datasource" />
+>>>>>>> origin/master
     <None Include="Service References\CAluno\CAluno.wsdl" />
     <None Include="Service References\CAluno\CAluno.xsd">
       <SubType>Designer</SubType>
@@ -210,6 +217,7 @@
     <None Include="Service References\CAutor\CAutor2.xsd">
       <SubType>Designer</SubType>
     </None>
+<<<<<<< HEAD
     <None Include="Service References\CEditora\CEditora.wsdl" />
     <None Include="Service References\CEditora\CEditora.xsd">
       <SubType>Designer</SubType>
@@ -222,6 +230,16 @@
     </None>
     <None Include="Service References\CLivro\CLivro.wsdl" />
     <None Include="Service References\CLivro\CLivro.xsd">
+=======
+    <None Include="Service References\CLivro\CLivro.wsdl" />
+    <None Include="Service References\CLivro\CLivro.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CLivro\CLivro1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CLivro\CLivro2.xsd">
+>>>>>>> origin/master
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -241,7 +259,10 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\CAluno\" />
     <WCFMetadataStorage Include="Service References\CAutor\" />
+<<<<<<< HEAD
     <WCFMetadataStorage Include="Service References\CEditora\" />
+=======
+>>>>>>> origin/master
     <WCFMetadataStorage Include="Service References\CLivro\" />
   </ItemGroup>
   <ItemGroup>
@@ -275,6 +296,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Service References\CEditora\CEditora.disco" />
   </ItemGroup>
   <ItemGroup>
@@ -290,6 +312,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+=======
+>>>>>>> origin/master
     <None Include="Service References\CLivro\CLivro.disco" />
   </ItemGroup>
   <ItemGroup>

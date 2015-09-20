@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Model;
 
 namespace Controller
 {
@@ -12,6 +13,18 @@ namespace Controller
     public interface ICLivro
     {
         [OperationContract]
-        void DoWork();
+        bool Cadastrar(LIVRO oLivro);
+
+        [OperationContract]
+        bool Alterar(LIVRO oLivro);
+
+        [OperationContract]
+        LIVRO SelecionarID(int IDLivro);
+
+        [OperationContract]
+        LIVRO SelecionarTitulo(string LivroTit);
+
+        [OperationContract]
+        bool Deletar(int IDLivro);
     }
 }

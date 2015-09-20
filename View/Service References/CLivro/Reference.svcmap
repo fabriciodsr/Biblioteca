@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="39dad3b7-e45a-4ba4-a982-6bf23d2faf8a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26759/CLivro.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CLivro.xsd" MetadataType="Schema" ID="0fd9c2d5-11d8-4817-9ef7-c33cc09f674d" SourceId="1" SourceUrl="http://localhost:26759/CLivro.svc?xsd=xsd1" />
+    <MetadataFile FileName="CLivro1.xsd" MetadataType="Schema" ID="e72accb3-3aab-4043-bdef-9b8547d44d9d" SourceId="1" SourceUrl="http://localhost:26759/CLivro.svc?xsd=xsd2" />
+    <MetadataFile FileName="CLivro.wsdl" MetadataType="Wsdl" ID="a4545569-b1d1-4720-9db3-497698dde349" SourceId="1" SourceUrl="http://localhost:26759/CLivro.svc?wsdl" />
+    <MetadataFile FileName="CLivro.disco" MetadataType="Disco" ID="2065dc30-62e6-43b8-881b-9454d9754caf" SourceId="1" SourceUrl="http://localhost:26759/CLivro.svc?disco" />
+    <MetadataFile FileName="CLivro2.xsd" MetadataType="Schema" ID="a3977c7b-b10b-4c5f-b0cd-f4cbfd6c4ec4" SourceId="1" SourceUrl="http://localhost:26759/CLivro.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -294,9 +294,11 @@ namespace View
                 CLivro.CLivroClient oProxy = new CLivro.CLivroClient();
                 oProxy.Open();
 
-                if (oProxy.SelecionarAutor(txtPesquisa.Text) != null)
+                int var = Convert.ToInt32(txtPesquisa.Text);
+
+                if (oProxy.SelecionarID(var) != null)
                 {
-                    LIVRO oLivro = oProxy.SelecionarAutor(txtPesquisa.Text);
+                    LIVRO oLivro = oProxy.SelecionarID(var);
 
                     txtTitulo.Text = oLivro.TITULO;
                     //???????? = oLivro.QTD_DISP_EMPR;

@@ -15,13 +15,7 @@ namespace View.CLivro {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CLivro.ICLivro")]
     public interface ICLivro {
         
-<<<<<<< HEAD
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/DoWork", ReplyAction="http://tempuri.org/ICLivro/DoWorkResponse")]
-        void DoWork();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/DoWork", ReplyAction="http://tempuri.org/ICLivro/DoWorkResponse")]
-        System.Threading.Tasks.Task DoWorkAsync();
-=======
+
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/Cadastrar", ReplyAction="http://tempuri.org/ICLivro/CadastrarResponse")]
         bool Cadastrar(Model.LIVRO oLivro);
         
@@ -51,7 +45,6 @@ namespace View.CLivro {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/Deletar", ReplyAction="http://tempuri.org/ICLivro/DeletarResponse")]
         System.Threading.Tasks.Task<bool> DeletarAsync(int IDLivro);
->>>>>>> origin/master
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -81,14 +74,6 @@ namespace View.CLivro {
                 base(binding, remoteAddress) {
         }
         
-<<<<<<< HEAD
-        public void DoWork() {
-            base.Channel.DoWork();
-        }
-        
-        public System.Threading.Tasks.Task DoWorkAsync() {
-            return base.Channel.DoWorkAsync();
-=======
         public bool Cadastrar(Model.LIVRO oLivro) {
             return base.Channel.Cadastrar(oLivro);
         }
@@ -127,7 +112,6 @@ namespace View.CLivro {
         
         public System.Threading.Tasks.Task<bool> DeletarAsync(int IDLivro) {
             return base.Channel.DeletarAsync(IDLivro);
->>>>>>> origin/master
         }
     }
 }

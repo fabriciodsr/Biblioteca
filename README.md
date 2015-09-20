@@ -1,6 +1,6 @@
-# Projeto 3º e 4º BI - Sistema Laticinios
+# Projeto 3º e 4º BI - Sistema de Biblioteca
 
-![Laticinios](http://i.imgur.com/hN50njl.png)
+![Biblioteca](http://i.imgur.com/hN50njl.png)
 <br>
 <hr>
 Trabalho bimestral de Programação em C# .NET usando Entity Framework

@@ -428,6 +428,9 @@ namespace View
 
 
 
+        ///APENAS NÚMERO
+
+
 
         private static void ApenasNumero (KeyPressEventArgs e)
         {
@@ -435,13 +438,31 @@ namespace View
                 char.IsSymbol(e.KeyChar) ||    //Símbolos
                 char.IsWhiteSpace(e.KeyChar) || //Espaço
                 char.IsPunctuation(e.KeyChar)) //Pontuação
-                e.Handled = true; //Não permitir
-                                  //Com o script acima é possível utilizar Números, 'Del', 'BackSpace'..
-
-            //Abaixo só é permito de 0 a 9
-            //if ((e.KeyChar < '0') || (e.KeyChar > '9')) e.Handled = true; //Allow only numbers
+                e.Handled = true; 
         }
 
+
+
+
+        ///VALIDA O CAMPO DE PESQUISA POR ID - APENAS NÚMERO
+
+        private void txtPesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(cmbPesquisa.SelectedIndex==0)
+            {
+                ApenasNumero(e);
+            }
+        }
+
+
+
+        ///lIMPA CONTROLE PESQUISA AO MUDAR O CMBPESQUISA
+
+
+        private void cmbPesquisa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtPesquisa.Text = "";
+        }
     }
 
 }

@@ -35,6 +35,7 @@
             this.btnDeletar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbPesquisa = new System.Windows.Forms.ComboBox();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -65,7 +66,6 @@
             this.dtpNasc = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
             this.cmbPais = new System.Windows.Forms.ComboBox();
-            this.cmbPesquisa = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -159,6 +159,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(208, 20);
             this.txtPesquisa.TabIndex = 23;
+            this.txtPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisa_KeyPress);
             // 
             // groupBox1
             // 
@@ -171,6 +172,19 @@
             this.groupBox1.Size = new System.Drawing.Size(526, 42);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
+            // 
+            // cmbPesquisa
+            // 
+            this.cmbPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPesquisa.FormattingEnabled = true;
+            this.cmbPesquisa.Items.AddRange(new object[] {
+            "ID",
+            "NOME"});
+            this.cmbPesquisa.Location = new System.Drawing.Point(135, 15);
+            this.cmbPesquisa.Name = "cmbPesquisa";
+            this.cmbPesquisa.Size = new System.Drawing.Size(101, 21);
+            this.cmbPesquisa.TabIndex = 56;
+            this.cmbPesquisa.SelectedIndexChanged += new System.EventHandler(this.cmbPesquisa_SelectedIndexChanged);
             // 
             // btnProcurar
             // 
@@ -501,18 +515,6 @@
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(145, 21);
             this.cmbPais.TabIndex = 54;
-            // 
-            // cmbPesquisa
-            // 
-            this.cmbPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPesquisa.FormattingEnabled = true;
-            this.cmbPesquisa.Items.AddRange(new object[] {
-            "ID",
-            "NOME"});
-            this.cmbPesquisa.Location = new System.Drawing.Point(135, 15);
-            this.cmbPesquisa.Name = "cmbPesquisa";
-            this.cmbPesquisa.Size = new System.Drawing.Size(101, 21);
-            this.cmbPesquisa.TabIndex = 56;
             // 
             // frmCadastroAluno
             // 

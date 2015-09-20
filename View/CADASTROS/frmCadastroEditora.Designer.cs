@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroEditora));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbPesquisa = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnDeletar = new System.Windows.Forms.Button();
@@ -58,8 +60,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cmbPais = new System.Windows.Forms.ComboBox();
-            this.cmbPesquisa = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +74,29 @@
             this.groupBox1.Size = new System.Drawing.Size(526, 42);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
+            // 
+            // cmbPesquisa
+            // 
+            this.cmbPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPesquisa.FormattingEnabled = true;
+            this.cmbPesquisa.Items.AddRange(new object[] {
+            "ID",
+            "NOME"});
+            this.cmbPesquisa.Location = new System.Drawing.Point(136, 15);
+            this.cmbPesquisa.Name = "cmbPesquisa";
+            this.cmbPesquisa.Size = new System.Drawing.Size(101, 21);
+            this.cmbPesquisa.TabIndex = 97;
+            this.cmbPesquisa.SelectedIndexChanged += new System.EventHandler(this.cmbPesquisa_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(7, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 16);
+            this.label4.TabIndex = 96;
+            this.label4.Text = "Opção de Busca";
             // 
             // btnProcurar
             // 
@@ -101,6 +124,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(204, 20);
             this.txtPesquisa.TabIndex = 23;
+            this.txtPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisa_KeyPress);
             // 
             // btnDeletar
             // 
@@ -433,28 +457,6 @@
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(145, 21);
             this.cmbPais.TabIndex = 76;
-            // 
-            // cmbPesquisa
-            // 
-            this.cmbPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPesquisa.FormattingEnabled = true;
-            this.cmbPesquisa.Items.AddRange(new object[] {
-            "ID",
-            "NOME"});
-            this.cmbPesquisa.Location = new System.Drawing.Point(136, 15);
-            this.cmbPesquisa.Name = "cmbPesquisa";
-            this.cmbPesquisa.Size = new System.Drawing.Size(101, 21);
-            this.cmbPesquisa.TabIndex = 97;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(7, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 16);
-            this.label4.TabIndex = 96;
-            this.label4.Text = "Opção de Busca";
             // 
             // frmCadastroEditora
             // 

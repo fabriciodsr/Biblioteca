@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Model;
 
 namespace Controller
 {
@@ -12,6 +13,18 @@ namespace Controller
     public interface ICEditora
     {
         [OperationContract]
-        void DoWork();
+        bool Cadastrar(EDITORA oEDITORA);
+
+        [OperationContract]
+        bool Alterar(EDITORA oEDITORA);
+
+        [OperationContract]
+        EDITORA Selecionar(int idEDITORA);
+
+        [OperationContract]
+        EDITORA SelecionarNome(string EDITORANome);
+
+        [OperationContract]
+        bool Deletar(int idEDITORA);
     }
 }

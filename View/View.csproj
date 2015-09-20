@@ -137,6 +137,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CEditora\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CLivro\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cadastros\frmCadastroAluno.resx">
       <DependentUpon>frmCadastroAluno.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +189,7 @@
     <None Include="App.config" />
     <None Include="Properties\DataSources\Model.ALUNO.datasource" />
     <None Include="Properties\DataSources\Model.AUTOR.datasource" />
+    <None Include="Properties\DataSources\Model.EDITORA.datasource" />
     <None Include="Service References\CAluno\CAluno.wsdl" />
     <None Include="Service References\CAluno\CAluno.xsd">
       <SubType>Designer</SubType>
@@ -199,6 +210,20 @@
     <None Include="Service References\CAutor\CAutor2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CEditora\CEditora.wsdl" />
+    <None Include="Service References\CEditora\CEditora.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CEditora\CEditora1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CEditora\CEditora2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CLivro\CLivro.wsdl" />
+    <None Include="Service References\CLivro\CLivro.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Controller\Controller.csproj">
@@ -216,6 +241,8 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\CAluno\" />
     <WCFMetadataStorage Include="Service References\CAutor\" />
+    <WCFMetadataStorage Include="Service References\CEditora\" />
+    <WCFMetadataStorage Include="Service References\CLivro\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CAutor\CAutor.disco" />
@@ -243,6 +270,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CAluno\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CEditora\CEditora.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CEditora\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CEditora\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CEditora\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivro\CLivro.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivro\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivro\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivro\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

@@ -54,6 +54,7 @@
     <Compile Include="AUTOR.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
+    <Compile Include="AutorMetod.cs" />
     <Compile Include="Biblioteca.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,7 +90,6 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Biblioteca.tt</DependentUpon>
     </Compile>
-    <Compile Include="TesteMetod.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

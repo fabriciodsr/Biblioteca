@@ -20,5 +20,8 @@ namespace Controller
 
         [OperationContract]
         ALUNO Selecionar(int idAluno);
+
+        [OperationContract]
+        ALUNO SelecionarCPF(string CPFAluno);
     }
 }

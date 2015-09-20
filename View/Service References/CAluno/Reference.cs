@@ -32,6 +32,12 @@ namespace View.CAluno {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAluno/Selecionar", ReplyAction="http://tempuri.org/ICAluno/SelecionarResponse")]
         System.Threading.Tasks.Task<Model.ALUNO> SelecionarAsync(int idAluno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAluno/SelecionarCPF", ReplyAction="http://tempuri.org/ICAluno/SelecionarCPFResponse")]
+        Model.ALUNO SelecionarCPF(string CPFAluno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAluno/SelecionarCPF", ReplyAction="http://tempuri.org/ICAluno/SelecionarCPFResponse")]
+        System.Threading.Tasks.Task<Model.ALUNO> SelecionarCPFAsync(string CPFAluno);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,6 +89,14 @@ namespace View.CAluno {
         
         public System.Threading.Tasks.Task<Model.ALUNO> SelecionarAsync(int idAluno) {
             return base.Channel.SelecionarAsync(idAluno);
+        }
+        
+        public Model.ALUNO SelecionarCPF(string CPFAluno) {
+            return base.Channel.SelecionarCPF(CPFAluno);
+        }
+        
+        public System.Threading.Tasks.Task<Model.ALUNO> SelecionarCPFAsync(string CPFAluno) {
+            return base.Channel.SelecionarCPFAsync(CPFAluno);
         }
     }
 }

@@ -65,18 +65,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CAluno.svc" />
-    <Content Include="CTeste.svc" />
+    <Content Include="CAutor.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CAluno.svc.cs">
       <DependentUpon>CAluno.svc</DependentUpon>
     </Compile>
-    <Compile Include="CTeste.svc.cs">
-      <DependentUpon>CTeste.svc</DependentUpon>
+    <Compile Include="CAutor.svc.cs">
+      <DependentUpon>CAutor.svc</DependentUpon>
     </Compile>
     <Compile Include="ICAluno.cs" />
-    <Compile Include="ICTeste.cs" />
+    <Compile Include="ICAutor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

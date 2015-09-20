@@ -9,6 +9,10 @@ namespace Model
 {
     public class AlunoMetod
     {
+
+        ///CADASTRAR
+
+
         public static bool Cadastrar(ALUNO pAluno)
         {
             //var oDB = new BibliotecaVirtualEntities();
@@ -28,7 +32,6 @@ namespace Model
                     try
                     {
                         oDB.ALUNO.Add(pAluno);
-                        //oDB.Entry(pAluno).State = System.Data.Entity.EntityState.Added;
                         oDB.SaveChanges();
                         oDB.Dispose();
                     }
@@ -45,6 +48,13 @@ namespace Model
                 }
             }
         }
+
+
+
+
+        ///ALTERAR
+
+
 
         public static bool Alterar(ALUNO pAluno)
         {
@@ -89,12 +99,19 @@ namespace Model
             }
         }
 
-        public static bool Deletar(string IDAluno)
+
+
+        ///DELETAR
+
+
+
+
+        public static bool Deletar(int IDAluno)
         {
 
             var oDB = new BibliotecaVirtualEntities();
 
-            ALUNO oAluno = (from Seleciona in oDB.ALUNO where Seleciona.CPF == IDAluno select Seleciona).SingleOrDefault();
+            ALUNO oAluno = (from Seleciona in oDB.ALUNO where Seleciona.ID_ALUNO == IDAluno select Seleciona).SingleOrDefault();
 
             oDB.ALUNO.Remove(oAluno);
             oDB.SaveChanges();
@@ -102,6 +119,15 @@ namespace Model
 
             return true;
         }
+
+
+
+
+        ///SELECIONAR
+
+
+
+
 
         public static ALUNO Selecionar(int IDAluno)
         {
@@ -120,28 +146,17 @@ namespace Model
             else
             {
 
-                ALUNO oAluno = new ALUNO();
-
-                oAluno.NOME = ConsultaUsuario.NOME;
-                oAluno.SOBRENOME = ConsultaUsuario.SOBRENOME;
-                oAluno.NASC = ConsultaUsuario.NASC;
-                oAluno.CPF = ConsultaUsuario.CPF;
-                oAluno.ENDERECO = ConsultaUsuario.ENDERECO;
-                oAluno.BAIRRO = ConsultaUsuario.BAIRRO;
-                oAluno.CIDADE = ConsultaUsuario.CIDADE;
-                oAluno.UF = ConsultaUsuario.UF;
-                oAluno.PAIS = ConsultaUsuario.PAIS;
-                oAluno.CEP = ConsultaUsuario.CEP;
-                oAluno.TEL_RES = ConsultaUsuario.TEL_RES;
-                oAluno.TEL_CEL = ConsultaUsuario.TEL_CEL;
-                oAluno.EMAIL = ConsultaUsuario.EMAIL;
-
-                return oAluno;
+                return ConsultaUsuario;
             }
         }
 
 
 
+
+
+
+
+        ///SELECIONAR POR CPF
 
         public static ALUNO SelecionarCPF(string CPFAluno)
         {
@@ -160,23 +175,37 @@ namespace Model
             else
             {
 
-                ALUNO oAluno = new ALUNO();
+               
+                return ConsultaUsuario;
+            }
+        }
 
-                oAluno.NOME = ConsultaUsuario.NOME;
-                oAluno.SOBRENOME = ConsultaUsuario.SOBRENOME;
-                oAluno.NASC = ConsultaUsuario.NASC;
-                oAluno.CPF = ConsultaUsuario.CPF;
-                oAluno.ENDERECO = ConsultaUsuario.ENDERECO;
-                oAluno.BAIRRO = ConsultaUsuario.BAIRRO;
-                oAluno.CIDADE = ConsultaUsuario.CIDADE;
-                oAluno.UF = ConsultaUsuario.UF;
-                oAluno.PAIS = ConsultaUsuario.PAIS;
-                oAluno.CEP = ConsultaUsuario.CEP;
-                oAluno.TEL_RES = ConsultaUsuario.TEL_RES;
-                oAluno.TEL_CEL = ConsultaUsuario.TEL_CEL;
-                oAluno.EMAIL = ConsultaUsuario.EMAIL;
 
-                return oAluno;
+
+
+
+
+        ///SELECIONAR POR NOME
+
+        public static ALUNO SelecionarNome(string Alunome)
+        {
+            var oDB = new BibliotecaVirtualEntities();
+
+            //String de Seleção do usuário
+            var ConsultaUsuario = (from cu in oDB.ALUNO
+                                   where cu.NOME == Alunome
+                                   select cu).SingleOrDefault();
+
+            if (ConsultaUsuario == null)
+            {
+                return null;
+            }
+            //Se a consulta retorna um usuário, atualiza ele com os dados da tela    
+            else
+            {
+
+
+                return ConsultaUsuario;
             }
         }
     }

@@ -33,12 +33,10 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
-            this.txt_ID = new System.Windows.Forms.TextBox();
-            this.txt_Nome = new System.Windows.Forms.TextBox();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,6 +65,7 @@
             this.dtpNasc = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
             this.cmbPais = new System.Windows.Forms.ComboBox();
+            this.cmbPesquisa = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +73,6 @@
             // 
             this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalvar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalvar.BackgroundImage")));
             this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.FlatAppearance.BorderSize = 0;
@@ -96,9 +94,9 @@
             // 
             this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAlterar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAlterar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAlterar.BackgroundImage")));
             this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterar.Enabled = false;
             this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAlterar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -141,6 +139,7 @@
             this.btnDeletar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeletar.BackgroundImage")));
             this.btnDeletar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletar.Enabled = false;
             this.btnDeletar.FlatAppearance.BorderSize = 0;
             this.btnDeletar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDeletar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -152,28 +151,21 @@
             this.btnDeletar.Size = new System.Drawing.Size(33, 34);
             this.btnDeletar.TabIndex = 21;
             this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
-            // txt_ID
+            // txtPesquisa
             // 
-            this.txt_ID.Location = new System.Drawing.Point(41, 16);
-            this.txt_ID.Name = "txt_ID";
-            this.txt_ID.Size = new System.Drawing.Size(101, 20);
-            this.txt_ID.TabIndex = 22;
-            // 
-            // txt_Nome
-            // 
-            this.txt_Nome.Location = new System.Drawing.Point(210, 16);
-            this.txt_Nome.Name = "txt_Nome";
-            this.txt_Nome.Size = new System.Drawing.Size(251, 20);
-            this.txt_Nome.TabIndex = 23;
+            this.txtPesquisa.Location = new System.Drawing.Point(253, 16);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(208, 20);
+            this.txtPesquisa.TabIndex = 23;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbPesquisa);
             this.groupBox1.Controls.Add(this.btnProcurar);
+            this.groupBox1.Controls.Add(this.txtPesquisa);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txt_ID);
-            this.groupBox1.Controls.Add(this.txt_Nome);
             this.groupBox1.Location = new System.Drawing.Point(246, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(526, 42);
@@ -204,21 +196,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(155, 17);
+            this.label2.Location = new System.Drawing.Point(6, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
+            this.label2.Size = new System.Drawing.Size(123, 16);
             this.label2.TabIndex = 26;
-            this.label2.Text = "Nome";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 16);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Id.";
+            this.label2.Text = "Opção de Busca";
             // 
             // txtID
             // 
@@ -520,6 +502,18 @@
             this.cmbPais.Size = new System.Drawing.Size(145, 21);
             this.cmbPais.TabIndex = 54;
             // 
+            // cmbPesquisa
+            // 
+            this.cmbPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPesquisa.FormattingEnabled = true;
+            this.cmbPesquisa.Items.AddRange(new object[] {
+            "ID",
+            "NOME"});
+            this.cmbPesquisa.Location = new System.Drawing.Point(135, 15);
+            this.cmbPesquisa.Name = "cmbPesquisa";
+            this.cmbPesquisa.Size = new System.Drawing.Size(101, 21);
+            this.cmbPesquisa.TabIndex = 56;
+            // 
             // frmCadastroAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -576,11 +570,9 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnDeletar;
-        private System.Windows.Forms.TextBox txt_ID;
-        private System.Windows.Forms.TextBox txt_Nome;
+        private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -610,5 +602,6 @@
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox cmbPais;
+        private System.Windows.Forms.ComboBox cmbPesquisa;
     }
 }

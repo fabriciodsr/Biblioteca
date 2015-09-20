@@ -23,5 +23,11 @@ namespace Controller
 
         [OperationContract]
         ALUNO SelecionarCPF(string CPFAluno);
+
+        [OperationContract]
+        ALUNO SelecionarNome(string Alunome);
+
+        [OperationContract]
+        bool Deletar(int IDAluno);
     }
 }

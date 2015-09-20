@@ -38,6 +38,18 @@ namespace View.CAluno {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAluno/SelecionarCPF", ReplyAction="http://tempuri.org/ICAluno/SelecionarCPFResponse")]
         System.Threading.Tasks.Task<Model.ALUNO> SelecionarCPFAsync(string CPFAluno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAluno/SelecionarNome", ReplyAction="http://tempuri.org/ICAluno/SelecionarNomeResponse")]
+        Model.ALUNO SelecionarNome(string Alunome);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAluno/SelecionarNome", ReplyAction="http://tempuri.org/ICAluno/SelecionarNomeResponse")]
+        System.Threading.Tasks.Task<Model.ALUNO> SelecionarNomeAsync(string Alunome);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAluno/Deletar", ReplyAction="http://tempuri.org/ICAluno/DeletarResponse")]
+        bool Deletar(int IDAluno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAluno/Deletar", ReplyAction="http://tempuri.org/ICAluno/DeletarResponse")]
+        System.Threading.Tasks.Task<bool> DeletarAsync(int IDAluno);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +109,22 @@ namespace View.CAluno {
         
         public System.Threading.Tasks.Task<Model.ALUNO> SelecionarCPFAsync(string CPFAluno) {
             return base.Channel.SelecionarCPFAsync(CPFAluno);
+        }
+        
+        public Model.ALUNO SelecionarNome(string Alunome) {
+            return base.Channel.SelecionarNome(Alunome);
+        }
+        
+        public System.Threading.Tasks.Task<Model.ALUNO> SelecionarNomeAsync(string Alunome) {
+            return base.Channel.SelecionarNomeAsync(Alunome);
+        }
+        
+        public bool Deletar(int IDAluno) {
+            return base.Channel.Deletar(IDAluno);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeletarAsync(int IDAluno) {
+            return base.Channel.DeletarAsync(IDAluno);
         }
     }
 }

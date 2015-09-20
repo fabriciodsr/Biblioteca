@@ -57,4 +57,32 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SelecionarNome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Alunome" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelecionarNomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="SelecionarNomeResult" nillable="true" type="q5:ALUNO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Deletar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDAluno" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeletarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

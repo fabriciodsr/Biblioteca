@@ -36,6 +36,11 @@ namespace Controller
             }
         }
 
+        public bool Deletar(int IDAluno)
+        {
+            return AlunoMetod.Deletar(IDAluno);
+        }
+
         public ALUNO Selecionar(int idAluno)
         {
             return AlunoMetod.Selecionar(idAluno);
@@ -44,6 +49,11 @@ namespace Controller
         public ALUNO SelecionarCPF(string CPFAluno)
         {
             return AlunoMetod.SelecionarCPF(CPFAluno);
+        }
+
+        public ALUNO SelecionarNome(string Alunome)
+        {
+            return AlunoMetod.SelecionarNome(Alunome);
         }
     }
 }

@@ -24,12 +24,24 @@ namespace View
 
         int var = 0;
 
+
+
+        ///LOAD
+
         private void frmCadastroAluno_Load(object sender, EventArgs e)
         {
             cmbPais.DataSource = ListaPais.ListaPaises();
 
             cmbPesquisa.SelectedIndex = 0;
         }
+
+
+
+
+
+        ///BOTÃO SALVAR
+        /// 
+
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -147,11 +159,11 @@ namespace View
                 MessageBox.Show("Preencha todos os campos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-
-
-
-
         }
+
+
+
+        ///BOTÃO CANCELAR
         
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -170,6 +182,14 @@ namespace View
 
         }
 
+
+
+
+
+
+        ///LIMPA CAMPOS
+        /// 
+        
         private void LimpaCampos()
         {
             txtBairro.Text = "";
@@ -189,6 +209,15 @@ namespace View
             dtpNasc.Value = System.DateTime.Now;
         }
 
+
+
+
+
+
+        ///CLOSE
+        /// 
+
+
         private void frmCadastroAluno_FormClosed(object sender, FormClosedEventArgs e)
         {
             ((frmPrincipal)this.MdiParent).aLUNOToolStripMenuItem.Enabled = true;
@@ -196,7 +225,8 @@ namespace View
 
 
 
-
+        ///BOTÃO ALTERAR
+        ///
 
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -359,6 +389,12 @@ namespace View
 
 
 
+
+        ///VERIFICA CONTROLES
+        /// 
+
+
+
         private bool VerificaControles()
         {
             if (
@@ -385,6 +421,13 @@ namespace View
                 return false;
             }
         }
+
+
+
+        ///BOTÃO DELETAR
+        /// 
+
+
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {

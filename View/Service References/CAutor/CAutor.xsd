@@ -43,4 +43,32 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SelecionarNome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AutorNome" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelecionarNomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="SelecionarNomeResult" nillable="true" type="q4:AUTOR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Deletar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAutor" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeletarResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

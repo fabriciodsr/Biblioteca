@@ -32,6 +32,18 @@ namespace View.CAutor {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAutor/Selecionar", ReplyAction="http://tempuri.org/ICAutor/SelecionarResponse")]
         System.Threading.Tasks.Task<Model.AUTOR> SelecionarAsync(int idAutor);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAutor/SelecionarNome", ReplyAction="http://tempuri.org/ICAutor/SelecionarNomeResponse")]
+        Model.AUTOR SelecionarNome(string AutorNome);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAutor/SelecionarNome", ReplyAction="http://tempuri.org/ICAutor/SelecionarNomeResponse")]
+        System.Threading.Tasks.Task<Model.AUTOR> SelecionarNomeAsync(string AutorNome);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAutor/Deletar", ReplyAction="http://tempuri.org/ICAutor/DeletarResponse")]
+        bool Deletar(int idAutor);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAutor/Deletar", ReplyAction="http://tempuri.org/ICAutor/DeletarResponse")]
+        System.Threading.Tasks.Task<bool> DeletarAsync(int idAutor);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,6 +95,22 @@ namespace View.CAutor {
         
         public System.Threading.Tasks.Task<Model.AUTOR> SelecionarAsync(int idAutor) {
             return base.Channel.SelecionarAsync(idAutor);
+        }
+        
+        public Model.AUTOR SelecionarNome(string AutorNome) {
+            return base.Channel.SelecionarNome(AutorNome);
+        }
+        
+        public System.Threading.Tasks.Task<Model.AUTOR> SelecionarNomeAsync(string AutorNome) {
+            return base.Channel.SelecionarNomeAsync(AutorNome);
+        }
+        
+        public bool Deletar(int idAutor) {
+            return base.Channel.Deletar(idAutor);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeletarAsync(int idAutor) {
+            return base.Channel.DeletarAsync(idAutor);
         }
     }
 }

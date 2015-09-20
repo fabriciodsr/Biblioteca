@@ -33,7 +33,7 @@
             this.cmbPesquisa = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnProcurar = new System.Windows.Forms.Button();
-            this.txt_Pesquisa = new System.Windows.Forms.TextBox();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             this.groupBox1.Controls.Add(this.cmbPesquisa);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.btnProcurar);
-            this.groupBox1.Controls.Add(this.txt_Pesquisa);
+            this.groupBox1.Controls.Add(this.txtPesquisa);
             this.groupBox1.Location = new System.Drawing.Point(246, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(526, 42);
@@ -105,12 +105,12 @@
             this.btnProcurar.UseVisualStyleBackColor = false;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
-            // txt_Pesquisa
+            // txtPesquisa
             // 
-            this.txt_Pesquisa.Location = new System.Drawing.Point(239, 16);
-            this.txt_Pesquisa.Name = "txt_Pesquisa";
-            this.txt_Pesquisa.Size = new System.Drawing.Size(222, 20);
-            this.txt_Pesquisa.TabIndex = 23;
+            this.txtPesquisa.Location = new System.Drawing.Point(239, 16);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(222, 20);
+            this.txtPesquisa.TabIndex = 23;
             // 
             // btnDeletar
             // 
@@ -119,6 +119,7 @@
             this.btnDeletar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeletar.BackgroundImage")));
             this.btnDeletar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletar.Enabled = false;
             this.btnDeletar.FlatAppearance.BorderSize = 0;
             this.btnDeletar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDeletar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -130,6 +131,7 @@
             this.btnDeletar.Size = new System.Drawing.Size(33, 34);
             this.btnDeletar.TabIndex = 28;
             this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnCancelar
             // 
@@ -157,6 +159,7 @@
             this.btnAlterar.BackColor = System.Drawing.Color.Transparent;
             this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterar.Enabled = false;
             this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAlterar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -215,6 +218,7 @@
             // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(102, 81);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(101, 20);
@@ -315,7 +319,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnProcurar;
-        private System.Windows.Forms.TextBox txt_Pesquisa;
+        private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAlterar;

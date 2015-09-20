@@ -15,44 +15,34 @@ namespace Model
 
         public static bool Cadastrar(AUTOR pAutor)
         {
-            var oDB = new BibliotecaVirtualEntities();
-
-            //String de Seleção do usuário
-            var ConsultaAutor = (from CA in oDB.AUTOR
-                                 where CA.NOME == pAutor.NOME
-                                 select CA).SingleOrDefault();
-
-            //Se a consulta retorna NULA ele cadastra o usuário    
-            if (ConsultaAutor == null)
+            using (BibliotecaVirtualEntities oDB = new BibliotecaVirtualEntities())
             {
-                try
-                {
-                    oDB.AUTOR.Add(pAutor);
-                    oDB.SaveChanges();
-                    oDB.Dispose();
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-                return true;
-            }
-            //Se a consulta retorna um usuário, atualiza ele com os dados da tela    
-            else
-            {
-                try
-                {
-                    pAutor.NOME = ConsultaAutor.NOME;
-                    pAutor.SOBRENOME = ConsultaAutor.SOBRENOME;
-                    pAutor.BIOGRAFIA = ConsultaAutor.BIOGRAFIA;
-                    pAutor.SITE = ConsultaAutor.SITE;
 
-                }
-                catch (Exception)
+
+                //String de Seleção do usuário
+                var ConsultaAutor = (from CA in oDB.AUTOR
+                                     where CA.NOME == pAutor.NOME
+                                     select CA).SingleOrDefault();
+
+                //Se a consulta retorna NULA ele cadastra o usuário    
+                if (ConsultaAutor == null)
                 {
-                    throw;
+                    try
+                    {
+                        oDB.AUTOR.Add(pAutor);
+                        oDB.SaveChanges();
+                        oDB.Dispose();
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                    return true;
                 }
-                return false;
+                else
+                {
+                    return false;
+                }
             }
         }
 
@@ -141,21 +131,39 @@ namespace Model
             //Se a consulta retorna um usuário, atualiza ele com os dados da tela    
             else
             {
-
-                AUTOR oAutor = new AUTOR();
-
-                oAutor.NOME = ConsultaAutor.NOME;
-                oAutor.SOBRENOME = ConsultaAutor.SOBRENOME;
-                oAutor.ID_AUTOR = ConsultaAutor.ID_AUTOR;
-                oAutor.BIOGRAFIA = ConsultaAutor.BIOGRAFIA;
-                oAutor.SITE = ConsultaAutor.SITE;
-                
-
-                return oAutor;
+                return ConsultaAutor;
             }
         }
 
 
+
+
+        ///SELECIONAR POR NOME
+
+
+
+
+
+        public static AUTOR SelecionarNome(string AutorNome)
+        {
+            var oDB = new BibliotecaVirtualEntities();
+
+            //String de Seleção do autor
+            var ConsultaAutor = (from seleciona in oDB.AUTOR
+                                   where seleciona.NOME == AutorNome
+                                   select seleciona).SingleOrDefault();
+
+            if (ConsultaAutor == null)
+            {
+                return null;
+            }
+            //Se a consulta retorna um usuário, atualiza ele com os dados da tela    
+            else
+            {
+
+                return ConsultaAutor;
+            }
+        }
 
     }
 }

@@ -20,5 +20,11 @@ namespace Controller
 
         [OperationContract]
         AUTOR Selecionar(int idAutor);
+
+        [OperationContract]
+        AUTOR SelecionarNome(string AutorNome);
+
+        [OperationContract]
+        bool Deletar(int idAutor);
     }
 }

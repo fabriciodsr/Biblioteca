@@ -53,15 +53,11 @@
             this.dtp_Publicacao = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.cmbAutor1 = new System.Windows.Forms.ComboBox();
             this.cmbAutor2 = new System.Windows.Forms.ComboBox();
-            this.cmbAutor3 = new System.Windows.Forms.ComboBox();
-            this.cmbAutor4 = new System.Windows.Forms.ComboBox();
             this.cmbEditora = new System.Windows.Forms.ComboBox();
             this.cmbGenero1 = new System.Windows.Forms.ComboBox();
             this.cmbGenero2 = new System.Windows.Forms.ComboBox();
@@ -335,26 +331,6 @@
             this.label5.TabIndex = 76;
             this.label5.Text = "Autor 2";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(225, 176);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 16);
-            this.label10.TabIndex = 76;
-            this.label10.Text = "Autor 3";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(225, 213);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 16);
-            this.label12.TabIndex = 76;
-            this.label12.Text = "Autor 4";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -456,78 +432,6 @@
             this.cmbAutor2.Name = "cmbAutor2";
             this.cmbAutor2.Size = new System.Drawing.Size(452, 21);
             this.cmbAutor2.TabIndex = 89;
-            // 
-            // cmbAutor3
-            // 
-            this.cmbAutor3.FormattingEnabled = true;
-            this.cmbAutor3.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP ",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC\t ",
-            "SP\t ",
-            "SE\t ",
-            "TO"});
-            this.cmbAutor3.Location = new System.Drawing.Point(287, 175);
-            this.cmbAutor3.Name = "cmbAutor3";
-            this.cmbAutor3.Size = new System.Drawing.Size(452, 21);
-            this.cmbAutor3.TabIndex = 89;
-            // 
-            // cmbAutor4
-            // 
-            this.cmbAutor4.FormattingEnabled = true;
-            this.cmbAutor4.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP ",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC\t ",
-            "SP\t ",
-            "SE\t ",
-            "TO"});
-            this.cmbAutor4.Location = new System.Drawing.Point(287, 212);
-            this.cmbAutor4.Name = "cmbAutor4";
-            this.cmbAutor4.Size = new System.Drawing.Size(452, 21);
-            this.cmbAutor4.TabIndex = 89;
             // 
             // cmbEditora
             // 
@@ -645,8 +549,6 @@
             this.Controls.Add(this.cmbGenero2);
             this.Controls.Add(this.cmbGenero1);
             this.Controls.Add(this.cmbEditora);
-            this.Controls.Add(this.cmbAutor4);
-            this.Controls.Add(this.cmbAutor3);
             this.Controls.Add(this.cmbAutor2);
             this.Controls.Add(this.cmbAutor1);
             this.Controls.Add(this.label15);
@@ -658,8 +560,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
@@ -710,15 +610,11 @@
         private System.Windows.Forms.DateTimePicker dtp_Publicacao;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox cmbAutor1;
         private System.Windows.Forms.ComboBox cmbAutor2;
-        private System.Windows.Forms.ComboBox cmbAutor3;
-        private System.Windows.Forms.ComboBox cmbAutor4;
         private System.Windows.Forms.ComboBox cmbEditora;
         private System.Windows.Forms.ComboBox cmbGenero1;
         private System.Windows.Forms.ComboBox cmbGenero2;

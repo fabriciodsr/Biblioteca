@@ -41,7 +41,7 @@ namespace Model
                     }
                     return true;
                 }
-                //Se a consulta retorna um usuário, atualiza ele com os dados da tela    
+
                 else
                 {
                     return false;

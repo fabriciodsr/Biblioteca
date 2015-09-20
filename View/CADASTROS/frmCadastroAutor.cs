@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model;
 using Controller;
-//using System.Data.Entity.Validation;
 
 
 namespace View
@@ -25,12 +24,14 @@ namespace View
         }
 
 
+        int var = 0;
 
 
 
         private void frmCadastroAutor_FormClosed(object sender, FormClosedEventArgs e)
         {
             ((frmPrincipal)this.MdiParent).aUTORToolStripMenuItem.Enabled = true;
+
         }
 
 
@@ -43,7 +44,7 @@ namespace View
             txtSite.Text = "";
             txtSobreNome.Text = "";
             txt_ID.Text = "";
-            txt_Nome.Text = "";
+            txt_Pesquisa.Text = "";
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
@@ -115,6 +116,12 @@ namespace View
             txtSobreNome.Enabled = true;
             txtBiografia.Enabled = true;
             txtSite.Enabled = true;
+        }
+
+        private void frmCadastroAutor_Load(object sender, EventArgs e)
+        {
+            cmbPesquisa.SelectedIndex = 0;
+
         }
     }
 }

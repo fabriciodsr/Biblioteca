@@ -12,6 +12,10 @@ namespace Controller
     // NOTE: In order to launch WCF Test Client for testing this service, please select CAluno.svc or CAluno.svc.cs at the Solution Explorer and start debugging.
     public class CAluno : ICAluno
     {
+
+        ///ALTERAR
+
+
         public bool Alterar(ALUNO oAluno)
         {
             if (AlunoMetod.Alterar(oAluno))
@@ -23,6 +27,12 @@ namespace Controller
                 return false;
             }
         }
+
+
+
+
+        ///CADASTRAR
+
 
         public bool Cadastrar(ALUNO oAluno)
         {

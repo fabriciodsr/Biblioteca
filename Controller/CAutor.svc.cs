@@ -36,9 +36,22 @@ namespace Controller
             }
         }
 
+        public bool Deletar(int idAutor)
+        {
+            return AutorMetod.Deletar(idAutor);
+            
+        }
+
         public AUTOR Selecionar(int idAutor)
         {
             return AutorMetod.Selecionar(idAutor);
         }
+
+        public AUTOR SelecionarNome(string AutorNome)
+        {
+            return AutorMetod.SelecionarNome(AutorNome);
+        }
+
+
     }
 }

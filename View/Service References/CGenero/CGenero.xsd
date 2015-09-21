@@ -71,4 +71,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ListaTodosGeneros">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaTodosGenerosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="ListaTodosGenerosResult" nillable="true" type="q5:ArrayOfGENERO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

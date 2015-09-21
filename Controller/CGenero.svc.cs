@@ -42,6 +42,11 @@ namespace Controller
 
         }
 
+        public List<GENERO> ListaTodosGeneros()
+        {
+            return GeneroMetod.ListaTodosGeneros();
+        }
+
         public GENERO Selecionar(int idGENERO)
         {
             return GeneroMetod.Selecionar(idGENERO);

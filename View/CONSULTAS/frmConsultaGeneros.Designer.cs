@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaGeneros));
             this.cmbAndar = new System.Windows.Forms.ComboBox();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -44,7 +45,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cmbCorredor = new System.Windows.Forms.ComboBox();
+            this.gENEROBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgGeneros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gENEROBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbAndar
@@ -137,6 +140,7 @@
             this.btnProcurar.Size = new System.Drawing.Size(62, 55);
             this.btnProcurar.TabIndex = 104;
             this.btnProcurar.UseVisualStyleBackColor = false;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
             // label14
             // 
@@ -286,6 +290,10 @@
             this.cmbCorredor.Size = new System.Drawing.Size(121, 21);
             this.cmbCorredor.TabIndex = 121;
             // 
+            // gENEROBindingSource
+            // 
+            this.gENEROBindingSource.DataSource = typeof(Model.GENERO);
+            // 
             // frmConsultaGeneros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,6 +319,7 @@
             this.Text = "CONSULTA DE GÊNEROS";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmConsultaGeneros_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dtgGeneros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gENEROBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,5 +342,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cmbCorredor;
+        private System.Windows.Forms.BindingSource gENEROBindingSource;
     }
 }

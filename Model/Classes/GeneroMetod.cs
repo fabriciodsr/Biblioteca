@@ -168,5 +168,19 @@ namespace Model
 
 
 
+        public static List<GENERO> ListaTodosGeneros()
+        {
+            using (BibliotecaVirtualEntities oDB = new BibliotecaVirtualEntities())
+            {
+
+                IEnumerable<GENERO> Lista = (from p in oDB.GENERO select p);
+
+                return Lista.ToList();
+
+                
+            }
+        }
+
+
     }
 }

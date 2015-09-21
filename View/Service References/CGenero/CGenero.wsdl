@@ -37,6 +37,12 @@
   <wsdl:message name="ICGenero_Deletar_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeletarResponse" />
   </wsdl:message>
+  <wsdl:message name="ICGenero_ListaTodosGeneros_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaTodosGeneros" />
+  </wsdl:message>
+  <wsdl:message name="ICGenero_ListaTodosGeneros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaTodosGenerosResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICGenero">
     <wsdl:operation name="Cadastrar">
       <wsdl:input wsaw:Action="http://tempuri.org/ICGenero/Cadastrar" message="tns:ICGenero_Cadastrar_InputMessage" />
@@ -57,6 +63,10 @@
     <wsdl:operation name="Deletar">
       <wsdl:input wsaw:Action="http://tempuri.org/ICGenero/Deletar" message="tns:ICGenero_Deletar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICGenero/DeletarResponse" message="tns:ICGenero_Deletar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaTodosGeneros">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGenero/ListaTodosGeneros" message="tns:ICGenero_ListaTodosGeneros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGenero/ListaTodosGenerosResponse" message="tns:ICGenero_ListaTodosGeneros_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICGenero" type="tns:ICGenero">
@@ -99,6 +109,15 @@
     </wsdl:operation>
     <wsdl:operation name="Deletar">
       <soap:operation soapAction="http://tempuri.org/ICGenero/Deletar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTodosGeneros">
+      <soap:operation soapAction="http://tempuri.org/ICGenero/ListaTodosGeneros" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

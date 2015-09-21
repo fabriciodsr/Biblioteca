@@ -23,5 +23,14 @@ namespace View
         {
             ((frmPrincipal)this.MdiParent).gÊNEROSToolStripMenuItem.Enabled = true;
         }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            CGenero.CGeneroClient oProxy = new CGenero.CGeneroClient();
+            oProxy.Open();
+            dtgGeneros.DataSource = oProxy.ListaTodosGeneros();
+
+            oProxy.Close();
+        }
     }
 }

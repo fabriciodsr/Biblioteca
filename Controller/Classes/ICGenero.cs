@@ -26,5 +26,8 @@ namespace Controller
 
         [OperationContract]
         bool Deletar(int idGENERO);
+
+        [OperationContract]
+        List<GENERO> ListaTodosGeneros();
     }
 }

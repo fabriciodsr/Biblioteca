@@ -44,6 +44,12 @@ namespace View.CGenero {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICGenero/Deletar", ReplyAction="http://tempuri.org/ICGenero/DeletarResponse")]
         System.Threading.Tasks.Task<bool> DeletarAsync(int idGENERO);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICGenero/ListaTodosGeneros", ReplyAction="http://tempuri.org/ICGenero/ListaTodosGenerosResponse")]
+        Model.GENERO[] ListaTodosGeneros();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICGenero/ListaTodosGeneros", ReplyAction="http://tempuri.org/ICGenero/ListaTodosGenerosResponse")]
+        System.Threading.Tasks.Task<Model.GENERO[]> ListaTodosGenerosAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +117,14 @@ namespace View.CGenero {
         
         public System.Threading.Tasks.Task<bool> DeletarAsync(int idGENERO) {
             return base.Channel.DeletarAsync(idGENERO);
+        }
+        
+        public Model.GENERO[] ListaTodosGeneros() {
+            return base.Channel.ListaTodosGeneros();
+        }
+        
+        public System.Threading.Tasks.Task<Model.GENERO[]> ListaTodosGenerosAsync() {
+            return base.Channel.ListaTodosGenerosAsync();
         }
     }
 }

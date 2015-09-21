@@ -44,5 +44,17 @@ namespace View
                 char.IsPunctuation(e.KeyChar)) //Pontuação
                 e.Handled = true;
         }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text == "0")
+            {
+                CEditora.CEditoraClient oProxy = new CEditora.CEditoraClient();
+                oProxy.Open();
+                dtgEditoras.DataSource = oProxy.ListaTodasEditoras();
+
+                oProxy.Close();
+            }
+        }
     }
 }

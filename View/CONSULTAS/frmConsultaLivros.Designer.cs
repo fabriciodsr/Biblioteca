@@ -73,7 +73,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(574, 131);
+            this.label1.Location = new System.Drawing.Point(574, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 16);
             this.label1.TabIndex = 101;
@@ -97,12 +97,12 @@
             this.btnProcurar.FlatAppearance.BorderSize = 0;
             this.btnProcurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnProcurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnProcurar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnProcurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcurar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnProcurar.Location = new System.Drawing.Point(545, 37);
+            this.btnProcurar.Location = new System.Drawing.Point(483, 50);
             this.btnProcurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProcurar.Name = "btnProcurar";
-            this.btnProcurar.Size = new System.Drawing.Size(62, 55);
+            this.btnProcurar.Size = new System.Drawing.Size(70, 70);
             this.btnProcurar.TabIndex = 86;
             this.btnProcurar.UseVisualStyleBackColor = false;
             // 
@@ -200,12 +200,12 @@
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.Location = new System.Drawing.Point(629, 37);
+            this.btnCancelar.Location = new System.Drawing.Point(721, 95);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(63, 55);
+            this.btnCancelar.Size = new System.Drawing.Size(50, 50);
             this.btnCancelar.TabIndex = 87;
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 

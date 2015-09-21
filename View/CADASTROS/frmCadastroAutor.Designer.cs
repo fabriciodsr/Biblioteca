@@ -119,7 +119,7 @@
             this.btnDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeletar.BackColor = System.Drawing.Color.Transparent;
             this.btnDeletar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeletar.BackgroundImage")));
-            this.btnDeletar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDeletar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletar.Enabled = false;
             this.btnDeletar.FlatAppearance.BorderSize = 0;
@@ -127,10 +127,10 @@
             this.btnDeletar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDeletar.Location = new System.Drawing.Point(188, 11);
+            this.btnDeletar.Location = new System.Drawing.Point(186, 11);
             this.btnDeletar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(33, 34);
+            this.btnDeletar.Size = new System.Drawing.Size(50, 50);
             this.btnDeletar.TabIndex = 28;
             this.btnDeletar.UseVisualStyleBackColor = false;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
@@ -140,7 +140,7 @@
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
-            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -150,7 +150,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(128, 11);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(36, 34);
+            this.btnCancelar.Size = new System.Drawing.Size(50, 50);
             this.btnCancelar.TabIndex = 27;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -159,7 +159,8 @@
             // 
             this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAlterar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAlterar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAlterar.BackgroundImage")));
+            this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterar.Enabled = false;
             this.btnAlterar.FlatAppearance.BorderSize = 0;
@@ -168,12 +169,11 @@
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.Color.Red;
-            this.btnAlterar.Location = new System.Drawing.Point(13, 11);
+            this.btnAlterar.Location = new System.Drawing.Point(70, 14);
             this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(33, 34);
+            this.btnAlterar.Size = new System.Drawing.Size(50, 50);
             this.btnAlterar.TabIndex = 26;
-            this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
@@ -181,7 +181,8 @@
             // 
             this.btnInserir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInserir.BackColor = System.Drawing.Color.Transparent;
-            this.btnInserir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnInserir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInserir.BackgroundImage")));
+            this.btnInserir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnInserir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInserir.FlatAppearance.BorderSize = 0;
             this.btnInserir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -189,12 +190,11 @@
             this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.ForeColor = System.Drawing.Color.Red;
-            this.btnInserir.Location = new System.Drawing.Point(70, 11);
+            this.btnInserir.Location = new System.Drawing.Point(12, 14);
             this.btnInserir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(34, 34);
+            this.btnInserir.Size = new System.Drawing.Size(50, 50);
             this.btnInserir.TabIndex = 25;
-            this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = false;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 

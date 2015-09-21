@@ -352,6 +352,9 @@ namespace View
             txtSumario.Text = "";
             dtp_Publicacao.Value = System.DateTime.Now;
             cmbEditora.SelectedItem = null;
+            cmbAutor1.SelectedItem = null;
+            cmbAutor2.SelectedItem = null;
+            cmbGenero1.SelectedItem = null;
             txtVolume.Text = "";
             txtID.Text = "";
             txtPesquisa.Text = "";

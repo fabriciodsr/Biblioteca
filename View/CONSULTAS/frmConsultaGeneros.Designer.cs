@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaGeneros));
             this.cmbAndar = new System.Windows.Forms.ComboBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgGeneros = new System.Windows.Forms.DataGridView();
             this.btnProcurar = new System.Windows.Forms.Button();
@@ -72,21 +71,11 @@
             this.txtID.TabIndex = 106;
             this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(211, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 24);
-            this.label2.TabIndex = 119;
-            this.label2.Text = "*";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(574, 123);
+            this.label1.Location = new System.Drawing.Point(221, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 16);
             this.label1.TabIndex = 118;
@@ -110,12 +99,12 @@
             this.btnProcurar.FlatAppearance.BorderSize = 0;
             this.btnProcurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnProcurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnProcurar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnProcurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcurar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnProcurar.Location = new System.Drawing.Point(545, 37);
+            this.btnProcurar.Location = new System.Drawing.Point(466, 46);
             this.btnProcurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProcurar.Name = "btnProcurar";
-            this.btnProcurar.Size = new System.Drawing.Size(62, 55);
+            this.btnProcurar.Size = new System.Drawing.Size(70, 70);
             this.btnProcurar.TabIndex = 104;
             this.btnProcurar.UseVisualStyleBackColor = false;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
@@ -212,12 +201,12 @@
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.Location = new System.Drawing.Point(629, 37);
+            this.btnCancelar.Location = new System.Drawing.Point(721, 84);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(63, 55);
+            this.btnCancelar.Size = new System.Drawing.Size(50, 50);
             this.btnCancelar.TabIndex = 105;
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
@@ -269,7 +258,6 @@
             this.Controls.Add(this.cmbCorredor);
             this.Controls.Add(this.cmbAndar);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgGeneros);
             this.Controls.Add(this.btnProcurar);
@@ -296,7 +284,6 @@
 
         private System.Windows.Forms.ComboBox cmbAndar;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtgGeneros;
         private System.Windows.Forms.Button btnProcurar;

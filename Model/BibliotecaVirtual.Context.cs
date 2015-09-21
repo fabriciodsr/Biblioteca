@@ -29,7 +29,7 @@ namespace Model
         public DbSet<ALUNO> ALUNO { get; set; }
         public DbSet<AUTOR> AUTOR { get; set; }
         public DbSet<EDITORA> EDITORA { get; set; }
-        public DbSet<Emprestimo> Emprestimo { get; set; }
+        public DbSet<EMPRESTIMO> EMPRESTIMO { get; set; }
         public DbSet<GENERO> GENERO { get; set; }
         public DbSet<LIVRO> LIVRO { get; set; }
         public DbSet<RESERVA> RESERVA { get; set; }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bf30081d-b8a0-4652-ba6d-bef047c5ee73" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ce0aff04-e160-4626-bdf4-271508adb061" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:26759/CAluno.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CAluno.xsd" MetadataType="Schema" ID="aa9f97cf-896b-4341-8a58-14292dbfc635" SourceId="1" SourceUrl="http://localhost:26759/CAluno.svc?xsd=xsd1" />
-    <MetadataFile FileName="CAluno1.xsd" MetadataType="Schema" ID="6483a13c-47fc-4e53-89fb-58ef62e16ef1" SourceId="1" SourceUrl="http://localhost:26759/CAluno.svc?xsd=xsd0" />
-    <MetadataFile FileName="CAluno.wsdl" MetadataType="Wsdl" ID="dd18d3f3-46eb-4c48-aab4-cce4a4cb6460" SourceId="1" SourceUrl="http://localhost:26759/CAluno.svc?wsdl" />
-    <MetadataFile FileName="CAluno2.xsd" MetadataType="Schema" ID="bb85a5f1-b9c1-4bc7-b3ed-41716b65ec33" SourceId="1" SourceUrl="http://localhost:26759/CAluno.svc?xsd=xsd2" />
-    <MetadataFile FileName="CAluno.disco" MetadataType="Disco" ID="32368d57-20fa-4d27-8230-63d41e805e45" SourceId="1" SourceUrl="http://localhost:26759/CAluno.svc?disco" />
+    <MetadataFile FileName="CAluno.xsd" MetadataType="Schema" ID="ebacaf1b-eaf3-4cc0-b8f9-6af54d109bfd" SourceId="1" SourceUrl="http://localhost:26759/CAluno.svc?xsd=xsd1" />
+    <MetadataFile FileName="CAluno1.xsd" MetadataType="Schema" ID="8568261f-30f5-47a3-a5ef-e4f0bbc88354" SourceId="1" SourceUrl="http://localhost:26759/CAluno.svc?xsd=xsd0" />
+    <MetadataFile FileName="CAluno.wsdl" MetadataType="Wsdl" ID="e3466720-06b6-41d7-b853-86cbfd455122" SourceId="1" SourceUrl="http://localhost:26759/CAluno.svc?wsdl" />
+    <MetadataFile FileName="CAluno2.xsd" MetadataType="Schema" ID="74fc1034-e68f-4775-b91c-f80682f39b81" SourceId="1" SourceUrl="http://localhost:26759/CAluno.svc?xsd=xsd2" />
+    <MetadataFile FileName="CAluno.disco" MetadataType="Disco" ID="603f9f7e-4ed1-4a0b-b96d-b532162652c9" SourceId="1" SourceUrl="http://localhost:26759/CAluno.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

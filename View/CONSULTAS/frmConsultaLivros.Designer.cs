@@ -53,11 +53,11 @@
             // 
             // txtID
             // 
-            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(114, 20);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(101, 20);
             this.txtID.TabIndex = 88;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // label2
             // 
@@ -118,35 +118,8 @@
             // 
             // cmbGenero
             // 
+            this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP ",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC\t ",
-            "SP\t ",
-            "SE\t ",
-            "TO"});
             this.cmbGenero.Location = new System.Drawing.Point(297, 20);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(162, 21);
@@ -195,6 +168,7 @@
             this.txtVolume.Name = "txtVolume";
             this.txtVolume.Size = new System.Drawing.Size(27, 20);
             this.txtVolume.TabIndex = 93;
+            this.txtVolume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVolume_KeyPress);
             // 
             // label4
             // 
@@ -237,35 +211,8 @@
             // 
             // cmbEditora
             // 
+            this.cmbEditora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEditora.FormattingEnabled = true;
-            this.cmbEditora.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP ",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC\t ",
-            "SP\t ",
-            "SE\t ",
-            "TO"});
             this.cmbEditora.Location = new System.Drawing.Point(114, 72);
             this.cmbEditora.Name = "cmbEditora";
             this.cmbEditora.Size = new System.Drawing.Size(345, 21);
@@ -273,35 +220,8 @@
             // 
             // cmbAutor1
             // 
+            this.cmbAutor1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAutor1.FormattingEnabled = true;
-            this.cmbAutor1.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP ",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC\t ",
-            "SP\t ",
-            "SE\t ",
-            "TO"});
             this.cmbAutor1.Location = new System.Drawing.Point(114, 99);
             this.cmbAutor1.Name = "cmbAutor1";
             this.cmbAutor1.Size = new System.Drawing.Size(345, 21);
@@ -319,35 +239,8 @@
             // 
             // cmbAutor2
             // 
+            this.cmbAutor2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAutor2.FormattingEnabled = true;
-            this.cmbAutor2.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP ",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC\t ",
-            "SP\t ",
-            "SE\t ",
-            "TO"});
             this.cmbAutor2.Location = new System.Drawing.Point(114, 126);
             this.cmbAutor2.Name = "cmbAutor2";
             this.cmbAutor2.Size = new System.Drawing.Size(345, 21);
@@ -381,6 +274,7 @@
             this.Name = "frmConsultaLivros";
             this.Text = "CONSULTA DE LIVROS";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmConsultaLivros_FormClosed);
+            this.Load += new System.EventHandler(this.frmConsultaLivros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgLivros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -21,7 +21,28 @@ namespace View
 
         private void frmConsultaEditoras_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ((frmPrincipal)this.MdiParent).gÊNEROSToolStripMenuItem.Enabled = true;
+            ((frmPrincipal)this.MdiParent).eDITORASToolStripMenuItem.Enabled = true;
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ApenasNumero(e);
+        }
+
+
+
+
+        ///APENAS NÚMERO
+
+
+
+        private static void ApenasNumero(KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) ||    //Letras
+                char.IsSymbol(e.KeyChar) ||    //Símbolos
+                char.IsWhiteSpace(e.KeyChar) || //Espaço
+                char.IsPunctuation(e.KeyChar)) //Pontuação
+                e.Handled = true;
         }
     }
 }

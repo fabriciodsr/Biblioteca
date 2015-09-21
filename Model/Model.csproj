@@ -48,60 +48,60 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ALUNO.cs">
-      <DependentUpon>Biblioteca.tt</DependentUpon>
+      <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AUTOR.cs">
+      <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotecaVirtual.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotecaVirtual.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotecaVirtual.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotecaVirtual.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotecaVirtual.edmx</DependentUpon>
     </Compile>
     <Compile Include="Classes\AlunoMetod.cs" />
-    <Compile Include="AUTOR.cs">
-      <DependentUpon>Biblioteca.tt</DependentUpon>
-    </Compile>
     <Compile Include="Classes\AutorMetod.cs" />
-    <Compile Include="Biblioteca.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Biblioteca.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Biblioteca.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Biblioteca.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Biblioteca.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Biblioteca.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="EDITORA.cs">
-      <DependentUpon>Biblioteca.tt</DependentUpon>
-    </Compile>
     <Compile Include="Classes\EditoraMetod.cs" />
-    <Compile Include="Emprestimo.cs">
-      <DependentUpon>Biblioteca.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GENERO.cs">
-      <DependentUpon>Biblioteca.tt</DependentUpon>
-    </Compile>
     <Compile Include="Classes\GeneroMetod.cs" />
     <Compile Include="Classes\ListaPais.cs" />
-    <Compile Include="LIVRO.cs">
-      <DependentUpon>Biblioteca.tt</DependentUpon>
-    </Compile>
     <Compile Include="Classes\LivroMetod.cs" />
+    <Compile Include="EDITORA.cs">
+      <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMPRESTIMO.cs">
+      <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GENERO.cs">
+      <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LIVRO.cs">
+      <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RESERVA.cs">
-      <DependentUpon>Biblioteca.tt</DependentUpon>
+      <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Biblioteca.tt</DependentUpon>
+      <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="Biblioteca.edmx">
+    <EntityDeploy Include="BibliotecaVirtual.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Biblioteca.Designer.cs</LastGenOutput>
+      <LastGenOutput>BibliotecaVirtual.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Biblioteca.edmx.diagram">
-      <DependentUpon>Biblioteca.edmx</DependentUpon>
+    <None Include="BibliotecaVirtual.edmx.diagram">
+      <DependentUpon>BibliotecaVirtual.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -109,15 +109,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Biblioteca.Context.tt">
+    <Content Include="BibliotecaVirtual.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Biblioteca.edmx</DependentUpon>
-      <LastGenOutput>Biblioteca.Context.cs</LastGenOutput>
+      <DependentUpon>BibliotecaVirtual.edmx</DependentUpon>
+      <LastGenOutput>BibliotecaVirtual.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Biblioteca.tt">
+    <Content Include="BibliotecaVirtual.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Biblioteca.edmx</DependentUpon>
-      <LastGenOutput>Biblioteca.cs</LastGenOutput>
+      <DependentUpon>BibliotecaVirtual.edmx</DependentUpon>
+      <LastGenOutput>BibliotecaVirtual.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

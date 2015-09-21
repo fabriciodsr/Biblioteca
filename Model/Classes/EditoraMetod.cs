@@ -172,5 +172,20 @@ namespace Model
         }
 
 
+
+
+        public static List<EDITORA> ListaTodasEditoras()
+        {
+            using (BibliotecaVirtualEntities oDB = new BibliotecaVirtualEntities())
+            {
+
+                IEnumerable<EDITORA> Lista = (from p in oDB.EDITORA select p);
+
+                return Lista.ToList();
+
+
+            }
+        }
+
     }
 }

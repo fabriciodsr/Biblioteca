@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="77e46874-9c7d-4c3c-87de-93d3035ff83b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d2048020-efb0-48f7-bfa1-cbb5686565bd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:26759/CGenero.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CGenero.xsd" MetadataType="Schema" ID="93b341a2-a4c2-4550-94c1-143045bd739c" SourceId="1" SourceUrl="http://localhost:26759/CGenero.svc?xsd=xsd0" />
-    <MetadataFile FileName="CGenero.wsdl" MetadataType="Wsdl" ID="dad5ea3a-78ad-44ca-8a8a-6ef5e0c5a360" SourceId="1" SourceUrl="http://localhost:26759/CGenero.svc?wsdl" />
-    <MetadataFile FileName="CGenero.disco" MetadataType="Disco" ID="6627398e-3c80-47a6-8462-1f8832e2ffde" SourceId="1" SourceUrl="http://localhost:26759/CGenero.svc?disco" />
-    <MetadataFile FileName="CGenero1.xsd" MetadataType="Schema" ID="25c90287-da9f-4671-b3d6-0e04d22630df" SourceId="1" SourceUrl="http://localhost:26759/CGenero.svc?xsd=xsd1" />
-    <MetadataFile FileName="CGenero2.xsd" MetadataType="Schema" ID="25d9969b-3e21-498e-b766-061127761bb2" SourceId="1" SourceUrl="http://localhost:26759/CGenero.svc?xsd=xsd2" />
+    <MetadataFile FileName="CGenero.xsd" MetadataType="Schema" ID="54777987-8bd9-40d6-ba2e-2b10951be98b" SourceId="1" SourceUrl="http://localhost:26759/CGenero.svc?xsd=xsd0" />
+    <MetadataFile FileName="CGenero.wsdl" MetadataType="Wsdl" ID="4a37c0d7-ca1b-47aa-9c57-1ac0b85b78f8" SourceId="1" SourceUrl="http://localhost:26759/CGenero.svc?wsdl" />
+    <MetadataFile FileName="CGenero.disco" MetadataType="Disco" ID="d5a5d177-bec8-487f-a2a8-61e677ed9734" SourceId="1" SourceUrl="http://localhost:26759/CGenero.svc?disco" />
+    <MetadataFile FileName="CGenero1.xsd" MetadataType="Schema" ID="c3e9732e-5a9a-4475-a20f-59754678109d" SourceId="1" SourceUrl="http://localhost:26759/CGenero.svc?xsd=xsd1" />
+    <MetadataFile FileName="CGenero2.xsd" MetadataType="Schema" ID="6cf58adc-1ecc-45c1-892f-6ac75745419d" SourceId="1" SourceUrl="http://localhost:26759/CGenero.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

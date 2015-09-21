@@ -265,6 +265,7 @@
             // 
             // cmbAndar
             // 
+            this.cmbAndar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAndar.FormattingEnabled = true;
             this.cmbAndar.Items.AddRange(new object[] {
             "1º",
@@ -278,6 +279,7 @@
             // 
             // cmbCorredor
             // 
+            this.cmbCorredor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCorredor.FormattingEnabled = true;
             this.cmbCorredor.Items.AddRange(new object[] {
             "A",
@@ -313,6 +315,7 @@
             // 
             // cmbPrateleira
             // 
+            this.cmbPrateleira.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPrateleira.FormattingEnabled = true;
             this.cmbPrateleira.Items.AddRange(new object[] {
             "1",

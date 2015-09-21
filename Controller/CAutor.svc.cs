@@ -52,6 +52,11 @@ namespace Controller
             return AutorMetod.SelecionarNome(AutorNome);
         }
 
+        public List<AUTOR> ListaTodosAutores()
+        {
+            return AutorMetod.ListaTodosAutores();
+        }
+
 
     }
 }

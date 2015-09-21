@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2574cedf-3f56-47f6-8aef-052c50f89cbf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d346a795-48bf-4bbe-8ea8-02e055e30281" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:26759/CAutor.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CAutor.wsdl" MetadataType="Wsdl" ID="a744b08c-225f-46f1-a98f-56aa06e6ef90" SourceId="1" SourceUrl="http://localhost:26759/CAutor.svc?wsdl" />
-    <MetadataFile FileName="CAutor.xsd" MetadataType="Schema" ID="296f0e50-9f90-4553-a4db-663e68260d8d" SourceId="1" SourceUrl="http://localhost:26759/CAutor.svc?xsd=xsd0" />
-    <MetadataFile FileName="CAutor.disco" MetadataType="Disco" ID="f25063c5-774b-47b5-836a-cdb011576104" SourceId="1" SourceUrl="http://localhost:26759/CAutor.svc?disco" />
-    <MetadataFile FileName="CAutor1.xsd" MetadataType="Schema" ID="313dda2c-3218-4702-89f2-229dff245d35" SourceId="1" SourceUrl="http://localhost:26759/CAutor.svc?xsd=xsd1" />
-    <MetadataFile FileName="CAutor2.xsd" MetadataType="Schema" ID="90b1986b-b421-47c0-bba6-af6ee245e038" SourceId="1" SourceUrl="http://localhost:26759/CAutor.svc?xsd=xsd2" />
+    <MetadataFile FileName="CAutor.wsdl" MetadataType="Wsdl" ID="288e5078-c0be-4a28-833d-c1980c689b20" SourceId="1" SourceUrl="http://localhost:26759/CAutor.svc?wsdl" />
+    <MetadataFile FileName="CAutor.xsd" MetadataType="Schema" ID="854f1bc9-96b0-4156-9761-3ad1b501b7d2" SourceId="1" SourceUrl="http://localhost:26759/CAutor.svc?xsd=xsd0" />
+    <MetadataFile FileName="CAutor.disco" MetadataType="Disco" ID="aff3c787-3180-40c3-be7a-b9303eb5398c" SourceId="1" SourceUrl="http://localhost:26759/CAutor.svc?disco" />
+    <MetadataFile FileName="CAutor1.xsd" MetadataType="Schema" ID="9f06f10a-3fed-497f-8d50-e7e69576b048" SourceId="1" SourceUrl="http://localhost:26759/CAutor.svc?xsd=xsd1" />
+    <MetadataFile FileName="CAutor2.xsd" MetadataType="Schema" ID="544c3b67-7873-4362-abe9-8aadb237a71c" SourceId="1" SourceUrl="http://localhost:26759/CAutor.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

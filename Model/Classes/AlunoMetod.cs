@@ -234,5 +234,19 @@ namespace Model
                 return ConsultaUsuario;
             }
         }
+
+
+        public static List<ALUNO> ListaTodosAlunos()
+        {
+            using (BibliotecaVirtualEntities oDB = new BibliotecaVirtualEntities())
+            {
+
+                IEnumerable<ALUNO> Lista = (from p in oDB.ALUNO select p);
+
+                return Lista.ToList();
+
+
+            }
+        }
     }
 }

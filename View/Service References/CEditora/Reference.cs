@@ -44,6 +44,12 @@ namespace View.CEditora {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICEditora/Deletar", ReplyAction="http://tempuri.org/ICEditora/DeletarResponse")]
         System.Threading.Tasks.Task<bool> DeletarAsync(int idEDITORA);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICEditora/ListaTodasEditoras", ReplyAction="http://tempuri.org/ICEditora/ListaTodasEditorasResponse")]
+        Model.EDITORA[] ListaTodasEditoras();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICEditora/ListaTodasEditoras", ReplyAction="http://tempuri.org/ICEditora/ListaTodasEditorasResponse")]
+        System.Threading.Tasks.Task<Model.EDITORA[]> ListaTodasEditorasAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +117,14 @@ namespace View.CEditora {
         
         public System.Threading.Tasks.Task<bool> DeletarAsync(int idEDITORA) {
             return base.Channel.DeletarAsync(idEDITORA);
+        }
+        
+        public Model.EDITORA[] ListaTodasEditoras() {
+            return base.Channel.ListaTodasEditoras();
+        }
+        
+        public System.Threading.Tasks.Task<Model.EDITORA[]> ListaTodasEditorasAsync() {
+            return base.Channel.ListaTodasEditorasAsync();
         }
     }
 }

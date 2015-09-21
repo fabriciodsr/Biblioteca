@@ -30,7 +30,7 @@ namespace View
 
         private void frmCadastroGenero_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ((frmPrincipal)this.MdiParent).lIVROToolStripMenuItem.Enabled = true;
+            ((frmPrincipal)this.MdiParent).gENEROToolStripMenuItem.Enabled = true;
         }
 
 

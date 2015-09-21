@@ -44,6 +44,12 @@ namespace View.CAutor {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAutor/Deletar", ReplyAction="http://tempuri.org/ICAutor/DeletarResponse")]
         System.Threading.Tasks.Task<bool> DeletarAsync(int idAutor);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAutor/ListaTodosAutores", ReplyAction="http://tempuri.org/ICAutor/ListaTodosAutoresResponse")]
+        Model.AUTOR[] ListaTodosAutores();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAutor/ListaTodosAutores", ReplyAction="http://tempuri.org/ICAutor/ListaTodosAutoresResponse")]
+        System.Threading.Tasks.Task<Model.AUTOR[]> ListaTodosAutoresAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +117,14 @@ namespace View.CAutor {
         
         public System.Threading.Tasks.Task<bool> DeletarAsync(int idAutor) {
             return base.Channel.DeletarAsync(idAutor);
+        }
+        
+        public Model.AUTOR[] ListaTodosAutores() {
+            return base.Channel.ListaTodosAutores();
+        }
+        
+        public System.Threading.Tasks.Task<Model.AUTOR[]> ListaTodosAutoresAsync() {
+            return base.Channel.ListaTodosAutoresAsync();
         }
     }
 }

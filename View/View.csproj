@@ -269,21 +269,6 @@
     <WCFMetadataStorage Include="Service References\CLivro\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\CAutor\CAutor.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\CAutor\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\CAutor\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\CAutor\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\CAluno\CAluno.disco" />
   </ItemGroup>
   <ItemGroup>
@@ -294,6 +279,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CAluno\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CAutor\CAutor.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CAutor\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CAutor\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CAutor\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -314,21 +314,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\CLivro\CLivro.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\CLivro\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\CLivro\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\CLivro\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\CGenero\CGenero.disco" />
   </ItemGroup>
   <ItemGroup>
@@ -339,6 +324,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CGenero\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivro\CLivro.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivro\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivro\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivro\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

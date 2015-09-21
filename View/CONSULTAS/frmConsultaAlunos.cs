@@ -94,5 +94,34 @@ namespace View
             txtPesquisa.Text = "";
             cmbPesquisa.SelectedItem = null;
         }
+
+
+
+
+        ///APENAS NÚMERO
+
+
+
+        private static void ApenasNumero(KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) ||    //Letras
+                char.IsSymbol(e.KeyChar) ||    //Símbolos
+                char.IsWhiteSpace(e.KeyChar) || //Espaço
+                char.IsPunctuation(e.KeyChar)) //Pontuação
+                e.Handled = true;
+        }
+
+        private void txtPesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(cmbPesquisa.SelectedIndex == 1)
+            {
+                ApenasNumero(e);
+            }
+        }
+
+        private void cmbPesquisa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtPesquisa.Text = "";
+        }
     }
 }

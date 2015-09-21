@@ -37,6 +37,12 @@
   <wsdl:message name="ICEditora_Deletar_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeletarResponse" />
   </wsdl:message>
+  <wsdl:message name="ICEditora_ListaTodasEditoras_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaTodasEditoras" />
+  </wsdl:message>
+  <wsdl:message name="ICEditora_ListaTodasEditoras_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaTodasEditorasResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICEditora">
     <wsdl:operation name="Cadastrar">
       <wsdl:input wsaw:Action="http://tempuri.org/ICEditora/Cadastrar" message="tns:ICEditora_Cadastrar_InputMessage" />
@@ -57,6 +63,10 @@
     <wsdl:operation name="Deletar">
       <wsdl:input wsaw:Action="http://tempuri.org/ICEditora/Deletar" message="tns:ICEditora_Deletar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICEditora/DeletarResponse" message="tns:ICEditora_Deletar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaTodasEditoras">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICEditora/ListaTodasEditoras" message="tns:ICEditora_ListaTodasEditoras_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICEditora/ListaTodasEditorasResponse" message="tns:ICEditora_ListaTodasEditoras_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICEditora" type="tns:ICEditora">
@@ -99,6 +109,15 @@
     </wsdl:operation>
     <wsdl:operation name="Deletar">
       <soap:operation soapAction="http://tempuri.org/ICEditora/Deletar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTodasEditoras">
+      <soap:operation soapAction="http://tempuri.org/ICEditora/ListaTodasEditoras" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

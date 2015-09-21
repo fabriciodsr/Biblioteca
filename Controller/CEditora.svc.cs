@@ -52,5 +52,11 @@ namespace Controller
             return EditoraMetod.SelecionarNome(EDITORANome);
         }
 
+
+        public List<EDITORA> ListaTodasEditoras()
+        {
+            return EditoraMetod.ListaTodasEditoras();
+        }
+
     }
 }

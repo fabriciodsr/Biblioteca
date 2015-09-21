@@ -65,5 +65,10 @@ namespace Controller
         {
             return AlunoMetod.SelecionarNome(Alunome);
         }
+
+        public List<ALUNO> ListaTodosAlunos()
+        {
+            return AlunoMetod.ListaTodosAlunos();
+        }
     }
 }

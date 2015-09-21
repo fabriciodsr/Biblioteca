@@ -50,6 +50,12 @@ namespace View.CAluno {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAluno/Deletar", ReplyAction="http://tempuri.org/ICAluno/DeletarResponse")]
         System.Threading.Tasks.Task<bool> DeletarAsync(int IDAluno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAluno/ListaTodosAlunos", ReplyAction="http://tempuri.org/ICAluno/ListaTodosAlunosResponse")]
+        Model.ALUNO[] ListaTodosAlunos();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICAluno/ListaTodosAlunos", ReplyAction="http://tempuri.org/ICAluno/ListaTodosAlunosResponse")]
+        System.Threading.Tasks.Task<Model.ALUNO[]> ListaTodosAlunosAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -125,6 +131,14 @@ namespace View.CAluno {
         
         public System.Threading.Tasks.Task<bool> DeletarAsync(int IDAluno) {
             return base.Channel.DeletarAsync(IDAluno);
+        }
+        
+        public Model.ALUNO[] ListaTodosAlunos() {
+            return base.Channel.ListaTodosAlunos();
+        }
+        
+        public System.Threading.Tasks.Task<Model.ALUNO[]> ListaTodosAlunosAsync() {
+            return base.Channel.ListaTodosAlunosAsync();
         }
     }
 }

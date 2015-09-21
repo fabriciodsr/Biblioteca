@@ -52,35 +52,13 @@
             // 
             // cmbAndar
             // 
+            this.cmbAndar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAndar.FormattingEnabled = true;
             this.cmbAndar.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP ",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC\t ",
-            "SP\t ",
-            "SE\t ",
-            "TO"});
+            "1º",
+            "2º",
+            "3º",
+            "4º"});
             this.cmbAndar.Location = new System.Drawing.Point(114, 72);
             this.cmbAndar.Name = "cmbAndar";
             this.cmbAndar.Size = new System.Drawing.Size(345, 21);
@@ -88,11 +66,11 @@
             // 
             // txtID
             // 
-            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(114, 20);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(101, 20);
             this.txtID.TabIndex = 106;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // label2
             // 
@@ -154,35 +132,24 @@
             // 
             // cmbPrateleira
             // 
+            this.cmbPrateleira.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPrateleira.FormattingEnabled = true;
             this.cmbPrateleira.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP ",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC\t ",
-            "SP\t ",
-            "SE\t ",
-            "TO"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"});
             this.cmbPrateleira.Location = new System.Drawing.Point(338, 98);
             this.cmbPrateleira.Name = "cmbPrateleira";
             this.cmbPrateleira.Size = new System.Drawing.Size(121, 21);
@@ -256,35 +223,35 @@
             // 
             // cmbCorredor
             // 
+            this.cmbCorredor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCorredor.FormattingEnabled = true;
             this.cmbCorredor.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP ",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC\t ",
-            "SP\t ",
-            "SE\t ",
-            "TO"});
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"});
             this.cmbCorredor.Location = new System.Drawing.Point(114, 98);
             this.cmbCorredor.Name = "cmbCorredor";
             this.cmbCorredor.Size = new System.Drawing.Size(121, 21);

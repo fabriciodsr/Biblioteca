@@ -15,7 +15,6 @@ namespace View.CLivro {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CLivro.ICLivro")]
     public interface ICLivro {
         
-
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/Cadastrar", ReplyAction="http://tempuri.org/ICLivro/CadastrarResponse")]
         bool Cadastrar(Model.LIVRO oLivro);
         

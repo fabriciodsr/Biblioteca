@@ -29,5 +29,8 @@ namespace Controller
 
         [OperationContract]
         bool Deletar(int IDAluno);
+
+        [OperationContract]
+        List<ALUNO> ListaTodosAlunos();
     }
 }

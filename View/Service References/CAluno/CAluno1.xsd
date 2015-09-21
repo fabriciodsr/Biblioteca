@@ -85,4 +85,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ListaTodosAlunos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaTodosAlunosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="ListaTodosAlunosResult" nillable="true" type="q6:ArrayOfALUNO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

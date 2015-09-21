@@ -71,4 +71,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ListaTodosAutores">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaTodosAutoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="ListaTodosAutoresResult" nillable="true" type="q5:ArrayOfAUTOR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

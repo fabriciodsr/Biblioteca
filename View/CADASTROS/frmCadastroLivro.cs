@@ -21,10 +21,15 @@ namespace View
 
         int var = 0;
 
+
+
         private void frmCadastroLivro_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ((frmPrincipal)this.MdiParent).lIVROSToolStripMenuItem.Enabled = true;
+            ((frmPrincipal)this.MdiParent).lIVROToolStripMenuItem.Enabled = true;
         }
+
+
+
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
@@ -46,26 +51,65 @@ namespace View
                 LIVRO oLivro = new LIVRO();
 
                 oLivro.TITULO = txtTitulo.Text;
-                //oLivro.QTD_DISP_EMPR = ??????????
+                oLivro.VOLUME = Convert.ToInt32(txtVolume.Text);
+                oLivro.DATA_PUBLIC = dtp_Publicacao.Value;
                 oLivro.QTD_EXMPLARES = Convert.ToInt32(txtQuantidade.Text);
                 oLivro.SUMARIO = txtSumario.Text;
-                oLivro.DATA_PUBLIC = dtp_Publicacao.Value;
-                oLivro.ID_EDITORA = cmbEditora.SelectedIndex;
-                oLivro.VOLUME = Convert.ToInt32(txtVolume.Text);
+
+
+
+                CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
+                oProxy.Open();
+
+                AUTOR xAutor = oProxy.SelecionarNome(cmbAutor1.Text);
+                AUTOR xAutor2 = oProxy.SelecionarNome(cmbAutor2.Text);
+
+                oLivro.AUTOR.Add(xAutor);
+                oLivro.AUTOR.Add(xAutor2);
+
+                oProxy.Close();
+
+
+
+                CEditora.CEditoraClient oProxy2 = new CEditora.CEditoraClient();
+                oProxy2.Open();
+
+                EDITORA xEditora = oProxy2.SelecionarNome(cmbEditora.Text);
+                oLivro.EDITORA = xEditora;
+
+                oProxy2.Close();
+
+
+
+
+                CGenero.CGeneroClient oProxy3 = new CGenero.CGeneroClient();
+                oProxy3.Open();
+
+                GENERO xGenero = oProxy3.SelecionarDescricao(cmbGenero1.Text);
+                oLivro.GENERO.Add(xGenero);
+
+                oProxy3.Close();
+
+
+
+
+
+                //oLivro.QTD_DISP_EMPR = ??????????
+                //oLivro.ID_EDITORA = cmbEditora.SelectedIndex;
                 //oLivro.GENERO = 
                 //oLivro.Emprestimo = ???????????
                 //oLivro.RESERVA = ???????
 
 
-                CLivro.CLivroClient oProxy = new CLivro.CLivroClient();
-                oProxy.Open();
+                CLivro.CLivroClient oProxy4 = new CLivro.CLivroClient();
+                oProxy4.Open();
 
                 if (var == 0)
                 {
 
                     try
                     {
-                        if (oProxy.Cadastrar(oLivro))
+                        if (oProxy4.Cadastrar(oLivro))
                         {
 
                             MessageBox.Show("Cadastro realizado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -86,17 +130,19 @@ namespace View
 
 
 
-                                LIVRO xLivro = oProxy.SelecionarTitulo(var);
+                                LIVRO xLivro = oProxy4.SelecionarTitulo(var);
 
                                 int var2 = xLivro.ID_LIVRO;
 
-                                txtTitulo.Text = oLivro.TITULO;
+                                txtTitulo.Text = xLivro.TITULO;
                                 //???????? = oLivro.QTD_DISP_EMPR;
-                                txtQuantidade.Text = oLivro.QTD_EXMPLARES.ToString();
-                                txtSumario.Text = oLivro.SUMARIO;
-                                dtp_Publicacao.Value = oLivro.DATA_PUBLIC;
-                                cmbEditora.SelectedIndex = oLivro.ID_EDITORA;
-                                txtVolume.Text = oLivro.VOLUME.ToString();
+                                txtQuantidade.Text = xLivro.QTD_EXMPLARES.ToString();
+                                txtSumario.Text = xLivro.SUMARIO;
+                                dtp_Publicacao.Value = xLivro.DATA_PUBLIC;
+                                cmbEditora.Text = xLivro.EDITORA.NOME;
+                                cmbAutor1.Text = xLivro.AUTOR.ElementAt(0).NOME;
+                                cmbAutor2.Text = xLivro.AUTOR.ElementAt(1).NOME;
+                                cmbGenero1.Text = xLivro.GENERO.ElementAt(0).DESCRICAO;
                                 //???????? = .GENERO; 
                                 //???????? = oLivro.Emprestimo;
                                 //???????? = oLivro.RESERVA;
@@ -122,7 +168,7 @@ namespace View
 
                     try
                     {
-                        if (oProxy.Alterar(oLivro))
+                        if (oProxy4.Alterar(oLivro))
                         {
                             MessageBox.Show("Alteração realizada com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LimpaCampos();
@@ -152,7 +198,7 @@ namespace View
 
 
 
-
+        ///CANCELAR
 
 
 
@@ -171,13 +217,66 @@ namespace View
             btnSalvar.Enabled = true;
         }
 
+
+
+        ///DELETAR
+
+
+
         private void btnDeletar_Click(object sender, EventArgs e)
         {
 
         }
 
+
+
+        ///LOAD
+
+
         private void frmCadastroLivro_Load(object sender, EventArgs e)
         {
+            CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
+            oProxy.Open();
+
+            var Lista = oProxy.ListaTodosAutores();
+            
+            foreach (var p in Lista)
+            {
+                cmbAutor1.Items.Add(p.NOME);
+                cmbAutor2.Items.Add(p.NOME);
+            }
+
+            oProxy.Close();
+
+
+
+            CGenero.CGeneroClient oProxy2 = new CGenero.CGeneroClient();
+            oProxy2.Open();
+
+            var Lista2 = oProxy2.ListaTodosGeneros();
+
+            foreach (var p in Lista2)
+            {
+                cmbGenero1.Items.Add(p.DESCRICAO);
+            }
+
+            oProxy2.Close();
+
+
+
+            CEditora.CEditoraClient  oProxy3 = new CEditora.CEditoraClient();
+            oProxy3.Open();
+
+            var Lista3 = oProxy3.ListaTodasEditoras();
+
+            foreach (var p in Lista3)
+            {
+                cmbEditora.Items.Add(p.NOME);
+            }
+
+            oProxy3.Close();
+
+
 
         }
 
@@ -228,9 +327,10 @@ namespace View
                     txtSumario.Text.Trim() != "" &&
                     dtp_Publicacao.Value != System.DateTime.Now &&
                     cmbEditora.SelectedItem != null &&
-                    txtVolume.Text.Trim() != "" &&
-                    txtID.Text.Trim() != "" &&
-                    txtPesquisa.Text.Trim() != ""
+                    cmbGenero1.SelectedItem != null &&
+                    cmbAutor1.SelectedItem != null &&
+                    cmbAutor2.SelectedItem != null &&
+                    txtVolume.Text.Trim() != "" 
                 )
             {
 
@@ -331,6 +431,31 @@ namespace View
                     MessageBox.Show("Livro não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+
+
+        ///APENAS NÚMERO
+
+
+
+        private static void ApenasNumero(KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) ||    //Letras
+                char.IsSymbol(e.KeyChar) ||    //Símbolos
+                char.IsWhiteSpace(e.KeyChar) || //Espaço
+                char.IsPunctuation(e.KeyChar)) //Pontuação
+                e.Handled = true;
+        }
+
+        private void txtVolume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ApenasNumero(e);
+        }
+
+        private void txtQuantidade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ApenasNumero(e);
         }
     }
 }

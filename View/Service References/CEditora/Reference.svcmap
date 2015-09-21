@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9691db73-30fe-4981-9aca-08d32d292513" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="faed856c-3cb6-4308-bdbe-aa52afd130f4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:26759/CEditora.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CEditora.disco" MetadataType="Disco" ID="ea7f8f6f-890b-46f5-9bde-a28195ce8f2c" SourceId="1" SourceUrl="http://localhost:26759/CEditora.svc?disco" />
-    <MetadataFile FileName="CEditora.xsd" MetadataType="Schema" ID="2f9367de-ee74-4fc7-9eb5-871e3bc4f3fa" SourceId="1" SourceUrl="http://localhost:26759/CEditora.svc?xsd=xsd1" />
-    <MetadataFile FileName="CEditora1.xsd" MetadataType="Schema" ID="ad9e0ef2-f166-4ff7-b47a-ec57b3a8e407" SourceId="1" SourceUrl="http://localhost:26759/CEditora.svc?xsd=xsd0" />
-    <MetadataFile FileName="CEditora2.xsd" MetadataType="Schema" ID="2dc4acd4-cba2-491c-bd37-b9d242f4065f" SourceId="1" SourceUrl="http://localhost:26759/CEditora.svc?xsd=xsd2" />
-    <MetadataFile FileName="CEditora.wsdl" MetadataType="Wsdl" ID="8f69039d-5685-40bc-9d3a-5b1a4510a611" SourceId="1" SourceUrl="http://localhost:26759/CEditora.svc?wsdl" />
+    <MetadataFile FileName="CEditora.disco" MetadataType="Disco" ID="fe36341c-06e1-45d9-ab76-bd5bb0ee6135" SourceId="1" SourceUrl="http://localhost:26759/CEditora.svc?disco" />
+    <MetadataFile FileName="CEditora.xsd" MetadataType="Schema" ID="8aa6c9c6-4fbe-439a-a019-e30cadf3519c" SourceId="1" SourceUrl="http://localhost:26759/CEditora.svc?xsd=xsd1" />
+    <MetadataFile FileName="CEditora1.xsd" MetadataType="Schema" ID="b1930d1e-4610-4fb6-9c5c-4b6b90dad715" SourceId="1" SourceUrl="http://localhost:26759/CEditora.svc?xsd=xsd0" />
+    <MetadataFile FileName="CEditora2.xsd" MetadataType="Schema" ID="0b397cda-b9a7-4d6a-9c44-ec3542bed632" SourceId="1" SourceUrl="http://localhost:26759/CEditora.svc?xsd=xsd2" />
+    <MetadataFile FileName="CEditora.wsdl" MetadataType="Wsdl" ID="f420a921-0019-4b2a-a9f3-ff30cf7b68ff" SourceId="1" SourceUrl="http://localhost:26759/CEditora.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

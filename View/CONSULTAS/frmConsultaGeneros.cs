@@ -26,11 +26,39 @@ namespace View
 
         private void btnProcurar_Click(object sender, EventArgs e)
         {
-            CGenero.CGeneroClient oProxy = new CGenero.CGeneroClient();
-            oProxy.Open();
-            dtgGeneros.DataSource = oProxy.ListaTodosGeneros();
+            
+            if(txtID.Text == "0")
+            {
+                CGenero.CGeneroClient oProxy = new CGenero.CGeneroClient();
+                oProxy.Open();
+                dtgGeneros.DataSource = oProxy.ListaTodosGeneros();
 
-            oProxy.Close();
+                oProxy.Close();
+            }
+            
+        }
+
+
+
+        ///APENAS NÚMERO
+
+
+
+        private static void ApenasNumero(KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) ||    //Letras
+                char.IsSymbol(e.KeyChar) ||    //Símbolos
+                char.IsWhiteSpace(e.KeyChar) || //Espaço
+                char.IsPunctuation(e.KeyChar)) //Pontuação
+                e.Handled = true;
+        }
+
+
+        ///apenas numero em ID
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ApenasNumero(e);
         }
     }
 }

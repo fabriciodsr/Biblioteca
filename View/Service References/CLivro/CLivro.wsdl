@@ -3,20 +3,6 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:26759/CLivro.svc?xsd=xsd0" namespace="http://tempuri.org/" />
-<<<<<<< HEAD
-    </xsd:schema>
-  </wsdl:types>
-  <wsdl:message name="ICLivro_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
-  </wsdl:message>
-  <wsdl:message name="ICLivro_DoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
-  </wsdl:message>
-  <wsdl:portType name="ICLivro">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICLivro/DoWork" message="tns:ICLivro_DoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICLivro/DoWorkResponse" message="tns:ICLivro_DoWork_OutputMessage" />
-=======
       <xsd:import schemaLocation="http://localhost:26759/CLivro.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:26759/CLivro.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
     </xsd:schema>
@@ -71,15 +57,10 @@
     <wsdl:operation name="Deletar">
       <wsdl:input wsaw:Action="http://tempuri.org/ICLivro/Deletar" message="tns:ICLivro_Deletar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICLivro/DeletarResponse" message="tns:ICLivro_Deletar_OutputMessage" />
->>>>>>> origin/master
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICLivro" type="tns:ICLivro">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-<<<<<<< HEAD
-    <wsdl:operation name="DoWork">
-      <soap:operation soapAction="http://tempuri.org/ICLivro/DoWork" style="document" />
-=======
     <wsdl:operation name="Cadastrar">
       <soap:operation soapAction="http://tempuri.org/ICLivro/Cadastrar" style="document" />
       <wsdl:input>
@@ -118,7 +99,6 @@
     </wsdl:operation>
     <wsdl:operation name="Deletar">
       <soap:operation soapAction="http://tempuri.org/ICLivro/Deletar" style="document" />
->>>>>>> origin/master
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -165,5 +165,20 @@ namespace Model
             }
         }
 
+
+
+        public static List<AUTOR> ListaTodosAutores()
+        {
+            using (BibliotecaVirtualEntities oDB = new BibliotecaVirtualEntities())
+            {
+
+                IEnumerable<AUTOR> Lista = (from p in oDB.AUTOR select p);
+
+                return Lista.ToList();
+
+
+            }
+        }
+
     }
 }

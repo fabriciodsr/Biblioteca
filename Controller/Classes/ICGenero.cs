@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Model;
 
 namespace Controller
 {
@@ -12,6 +13,18 @@ namespace Controller
     public interface ICGenero
     {
         [OperationContract]
-        void DoWork();
+        bool Cadastrar(GENERO oGENERO);
+
+        [OperationContract]
+        bool Alterar(GENERO oGENERO);
+
+        [OperationContract]
+        GENERO Selecionar(int idGENERO);
+
+        [OperationContract]
+        GENERO SelecionarDescricao(string GENERODesc);
+
+        [OperationContract]
+        bool Deletar(int idGENERO);
     }
 }

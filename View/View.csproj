@@ -142,6 +142,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CGenero\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\CLivro\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -190,6 +195,7 @@
     <None Include="Properties\DataSources\Model.ALUNO.datasource" />
     <None Include="Properties\DataSources\Model.AUTOR.datasource" />
     <None Include="Properties\DataSources\Model.EDITORA.datasource" />
+    <None Include="Properties\DataSources\Model.GENERO.datasource" />
     <None Include="Properties\DataSources\Model.LIVRO.datasource" />
     <None Include="Service References\CAluno\CAluno.wsdl" />
     <None Include="Service References\CAluno\CAluno.xsd">
@@ -221,6 +227,16 @@
     <None Include="Service References\CEditora\CEditora2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CGenero\CGenero.wsdl" />
+    <None Include="Service References\CGenero\CGenero.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CGenero\CGenero1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CGenero\CGenero2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CLivro\CLivro.wsdl" />
     <None Include="Service References\CLivro\CLivro.xsd">
       <SubType>Designer</SubType>
@@ -249,6 +265,7 @@
     <WCFMetadataStorage Include="Service References\CAluno\" />
     <WCFMetadataStorage Include="Service References\CAutor\" />
     <WCFMetadataStorage Include="Service References\CEditora\" />
+    <WCFMetadataStorage Include="Service References\CGenero\" />
     <WCFMetadataStorage Include="Service References\CLivro\" />
   </ItemGroup>
   <ItemGroup>
@@ -307,6 +324,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CLivro\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CGenero\CGenero.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CGenero\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CGenero\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CGenero\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

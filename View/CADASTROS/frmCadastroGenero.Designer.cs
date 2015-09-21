@@ -30,14 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroGenero));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbPesquisa = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnProcurar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_ID_Pesquisa = new System.Windows.Forms.TextBox();
-            this.txt_Descricao_Pesquisa = new System.Windows.Forms.TextBox();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -54,16 +53,38 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbPesquisa);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnProcurar);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txt_ID_Pesquisa);
-            this.groupBox1.Controls.Add(this.txt_Descricao_Pesquisa);
+            this.groupBox1.Controls.Add(this.txtPesquisa);
             this.groupBox1.Location = new System.Drawing.Point(246, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(526, 42);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
+            // 
+            // cmbPesquisa
+            // 
+            this.cmbPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPesquisa.FormattingEnabled = true;
+            this.cmbPesquisa.Items.AddRange(new object[] {
+            "ID",
+            "NOME"});
+            this.cmbPesquisa.Location = new System.Drawing.Point(137, 16);
+            this.cmbPesquisa.Name = "cmbPesquisa";
+            this.cmbPesquisa.Size = new System.Drawing.Size(101, 21);
+            this.cmbPesquisa.TabIndex = 99;
+            this.cmbPesquisa.SelectedIndexChanged += new System.EventHandler(this.cmbPesquisa_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(8, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 16);
+            this.label4.TabIndex = 98;
+            this.label4.Text = "Opção de Busca";
             // 
             // btnProcurar
             // 
@@ -83,40 +104,15 @@
             this.btnProcurar.Size = new System.Drawing.Size(31, 26);
             this.btnProcurar.TabIndex = 54;
             this.btnProcurar.UseVisualStyleBackColor = false;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
-            // label2
+            // txtPesquisa
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(155, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Desc.";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 16);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Id.";
-            // 
-            // txt_ID_Pesquisa
-            // 
-            this.txt_ID_Pesquisa.Location = new System.Drawing.Point(41, 16);
-            this.txt_ID_Pesquisa.Name = "txt_ID_Pesquisa";
-            this.txt_ID_Pesquisa.Size = new System.Drawing.Size(101, 20);
-            this.txt_ID_Pesquisa.TabIndex = 22;
-            // 
-            // txt_Descricao_Pesquisa
-            // 
-            this.txt_Descricao_Pesquisa.Location = new System.Drawing.Point(210, 16);
-            this.txt_Descricao_Pesquisa.Name = "txt_Descricao_Pesquisa";
-            this.txt_Descricao_Pesquisa.Size = new System.Drawing.Size(251, 20);
-            this.txt_Descricao_Pesquisa.TabIndex = 23;
+            this.txtPesquisa.Location = new System.Drawing.Point(253, 16);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(208, 20);
+            this.txtPesquisa.TabIndex = 23;
+            this.txtPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisa_KeyPress);
             // 
             // btnDeletar
             // 
@@ -125,6 +121,7 @@
             this.btnDeletar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeletar.BackgroundImage")));
             this.btnDeletar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletar.Enabled = false;
             this.btnDeletar.FlatAppearance.BorderSize = 0;
             this.btnDeletar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDeletar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -136,6 +133,7 @@
             this.btnDeletar.Size = new System.Drawing.Size(33, 34);
             this.btnDeletar.TabIndex = 33;
             this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnCancelar
             // 
@@ -155,44 +153,50 @@
             this.btnCancelar.Size = new System.Drawing.Size(36, 34);
             this.btnCancelar.TabIndex = 32;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnNovo
+            // btnAlterar
             // 
-            this.btnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNovo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNovo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNovo.BackgroundImage")));
-            this.btnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovo.FlatAppearance.BorderSize = 0;
-            this.btnNovo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnNovo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovo.ForeColor = System.Drawing.Color.Transparent;
-            this.btnNovo.Location = new System.Drawing.Point(13, 14);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(33, 34);
-            this.btnNovo.TabIndex = 31;
-            this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAlterar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterar.Enabled = false;
+            this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAlterar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.Color.Red;
+            this.btnAlterar.Location = new System.Drawing.Point(13, 14);
+            this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(33, 34);
+            this.btnAlterar.TabIndex = 31;
+            this.btnAlterar.Text = "ALT";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnSalvar
             // 
             this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalvar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalvar.BackgroundImage")));
             this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.FlatAppearance.BorderSize = 0;
             this.btnSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.Red;
             this.btnSalvar.Location = new System.Drawing.Point(70, 14);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(34, 34);
             this.btnSalvar.TabIndex = 30;
+            this.btnSalvar.Text = "INS";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label7
             // 
@@ -263,33 +267,10 @@
             // 
             this.cmbAndar.FormattingEnabled = true;
             this.cmbAndar.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP ",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC\t ",
-            "SP\t ",
-            "SE\t ",
-            "TO"});
+            "1º",
+            "2º",
+            "3º",
+            "4º"});
             this.cmbAndar.Location = new System.Drawing.Point(287, 224);
             this.cmbAndar.Name = "cmbAndar";
             this.cmbAndar.Size = new System.Drawing.Size(101, 21);
@@ -299,33 +280,32 @@
             // 
             this.cmbCorredor.FormattingEnabled = true;
             this.cmbCorredor.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP ",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC\t ",
-            "SP\t ",
-            "SE\t ",
-            "TO"});
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"});
             this.cmbCorredor.Location = new System.Drawing.Point(287, 265);
             this.cmbCorredor.Name = "cmbCorredor";
             this.cmbCorredor.Size = new System.Drawing.Size(101, 21);
@@ -335,33 +315,21 @@
             // 
             this.cmbPrateleira.FormattingEnabled = true;
             this.cmbPrateleira.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP ",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC\t ",
-            "SP\t ",
-            "SE\t ",
-            "TO"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"});
             this.cmbPrateleira.Location = new System.Drawing.Point(287, 310);
             this.cmbPrateleira.Name = "cmbPrateleira";
             this.cmbPrateleira.Size = new System.Drawing.Size(101, 21);
@@ -385,12 +353,13 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnNovo);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnSalvar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCadastroGenero";
             this.Text = "CADASTRO DE GÊNERO";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmCadastroGenero_FormClosed);
+            this.Load += new System.EventHandler(this.frmCadastroGenero_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -402,13 +371,10 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnProcurar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_ID_Pesquisa;
-        private System.Windows.Forms.TextBox txt_Descricao_Pesquisa;
+        private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDescricao;
@@ -420,5 +386,7 @@
         private System.Windows.Forms.ComboBox cmbAndar;
         private System.Windows.Forms.ComboBox cmbCorredor;
         private System.Windows.Forms.ComboBox cmbPrateleira;
+        private System.Windows.Forms.ComboBox cmbPesquisa;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Model;
 
 namespace Controller
 {
@@ -11,8 +12,45 @@ namespace Controller
     // NOTE: In order to launch WCF Test Client for testing this service, please select CGenero.svc or CGenero.svc.cs at the Solution Explorer and start debugging.
     public class CGenero : ICGenero
     {
-        public void DoWork()
+        public bool Alterar(GENERO oGENERO)
         {
+            if (GeneroMetod.Alterar(oGENERO))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+
+        public bool Cadastrar(GENERO oGENERO)
+        {
+            if (GeneroMetod.Cadastrar(oGENERO))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool Deletar(int idGENERO)
+        {
+            return GeneroMetod.Deletar(idGENERO);
+
+        }
+
+        public GENERO Selecionar(int idGENERO)
+        {
+            return GeneroMetod.Selecionar(idGENERO);
+        }
+
+        public GENERO SelecionarDescricao(string GENERODesc)
+        {
+            return GeneroMetod.SelecionarDescricao(GENERODesc);
+        }
+
     }
 }

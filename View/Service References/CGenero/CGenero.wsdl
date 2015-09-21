@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CGenero" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:26759/CGenero.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:26759/CGenero.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:26759/CGenero.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICGenero_Cadastrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Cadastrar" />
+  </wsdl:message>
+  <wsdl:message name="ICGenero_Cadastrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGenero_Alterar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Alterar" />
+  </wsdl:message>
+  <wsdl:message name="ICGenero_Alterar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGenero_Selecionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecionar" />
+  </wsdl:message>
+  <wsdl:message name="ICGenero_Selecionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGenero_SelecionarDescricao_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionarDescricao" />
+  </wsdl:message>
+  <wsdl:message name="ICGenero_SelecionarDescricao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionarDescricaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICGenero_Deletar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Deletar" />
+  </wsdl:message>
+  <wsdl:message name="ICGenero_Deletar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICGenero">
+    <wsdl:operation name="Cadastrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGenero/Cadastrar" message="tns:ICGenero_Cadastrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGenero/CadastrarResponse" message="tns:ICGenero_Cadastrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Alterar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGenero/Alterar" message="tns:ICGenero_Alterar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGenero/AlterarResponse" message="tns:ICGenero_Alterar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGenero/Selecionar" message="tns:ICGenero_Selecionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGenero/SelecionarResponse" message="tns:ICGenero_Selecionar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionarDescricao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGenero/SelecionarDescricao" message="tns:ICGenero_SelecionarDescricao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGenero/SelecionarDescricaoResponse" message="tns:ICGenero_SelecionarDescricao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Deletar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICGenero/Deletar" message="tns:ICGenero_Deletar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICGenero/DeletarResponse" message="tns:ICGenero_Deletar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICGenero" type="tns:ICGenero">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Cadastrar">
+      <soap:operation soapAction="http://tempuri.org/ICGenero/Cadastrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Alterar">
+      <soap:operation soapAction="http://tempuri.org/ICGenero/Alterar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecionar">
+      <soap:operation soapAction="http://tempuri.org/ICGenero/Selecionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionarDescricao">
+      <soap:operation soapAction="http://tempuri.org/ICGenero/SelecionarDescricao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deletar">
+      <soap:operation soapAction="http://tempuri.org/ICGenero/Deletar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CGenero">
+    <wsdl:port name="BasicHttpBinding_ICGenero" binding="tns:BasicHttpBinding_ICGenero">
+      <soap:address location="http://localhost:26759/CGenero.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

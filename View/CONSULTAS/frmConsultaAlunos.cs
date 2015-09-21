@@ -23,5 +23,76 @@ namespace View
         {
             ((frmPrincipal)this.MdiParent).aLUNOSToolStripMenuItem.Enabled = true;
         }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+
+            if (cmbPesquisa.SelectedIndex == 0)
+            {
+                dtgAlunos.DataSource = AlunoMetod.SelecionarTodos();
+            }
+            else if (cmbPesquisa.SelectedIndex == 1)
+            {
+                int var = Convert.ToInt32(txtPesquisa.Text);
+                CAluno.CAlunoClient oProxy = new CAluno.CAlunoClient();
+                oProxy.Open();
+
+                if (oProxy.Selecionar(var) != null)
+                {
+                    List<ALUNO> oAlunos = new List<ALUNO>();
+                    oAlunos.Add(oProxy.Selecionar(var));
+                    dtgAlunos.DataSource = oAlunos;
+                    dtgAlunos.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Aluno não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (cmbPesquisa.SelectedIndex == 2)
+            {
+
+                CAluno.CAlunoClient oProxy = new CAluno.CAlunoClient();
+                oProxy.Open();
+
+                if (oProxy.SelecionarNome(txtPesquisa.Text) != null)
+                {
+                    List<ALUNO> oAlunos = new List<ALUNO>();
+                    oAlunos.Add(oProxy.SelecionarNome(txtPesquisa.Text)); 
+
+                    dtgAlunos.DataSource = oAlunos;
+                    dtgAlunos.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Aluno não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (cmbPesquisa.SelectedIndex == 3)
+            {
+                CAluno.CAlunoClient oProxy = new CAluno.CAlunoClient();
+                oProxy.Open();
+
+                if (oProxy.SelecionarCPF(txtPesquisa.Text) != null)
+                {
+                    List<ALUNO> oAlunos = new List<ALUNO>();
+                    oAlunos.Add(oProxy.SelecionarCPF(txtPesquisa.Text));
+
+                    dtgAlunos.DataSource = oAlunos;
+                    dtgAlunos.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Aluno não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            dtgAlunos.DataSource = null;
+            txtPesquisa.Text = "";
+            cmbPesquisa.SelectedItem = null;
+        }
     }
 }

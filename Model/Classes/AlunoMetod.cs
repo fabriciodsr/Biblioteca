@@ -181,7 +181,33 @@ namespace Model
         }
 
 
+        ///SELECIONAR TODOS
+        public static List<ALUNO> SelecionarTodos()
+        {
+            try
+            {
+                List<ALUNO> alunoLista = new List<ALUNO>();
 
+                using (var oDB = new BibliotecaVirtualEntities())
+                {
+                    var alunoSelecionado = from a in oDB.ALUNO
+                                           select a;
+
+                    if (alunoSelecionado.Count() > 0)
+                    {
+                        foreach (ALUNO item in alunoSelecionado)
+                        {
+                            alunoLista.Add(item);
+                        }
+                    }
+                }
+                return alunoLista;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
 
 

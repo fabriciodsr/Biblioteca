@@ -28,13 +28,22 @@ namespace Model
                 {
                     try
                     {
-                        oDB.LIVRO.Add(oLivro);
+                        LIVRO xLivro = new LIVRO();
+
+                        xLivro.TITULO = oLivro.TITULO;
+                        //xLivro.AUTOR = oLivro.AUTOR;
+                        xLivro.VOLUME = oLivro.VOLUME;
+                        xLivro.DATA_PUBLIC = oLivro.DATA_PUBLIC;
+                        xLivro.QTD_EXMPLARES = oLivro.QTD_EXMPLARES;
+                        xLivro.SUMARIO = oLivro.SUMARIO;
+                        xLivro.ID_EDITORA = oLivro.ID_EDITORA;
+                        
+                        oDB.LIVRO.Add(xLivro);
                         oDB.SaveChanges();
-                        oDB.Dispose();
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
-                        throw;
+                        throw new Exception(ex.Message);
                     }
                     return true;
                 }

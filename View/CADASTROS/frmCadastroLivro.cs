@@ -55,7 +55,8 @@ namespace View
                 oLivro.DATA_PUBLIC = dtp_Publicacao.Value;
                 oLivro.QTD_EXMPLARES = Convert.ToInt32(txtQuantidade.Text);
                 oLivro.SUMARIO = txtSumario.Text;
-
+                oLivro.QTD_DISP_EMPR = Convert.ToInt32(txtQuantidade.Text);
+                oLivro.ID_EDITORA = cmbEditora.SelectedIndex;
 
 
                 CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
@@ -69,7 +70,7 @@ namespace View
 
                 oProxy.Close();
 
-
+                
 
                 CEditora.CEditoraClient oProxy2 = new CEditora.CEditoraClient();
                 oProxy2.Open();

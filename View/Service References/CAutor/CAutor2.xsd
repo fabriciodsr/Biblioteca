@@ -86,7 +86,7 @@
       <xs:element minOccurs="0" name="EMPRESTIMO" nillable="true" type="tns:ArrayOfEMPRESTIMO" />
       <xs:element minOccurs="0" name="ENDERECO" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ID_ALUNO" type="xs:int" />
-      <xs:element minOccurs="0" name="ID_RESERVA" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_RESERVA" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="NASC" type="xs:dateTime" />
       <xs:element minOccurs="0" name="NOME" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PAIS" nillable="true" type="xs:string" />

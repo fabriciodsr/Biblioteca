@@ -57,7 +57,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(50, 50);
-            this.btnCancelar.TabIndex = 56;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -77,7 +77,7 @@
             this.btnProcurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(50, 50);
-            this.btnProcurar.TabIndex = 54;
+            this.btnProcurar.TabIndex = 2;
             this.btnProcurar.UseVisualStyleBackColor = false;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
@@ -87,7 +87,7 @@
             this.dtgAlunos.Location = new System.Drawing.Point(13, 142);
             this.dtgAlunos.Name = "dtgAlunos";
             this.dtgAlunos.Size = new System.Drawing.Size(759, 298);
-            this.dtgAlunos.TabIndex = 83;
+            this.dtgAlunos.TabIndex = 4;
             // 
             // aLUNOBindingSource
             // 
@@ -105,7 +105,7 @@
             this.cmbPesquisa.Location = new System.Drawing.Point(193, 54);
             this.cmbPesquisa.Name = "cmbPesquisa";
             this.cmbPesquisa.Size = new System.Drawing.Size(101, 21);
-            this.cmbPesquisa.TabIndex = 88;
+            this.cmbPesquisa.TabIndex = 0;
             this.cmbPesquisa.SelectedIndexChanged += new System.EventHandler(this.cmbPesquisa_SelectedIndexChanged);
             // 
             // txtPesquisa
@@ -113,7 +113,7 @@
             this.txtPesquisa.Location = new System.Drawing.Point(311, 55);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(208, 20);
-            this.txtPesquisa.TabIndex = 85;
+            this.txtPesquisa.TabIndex = 1;
             this.txtPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisa_KeyPress);
             // 
             // label2

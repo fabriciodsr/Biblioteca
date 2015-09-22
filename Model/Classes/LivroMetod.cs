@@ -198,5 +198,18 @@ namespace Model
                 return ConsultaLivro;
             }
         }
+
+        public static List<LIVRO> ListaTodosLivros()
+        {
+            using (BibliotecaVirtualEntities oDB = new BibliotecaVirtualEntities())
+            {
+
+                IEnumerable<LIVRO> Lista = (from p in oDB.LIVRO select p);
+
+                return Lista.ToList();
+
+
+            }
+        }
     }
 }

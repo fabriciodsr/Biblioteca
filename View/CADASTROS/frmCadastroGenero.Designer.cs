@@ -73,7 +73,7 @@
             this.cmbPesquisa.Location = new System.Drawing.Point(137, 16);
             this.cmbPesquisa.Name = "cmbPesquisa";
             this.cmbPesquisa.Size = new System.Drawing.Size(101, 21);
-            this.cmbPesquisa.TabIndex = 99;
+            this.cmbPesquisa.TabIndex = 0;
             this.cmbPesquisa.SelectedIndexChanged += new System.EventHandler(this.cmbPesquisa_SelectedIndexChanged);
             // 
             // label4
@@ -102,7 +102,7 @@
             this.btnProcurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(31, 26);
-            this.btnProcurar.TabIndex = 54;
+            this.btnProcurar.TabIndex = 2;
             this.btnProcurar.UseVisualStyleBackColor = false;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
@@ -111,7 +111,7 @@
             this.txtPesquisa.Location = new System.Drawing.Point(253, 16);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(208, 20);
-            this.txtPesquisa.TabIndex = 23;
+            this.txtPesquisa.TabIndex = 1;
             this.txtPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisa_KeyPress);
             // 
             // btnDeletar
@@ -131,7 +131,7 @@
             this.btnDeletar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(50, 50);
-            this.btnDeletar.TabIndex = 33;
+            this.btnDeletar.TabIndex = 3;
             this.btnDeletar.UseVisualStyleBackColor = false;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
@@ -151,7 +151,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(50, 50);
-            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -173,7 +173,7 @@
             this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(50, 50);
-            this.btnAlterar.TabIndex = 31;
+            this.btnAlterar.TabIndex = 1;
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
@@ -194,7 +194,7 @@
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(50, 50);
-            this.btnSalvar.TabIndex = 30;
+            this.btnSalvar.TabIndex = 0;
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -213,7 +213,7 @@
             this.txtDescricao.Location = new System.Drawing.Point(287, 187);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(258, 20);
-            this.txtDescricao.TabIndex = 65;
+            this.txtDescricao.TabIndex = 5;
             // 
             // label6
             // 
@@ -241,7 +241,7 @@
             this.txtID.Location = new System.Drawing.Point(287, 143);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(101, 20);
-            this.txtID.TabIndex = 60;
+            this.txtID.TabIndex = 4;
             // 
             // label9
             // 
@@ -275,7 +275,7 @@
             this.cmbAndar.Location = new System.Drawing.Point(287, 224);
             this.cmbAndar.Name = "cmbAndar";
             this.cmbAndar.Size = new System.Drawing.Size(101, 21);
-            this.cmbAndar.TabIndex = 73;
+            this.cmbAndar.TabIndex = 6;
             // 
             // cmbCorredor
             // 
@@ -311,7 +311,7 @@
             this.cmbCorredor.Location = new System.Drawing.Point(287, 265);
             this.cmbCorredor.Name = "cmbCorredor";
             this.cmbCorredor.Size = new System.Drawing.Size(101, 21);
-            this.cmbCorredor.TabIndex = 74;
+            this.cmbCorredor.TabIndex = 7;
             // 
             // cmbPrateleira
             // 
@@ -336,7 +336,7 @@
             this.cmbPrateleira.Location = new System.Drawing.Point(287, 310);
             this.cmbPrateleira.Name = "cmbPrateleira";
             this.cmbPrateleira.Size = new System.Drawing.Size(101, 21);
-            this.cmbPrateleira.TabIndex = 75;
+            this.cmbPrateleira.TabIndex = 8;
             // 
             // frmCadastroGenero
             // 

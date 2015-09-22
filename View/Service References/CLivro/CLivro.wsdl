@@ -37,6 +37,12 @@
   <wsdl:message name="ICLivro_Deletar_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeletarResponse" />
   </wsdl:message>
+  <wsdl:message name="ICLivro_ListaTodosLivros_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaTodosLivros" />
+  </wsdl:message>
+  <wsdl:message name="ICLivro_ListaTodosLivros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaTodosLivrosResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICLivro">
     <wsdl:operation name="Cadastrar">
       <wsdl:input wsaw:Action="http://tempuri.org/ICLivro/Cadastrar" message="tns:ICLivro_Cadastrar_InputMessage" />
@@ -57,6 +63,10 @@
     <wsdl:operation name="Deletar">
       <wsdl:input wsaw:Action="http://tempuri.org/ICLivro/Deletar" message="tns:ICLivro_Deletar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICLivro/DeletarResponse" message="tns:ICLivro_Deletar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaTodosLivros">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICLivro/ListaTodosLivros" message="tns:ICLivro_ListaTodosLivros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICLivro/ListaTodosLivrosResponse" message="tns:ICLivro_ListaTodosLivros_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICLivro" type="tns:ICLivro">
@@ -99,6 +109,15 @@
     </wsdl:operation>
     <wsdl:operation name="Deletar">
       <soap:operation soapAction="http://tempuri.org/ICLivro/Deletar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTodosLivros">
+      <soap:operation soapAction="http://tempuri.org/ICLivro/ListaTodosLivros" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

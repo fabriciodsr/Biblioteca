@@ -72,7 +72,7 @@
             this.groupBox1.Location = new System.Drawing.Point(246, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(526, 42);
-            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // cmbPesquisa
@@ -85,7 +85,7 @@
             this.cmbPesquisa.Location = new System.Drawing.Point(136, 15);
             this.cmbPesquisa.Name = "cmbPesquisa";
             this.cmbPesquisa.Size = new System.Drawing.Size(101, 21);
-            this.cmbPesquisa.TabIndex = 97;
+            this.cmbPesquisa.TabIndex = 0;
             this.cmbPesquisa.SelectedIndexChanged += new System.EventHandler(this.cmbPesquisa_SelectedIndexChanged);
             // 
             // label4
@@ -123,7 +123,7 @@
             this.txtPesquisa.Location = new System.Drawing.Point(257, 16);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(204, 20);
-            this.txtPesquisa.TabIndex = 23;
+            this.txtPesquisa.TabIndex = 1;
             this.txtPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisa_KeyPress);
             // 
             // btnDeletar
@@ -143,7 +143,7 @@
             this.btnDeletar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(50, 50);
-            this.btnDeletar.TabIndex = 28;
+            this.btnDeletar.TabIndex = 3;
             this.btnDeletar.UseVisualStyleBackColor = false;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
@@ -163,7 +163,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(50, 50);
-            this.btnCancelar.TabIndex = 27;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -185,7 +185,7 @@
             this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(50, 50);
-            this.btnAlterar.TabIndex = 26;
+            this.btnAlterar.TabIndex = 1;
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
@@ -206,7 +206,7 @@
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(50, 50);
-            this.btnSalvar.TabIndex = 25;
+            this.btnSalvar.TabIndex = 0;
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -255,7 +255,7 @@
             this.cmbUF.Location = new System.Drawing.Point(514, 201);
             this.cmbUF.Name = "cmbUF";
             this.cmbUF.Size = new System.Drawing.Size(78, 21);
-            this.cmbUF.TabIndex = 72;
+            this.cmbUF.TabIndex = 13;
             // 
             // label13
             // 
@@ -270,9 +270,10 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(120, 344);
+            this.txtEmail.MaxLength = 30;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(258, 20);
-            this.txtEmail.TabIndex = 71;
+            this.txtEmail.TabIndex = 11;
             // 
             // label12
             // 
@@ -287,9 +288,10 @@
             // txtTel2
             // 
             this.txtTel2.Location = new System.Drawing.Point(514, 297);
+            this.txtTel2.MaxLength = 14;
             this.txtTel2.Name = "txtTel2";
             this.txtTel2.Size = new System.Drawing.Size(228, 20);
-            this.txtTel2.TabIndex = 69;
+            this.txtTel2.TabIndex = 15;
             // 
             // label11
             // 
@@ -304,9 +306,10 @@
             // txtTel1
             // 
             this.txtTel1.Location = new System.Drawing.Point(120, 300);
+            this.txtTel1.MaxLength = 13;
             this.txtTel1.Name = "txtTel1";
             this.txtTel1.Size = new System.Drawing.Size(258, 20);
-            this.txtTel1.TabIndex = 67;
+            this.txtTel1.TabIndex = 10;
             // 
             // label10
             // 
@@ -321,9 +324,10 @@
             // txtCEP
             // 
             this.txtCEP.Location = new System.Drawing.Point(514, 246);
+            this.txtCEP.MaxLength = 10;
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(180, 20);
-            this.txtCEP.TabIndex = 65;
+            this.txtCEP.TabIndex = 14;
             // 
             // label9
             // 
@@ -338,9 +342,10 @@
             // txtCidade
             // 
             this.txtCidade.Location = new System.Drawing.Point(116, 249);
+            this.txtCidade.MaxLength = 15;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(258, 20);
-            this.txtCidade.TabIndex = 63;
+            this.txtCidade.TabIndex = 9;
             // 
             // label8
             // 
@@ -355,9 +360,10 @@
             // txtBairro
             // 
             this.txtBairro.Location = new System.Drawing.Point(116, 203);
+            this.txtBairro.MaxLength = 15;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(258, 20);
-            this.txtBairro.TabIndex = 61;
+            this.txtBairro.TabIndex = 8;
             // 
             // label7
             // 
@@ -372,9 +378,10 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(116, 125);
+            this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(258, 20);
-            this.txtNome.TabIndex = 59;
+            this.txtNome.TabIndex = 6;
             // 
             // label6
             // 
@@ -389,9 +396,10 @@
             // txtEnd
             // 
             this.txtEnd.Location = new System.Drawing.Point(116, 159);
+            this.txtEnd.MaxLength = 50;
             this.txtEnd.Name = "txtEnd";
             this.txtEnd.Size = new System.Drawing.Size(258, 20);
-            this.txtEnd.TabIndex = 57;
+            this.txtEnd.TabIndex = 7;
             // 
             // label3
             // 
@@ -409,7 +417,7 @@
             this.txtID.Location = new System.Drawing.Point(116, 81);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(101, 20);
-            this.txtID.TabIndex = 50;
+            this.txtID.TabIndex = 5;
             // 
             // label16
             // 
@@ -456,7 +464,7 @@
             this.cmbPais.Location = new System.Drawing.Point(514, 155);
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(145, 21);
-            this.cmbPais.TabIndex = 76;
+            this.cmbPais.TabIndex = 12;
             // 
             // frmCadastroEditora
             // 

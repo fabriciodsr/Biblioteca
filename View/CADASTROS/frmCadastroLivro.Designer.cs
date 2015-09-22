@@ -83,7 +83,7 @@
             this.cmbPesquisa.Location = new System.Drawing.Point(139, 12);
             this.cmbPesquisa.Name = "cmbPesquisa";
             this.cmbPesquisa.Size = new System.Drawing.Size(101, 21);
-            this.cmbPesquisa.TabIndex = 60;
+            this.cmbPesquisa.TabIndex = 0;
             // 
             // btnProcurar
             // 
@@ -101,7 +101,7 @@
             this.btnProcurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(31, 26);
-            this.btnProcurar.TabIndex = 59;
+            this.btnProcurar.TabIndex = 2;
             this.btnProcurar.UseVisualStyleBackColor = false;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
@@ -110,7 +110,7 @@
             this.txtPesquisa.Location = new System.Drawing.Point(257, 13);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(208, 20);
-            this.txtPesquisa.TabIndex = 57;
+            this.txtPesquisa.TabIndex = 1;
             // 
             // label2
             // 
@@ -139,7 +139,7 @@
             this.btnDeletar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(50, 50);
-            this.btnDeletar.TabIndex = 33;
+            this.btnDeletar.TabIndex = 3;
             this.btnDeletar.UseVisualStyleBackColor = false;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
@@ -159,7 +159,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(50, 50);
-            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -181,7 +181,7 @@
             this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(50, 50);
-            this.btnAlterar.TabIndex = 31;
+            this.btnAlterar.TabIndex = 1;
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
@@ -202,7 +202,7 @@
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(50, 50);
-            this.btnSalvar.TabIndex = 30;
+            this.btnSalvar.TabIndex = 0;
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -222,7 +222,7 @@
             this.txtSumario.Multiline = true;
             this.txtSumario.Name = "txtSumario";
             this.txtSumario.Size = new System.Drawing.Size(635, 149);
-            this.txtSumario.TabIndex = 83;
+            this.txtSumario.TabIndex = 13;
             // 
             // label9
             // 
@@ -239,7 +239,7 @@
             this.txtQuantidade.Location = new System.Drawing.Point(104, 212);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(43, 20);
-            this.txtQuantidade.TabIndex = 81;
+            this.txtQuantidade.TabIndex = 10;
             this.txtQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantidade_KeyPress);
             // 
             // label8
@@ -267,7 +267,7 @@
             this.txtTitulo.Location = new System.Drawing.Point(287, 66);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(452, 20);
-            this.txtTitulo.TabIndex = 77;
+            this.txtTitulo.TabIndex = 5;
             // 
             // label6
             // 
@@ -284,7 +284,7 @@
             this.txtVolume.Location = new System.Drawing.Point(104, 114);
             this.txtVolume.Name = "txtVolume";
             this.txtVolume.Size = new System.Drawing.Size(101, 20);
-            this.txtVolume.TabIndex = 75;
+            this.txtVolume.TabIndex = 6;
             this.txtVolume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVolume_KeyPress);
             // 
             // label3
@@ -303,7 +303,7 @@
             this.txtID.Location = new System.Drawing.Point(104, 65);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(101, 20);
-            this.txtID.TabIndex = 72;
+            this.txtID.TabIndex = 4;
             // 
             // dtp_Publicacao
             // 
@@ -311,7 +311,7 @@
             this.dtp_Publicacao.Location = new System.Drawing.Point(104, 163);
             this.dtp_Publicacao.Name = "dtp_Publicacao";
             this.dtp_Publicacao.Size = new System.Drawing.Size(101, 20);
-            this.dtp_Publicacao.TabIndex = 86;
+            this.dtp_Publicacao.TabIndex = 8;
             // 
             // label4
             // 
@@ -360,7 +360,7 @@
             this.cmbAutor1.Location = new System.Drawing.Point(287, 101);
             this.cmbAutor1.Name = "cmbAutor1";
             this.cmbAutor1.Size = new System.Drawing.Size(452, 21);
-            this.cmbAutor1.TabIndex = 89;
+            this.cmbAutor1.TabIndex = 7;
             // 
             // cmbAutor2
             // 
@@ -369,7 +369,7 @@
             this.cmbAutor2.Location = new System.Drawing.Point(287, 138);
             this.cmbAutor2.Name = "cmbAutor2";
             this.cmbAutor2.Size = new System.Drawing.Size(452, 21);
-            this.cmbAutor2.TabIndex = 89;
+            this.cmbAutor2.TabIndex = 9;
             // 
             // cmbEditora
             // 
@@ -378,7 +378,7 @@
             this.cmbEditora.Location = new System.Drawing.Point(104, 255);
             this.cmbEditora.Name = "cmbEditora";
             this.cmbEditora.Size = new System.Drawing.Size(294, 21);
-            this.cmbEditora.TabIndex = 90;
+            this.cmbEditora.TabIndex = 11;
             // 
             // cmbGenero1
             // 
@@ -387,7 +387,7 @@
             this.cmbGenero1.Location = new System.Drawing.Point(503, 255);
             this.cmbGenero1.Name = "cmbGenero1";
             this.cmbGenero1.Size = new System.Drawing.Size(236, 21);
-            this.cmbGenero1.TabIndex = 91;
+            this.cmbGenero1.TabIndex = 12;
             // 
             // frmCadastroLivro
             // 

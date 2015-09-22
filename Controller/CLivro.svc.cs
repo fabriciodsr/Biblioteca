@@ -36,5 +36,10 @@ namespace Controller
         {
             return LivroMetod.SelecionarTitulo(LivroTit);
         }
+
+        public List<LIVRO> ListaTodosLivros()
+        {
+            return LivroMetod.ListaTodosLivros();
+        }
     }
 }

@@ -86,7 +86,7 @@
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(50, 50);
-            this.btnSalvar.TabIndex = 18;
+            this.btnSalvar.TabIndex = 0;
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -108,7 +108,7 @@
             this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(50, 50);
-            this.btnAlterar.TabIndex = 19;
+            this.btnAlterar.TabIndex = 1;
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
@@ -128,7 +128,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(50, 50);
-            this.btnCancelar.TabIndex = 20;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -149,7 +149,7 @@
             this.btnDeletar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(50, 50);
-            this.btnDeletar.TabIndex = 21;
+            this.btnDeletar.TabIndex = 3;
             this.btnDeletar.UseVisualStyleBackColor = false;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
@@ -158,7 +158,7 @@
             this.txtPesquisa.Location = new System.Drawing.Point(253, 16);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(208, 20);
-            this.txtPesquisa.TabIndex = 23;
+            this.txtPesquisa.TabIndex = 1;
             this.txtPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisa_KeyPress);
             // 
             // groupBox1
@@ -183,7 +183,7 @@
             this.cmbPesquisa.Location = new System.Drawing.Point(135, 15);
             this.cmbPesquisa.Name = "cmbPesquisa";
             this.cmbPesquisa.Size = new System.Drawing.Size(101, 21);
-            this.cmbPesquisa.TabIndex = 56;
+            this.cmbPesquisa.TabIndex = 0;
             this.cmbPesquisa.SelectedIndexChanged += new System.EventHandler(this.cmbPesquisa_SelectedIndexChanged);
             // 
             // btnProcurar
@@ -202,7 +202,7 @@
             this.btnProcurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(31, 26);
-            this.btnProcurar.TabIndex = 54;
+            this.btnProcurar.TabIndex = 2;
             this.btnProcurar.UseVisualStyleBackColor = false;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
@@ -222,7 +222,7 @@
             this.txtID.Location = new System.Drawing.Point(130, 76);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(101, 20);
-            this.txtID.TabIndex = 27;
+            this.txtID.TabIndex = 4;
             // 
             // label3
             // 
@@ -240,16 +240,16 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(29, 165);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 16);
+            this.label4.Size = new System.Drawing.Size(88, 16);
             this.label4.TabIndex = 28;
-            this.label4.Text = "Sobre Nome";
+            this.label4.Text = "Sobrenome";
             // 
             // txtSobreNome
             // 
             this.txtSobreNome.Location = new System.Drawing.Point(130, 164);
             this.txtSobreNome.Name = "txtSobreNome";
             this.txtSobreNome.Size = new System.Drawing.Size(258, 20);
-            this.txtSobreNome.TabIndex = 29;
+            this.txtSobreNome.TabIndex = 6;
             // 
             // label5
             // 
@@ -266,7 +266,7 @@
             this.txtCPF.Location = new System.Drawing.Point(130, 208);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(165, 20);
-            this.txtCPF.TabIndex = 31;
+            this.txtCPF.TabIndex = 7;
             // 
             // label6
             // 
@@ -283,7 +283,7 @@
             this.txtEnd.Location = new System.Drawing.Point(130, 252);
             this.txtEnd.Name = "txtEnd";
             this.txtEnd.Size = new System.Drawing.Size(258, 20);
-            this.txtEnd.TabIndex = 33;
+            this.txtEnd.TabIndex = 8;
             // 
             // label7
             // 
@@ -300,7 +300,7 @@
             this.txtNome.Location = new System.Drawing.Point(130, 120);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(258, 20);
-            this.txtNome.TabIndex = 35;
+            this.txtNome.TabIndex = 5;
             // 
             // label8
             // 
@@ -317,7 +317,7 @@
             this.txtBairro.Location = new System.Drawing.Point(130, 296);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(258, 20);
-            this.txtBairro.TabIndex = 37;
+            this.txtBairro.TabIndex = 9;
             // 
             // label9
             // 
@@ -334,7 +334,7 @@
             this.txtCidade.Location = new System.Drawing.Point(130, 340);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(258, 20);
-            this.txtCidade.TabIndex = 39;
+            this.txtCidade.TabIndex = 10;
             // 
             // label10
             // 
@@ -351,7 +351,7 @@
             this.txtCEP.Location = new System.Drawing.Point(480, 340);
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(180, 20);
-            this.txtCEP.TabIndex = 41;
+            this.txtCEP.TabIndex = 16;
             // 
             // label11
             // 
@@ -368,7 +368,7 @@
             this.txtTelRes.Location = new System.Drawing.Point(130, 384);
             this.txtTelRes.Name = "txtTelRes";
             this.txtTelRes.Size = new System.Drawing.Size(258, 20);
-            this.txtTelRes.TabIndex = 43;
+            this.txtTelRes.TabIndex = 11;
             // 
             // label12
             // 
@@ -385,7 +385,7 @@
             this.txtTelCel.Location = new System.Drawing.Point(480, 384);
             this.txtTelCel.Name = "txtTelCel";
             this.txtTelCel.Size = new System.Drawing.Size(228, 20);
-            this.txtTelCel.TabIndex = 45;
+            this.txtTelCel.TabIndex = 17;
             // 
             // label13
             // 
@@ -402,7 +402,7 @@
             this.txtEmail.Location = new System.Drawing.Point(130, 428);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(258, 20);
-            this.txtEmail.TabIndex = 47;
+            this.txtEmail.TabIndex = 12;
             // 
             // cmbUF
             // 
@@ -439,7 +439,7 @@
             this.cmbUF.Location = new System.Drawing.Point(480, 295);
             this.cmbUF.Name = "cmbUF";
             this.cmbUF.Size = new System.Drawing.Size(78, 21);
-            this.cmbUF.TabIndex = 48;
+            this.cmbUF.TabIndex = 15;
             // 
             // label14
             // 
@@ -467,7 +467,7 @@
             this.dtpNasc.Location = new System.Drawing.Point(595, 120);
             this.dtpNasc.Name = "dtpNasc";
             this.dtpNasc.Size = new System.Drawing.Size(112, 20);
-            this.dtpNasc.TabIndex = 53;
+            this.dtpNasc.TabIndex = 13;
             // 
             // label16
             // 
@@ -514,7 +514,7 @@
             this.cmbPais.Location = new System.Drawing.Point(480, 253);
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(145, 21);
-            this.cmbPais.TabIndex = 54;
+            this.cmbPais.TabIndex = 14;
             // 
             // frmCadastroAluno
             // 

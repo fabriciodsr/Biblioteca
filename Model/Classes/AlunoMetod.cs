@@ -35,9 +35,9 @@ namespace Model
                         oDB.SaveChanges();
                         oDB.Dispose();
                     }
-                    catch (Exception)
+                    catch (Exception EX)
                     {
-                        throw;
+                        throw new Exception(EX.Message);
                     }
                     return true;
                 }

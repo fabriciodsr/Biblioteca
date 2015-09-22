@@ -26,5 +26,9 @@ namespace Controller
 
         [OperationContract]
         bool Deletar(int IDLivro);
+
+        [OperationContract]
+        List<LIVRO> ListaTodosLivros();
+
     }
 }

@@ -44,6 +44,12 @@ namespace View.CLivro {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/Deletar", ReplyAction="http://tempuri.org/ICLivro/DeletarResponse")]
         System.Threading.Tasks.Task<bool> DeletarAsync(int IDLivro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/ListaTodosLivros", ReplyAction="http://tempuri.org/ICLivro/ListaTodosLivrosResponse")]
+        Model.LIVRO[] ListaTodosLivros();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivro/ListaTodosLivros", ReplyAction="http://tempuri.org/ICLivro/ListaTodosLivrosResponse")]
+        System.Threading.Tasks.Task<Model.LIVRO[]> ListaTodosLivrosAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +117,14 @@ namespace View.CLivro {
         
         public System.Threading.Tasks.Task<bool> DeletarAsync(int IDLivro) {
             return base.Channel.DeletarAsync(IDLivro);
+        }
+        
+        public Model.LIVRO[] ListaTodosLivros() {
+            return base.Channel.ListaTodosLivros();
+        }
+        
+        public System.Threading.Tasks.Task<Model.LIVRO[]> ListaTodosLivrosAsync() {
+            return base.Channel.ListaTodosLivrosAsync();
         }
     }
 }

@@ -22,7 +22,7 @@
           <Property Name="PAIS" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="TEL_RES" Type="varchar" MaxLength="13" Nullable="false" />
           <Property Name="TEL_CEL" Type="varchar" MaxLength="14" />
-          <Property Name="ID_RESERVA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_RESERVA" Type="int" />
           <Property Name="EMAIL" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="AUTOR">
@@ -127,7 +127,7 @@
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_ALUNO_RESERVA">
-          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="0..1" />
           <End Role="ALUNO" Type="Self.ALUNO" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="RESERVA">
@@ -321,7 +321,7 @@
           <Property Name="PAIS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TEL_RES" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TEL_CEL" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
-          <Property Name="ID_RESERVA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_RESERVA" Type="Int32" />
           <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="RESERVA" Relationship="Self.FK_ALUNO_RESERVA" FromRole="ALUNO" ToRole="RESERVA" />
           <NavigationProperty Name="EMPRESTIMO" Relationship="Self.FK_EMPRESTIMO_ALUNO1" FromRole="ALUNO" ToRole="EMPRESTIMO" />
@@ -416,7 +416,7 @@
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_ALUNO_RESERVA">
-          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="0..1" />
           <End Role="ALUNO" Type="Self.ALUNO" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="RESERVA">

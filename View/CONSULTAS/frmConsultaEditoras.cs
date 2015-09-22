@@ -45,16 +45,58 @@ namespace View
                 e.Handled = true;
         }
 
-        private void btnProcurar_Click(object sender, EventArgs e)
+        
+
+        private void btnProcurar_Click_1(object sender, EventArgs e)
         {
-            if (txtID.Text == "0")
+            if (cmbPesquisa.SelectedIndex == 0)
             {
                 CEditora.CEditoraClient oProxy = new CEditora.CEditoraClient();
                 oProxy.Open();
                 dtgEditoras.DataSource = oProxy.ListaTodasEditoras();
-
-                oProxy.Close();
             }
+            else if (cmbPesquisa.SelectedIndex == 1)
+            {
+                int var = Convert.ToInt32(txtPesquisa.Text);
+                CEditora.CEditoraClient oProxy = new CEditora.CEditoraClient();
+                oProxy.Open();
+
+                if (oProxy.Selecionar(var) != null)
+                {
+                    List<EDITORA> oEditoras = new List<EDITORA>();
+                    oEditoras.Add(oProxy.Selecionar(var));
+                    dtgEditoras.DataSource = oEditoras;
+                    dtgEditoras.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Editora não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (cmbPesquisa.SelectedIndex == 2)
+            {
+
+                CEditora.CEditoraClient oProxy = new CEditora.CEditoraClient();
+                oProxy.Open();
+
+                if (oProxy.SelecionarNome(txtPesquisa.Text) != null)
+                {
+                    List<EDITORA> oAutor = new List<EDITORA>();
+                    oAutor.Add(oProxy.SelecionarNome(txtPesquisa.Text));
+
+                    dtgEditoras.DataSource = oAutor;
+                    dtgEditoras.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Editora não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

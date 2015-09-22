@@ -27,48 +27,7 @@ namespace View
         private void frmConsultaLivros_Load(object sender, EventArgs e)
         {
 
-            CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
-            oProxy.Open();
-
-            var Lista = oProxy.ListaTodosAutores();
-
-            foreach (var p in Lista)
-            {
-                cmbAutor1.Items.Add(p.NOME);
-                cmbAutor2.Items.Add(p.NOME);
-            }
-
-            oProxy.Close();
-
-
-
-            CGenero.CGeneroClient oProxy2 = new CGenero.CGeneroClient();
-            oProxy2.Open();
-
-            var Lista2 = oProxy2.ListaTodosGeneros();
-
-            foreach (var p in Lista2)
-            {
-                cmbGenero.Items.Add(p.DESCRICAO);
-            }
-
-            oProxy2.Close();
-
-
-
-            CEditora.CEditoraClient oProxy3 = new CEditora.CEditoraClient();
-            oProxy3.Open();
-
-            var Lista3 = oProxy3.ListaTodasEditoras();
-
-            foreach (var p in Lista3)
-            {
-                cmbEditora.Items.Add(p.NOME);
-            }
-
-            oProxy3.Close();
-
-
+            
         }
 
         private void txtVolume_KeyPress(object sender, KeyPressEventArgs e)
@@ -97,6 +56,60 @@ namespace View
         private void txtID_KeyPress(object sender, KeyPressEventArgs e)
         {
             ApenasNumero(e);
+        }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            if (cmbPesquisa.SelectedIndex == 0)
+            {
+                CLivro.CLivroClient oProxy = new CLivro.CLivroClient();
+                oProxy.Open();
+                dtgLivros.DataSource = oProxy.ListaTodosLivros();
+            }
+            else if (cmbPesquisa.SelectedIndex == 1)
+            {
+                int var = Convert.ToInt32(txtPesquisa.Text);
+                CLivro.CLivroClient oProxy = new CLivro.CLivroClient();
+                oProxy.Open();
+
+                if (oProxy.SelecionarID(var) != null)
+                {
+                    List<LIVRO> oLivro = new List<LIVRO>();
+                    oLivro.Add(oProxy.SelecionarID(var));
+                    dtgLivros.DataSource = oLivro;
+                    dtgLivros.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Livro não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (cmbPesquisa.SelectedIndex == 2)
+            {
+
+                CLivro.CLivroClient oProxy = new CLivro.CLivroClient();
+                oProxy.Open();
+
+                if (oProxy.SelecionarTitulo(txtPesquisa.Text) != null)
+                {
+                    List<LIVRO> oLivro = new List<LIVRO>();
+                    oLivro.Add(oProxy.SelecionarTitulo(txtPesquisa.Text));
+
+                    dtgLivros.DataSource = oLivro;
+                    dtgLivros.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Livro não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            dtgLivros.DataSource = null;
+            txtPesquisa.Text = "";
+            cmbPesquisa.SelectedItem = null;
         }
     }
 }

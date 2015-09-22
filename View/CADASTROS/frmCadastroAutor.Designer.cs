@@ -73,7 +73,7 @@
             this.cmbPesquisa.Location = new System.Drawing.Point(132, 15);
             this.cmbPesquisa.Name = "cmbPesquisa";
             this.cmbPesquisa.Size = new System.Drawing.Size(101, 21);
-            this.cmbPesquisa.TabIndex = 95;
+            this.cmbPesquisa.TabIndex = 0;
             this.cmbPesquisa.SelectedIndexChanged += new System.EventHandler(this.cmbPesquisa_SelectedIndexChanged);
             // 
             // label8
@@ -102,7 +102,7 @@
             this.btnProcurar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(31, 26);
-            this.btnProcurar.TabIndex = 54;
+            this.btnProcurar.TabIndex = 2;
             this.btnProcurar.UseVisualStyleBackColor = false;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
@@ -111,7 +111,7 @@
             this.txtPesquisa.Location = new System.Drawing.Point(239, 16);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(222, 20);
-            this.txtPesquisa.TabIndex = 23;
+            this.txtPesquisa.TabIndex = 1;
             this.txtPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisa_KeyPress);
             // 
             // btnDeletar
@@ -131,7 +131,7 @@
             this.btnDeletar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(50, 50);
-            this.btnDeletar.TabIndex = 28;
+            this.btnDeletar.TabIndex = 3;
             this.btnDeletar.UseVisualStyleBackColor = false;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
@@ -151,7 +151,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(50, 50);
-            this.btnCancelar.TabIndex = 27;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -173,7 +173,7 @@
             this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(50, 50);
-            this.btnAlterar.TabIndex = 26;
+            this.btnAlterar.TabIndex = 1;
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
@@ -194,7 +194,7 @@
             this.btnInserir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(50, 50);
-            this.btnInserir.TabIndex = 25;
+            this.btnInserir.TabIndex = 0;
             this.btnInserir.UseVisualStyleBackColor = false;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
@@ -224,14 +224,15 @@
             this.txtID.Location = new System.Drawing.Point(102, 81);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(101, 20);
-            this.txtID.TabIndex = 30;
+            this.txtID.TabIndex = 4;
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(102, 117);
+            this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(286, 20);
-            this.txtNome.TabIndex = 31;
+            this.txtNome.TabIndex = 5;
             // 
             // label5
             // 
@@ -246,10 +247,11 @@
             // txtBiografia
             // 
             this.txtBiografia.Location = new System.Drawing.Point(102, 171);
+            this.txtBiografia.MaxLength = 100;
             this.txtBiografia.Multiline = true;
             this.txtBiografia.Name = "txtBiografia";
             this.txtBiografia.Size = new System.Drawing.Size(670, 222);
-            this.txtBiografia.TabIndex = 34;
+            this.txtBiografia.TabIndex = 7;
             // 
             // label6
             // 
@@ -264,9 +266,10 @@
             // txtSite
             // 
             this.txtSite.Location = new System.Drawing.Point(102, 421);
+            this.txtSite.MaxLength = 30;
             this.txtSite.Name = "txtSite";
             this.txtSite.Size = new System.Drawing.Size(670, 20);
-            this.txtSite.TabIndex = 36;
+            this.txtSite.TabIndex = 8;
             // 
             // label7
             // 
@@ -274,16 +277,17 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(394, 117);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 16);
+            this.label7.Size = new System.Drawing.Size(88, 16);
             this.label7.TabIndex = 92;
-            this.label7.Text = "Sobre Nome";
+            this.label7.Text = "Sobrenome";
             // 
             // txtSobreNome
             // 
             this.txtSobreNome.Location = new System.Drawing.Point(495, 116);
+            this.txtSobreNome.MaxLength = 50;
             this.txtSobreNome.Name = "txtSobreNome";
             this.txtSobreNome.Size = new System.Drawing.Size(277, 20);
-            this.txtSobreNome.TabIndex = 93;
+            this.txtSobreNome.TabIndex = 6;
             // 
             // frmCadastroAutor
             // 

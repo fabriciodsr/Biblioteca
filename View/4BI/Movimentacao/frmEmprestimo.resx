@@ -247,10 +247,7 @@
         N/bD2B9jv4z9s4ZqsO69kYcyZO/ixP8DTyuMmRxmuNgAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="textBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnPesquisaTitulo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAFYlJREFUeF7l
         WXlcU9e6TUJERMDhUkS0PqTodapaqohAraU4IaJGRW2dtUIBEedep+tch1rFGRGHqrVIvWoRcUJEizig
@@ -348,7 +345,7 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="btnPesquisarCliente.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnPesquisarAluno.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAFYlJREFUeF7l
         WXlcU9e6TUJERMDhUkS0PqTodapaqohAraU4IaJGRW2dtUIBEedep+tch1rFGRGHqrVIvWoRcUJEizig

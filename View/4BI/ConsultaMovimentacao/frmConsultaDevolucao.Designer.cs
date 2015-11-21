@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmConsultaDevolucao
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "frmConsultaDevolucao";
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "frmConsultaDevolucao";
+            this.Text = "CONSULTA DE DEVOLUÇÃO";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

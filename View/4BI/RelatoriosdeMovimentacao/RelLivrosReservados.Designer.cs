@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // RelLivrosReservados
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "RelLivrosReservados";
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "RelLivrosReservados";
+            this.Text = "RELATÓRIO DE LIVROS RESERVADOS";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

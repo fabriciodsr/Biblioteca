@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmRelatorioCadastroGeneros
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "frmRelatorioCadastroGeneros";
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "frmRelatorioCadastroGeneros";
+            this.Text = "RELATÓRIO DE CADASTRO DE GÊNEROS";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -278,6 +278,54 @@
     <EmbeddedResource Include="3BI\Consultas\frmConsultaLivros.resx">
       <DependentUpon>frmConsultaLivros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="4BI\ConsultaMovimentacao\frmConsultaDevolucao.resx">
+      <DependentUpon>frmConsultaDevolucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\ConsultaMovimentacao\frmConsultaEmprestimo.resx">
+      <DependentUpon>frmConsultaEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\ConsultaMovimentacao\frmConsultaLivrosReservados.resx">
+      <DependentUpon>frmConsultaLivrosReservados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\ConsultaMovimentacao\frmConsultaPendencias.resx">
+      <DependentUpon>frmConsultaPendencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\Movimentacao\frmDevolucao.resx">
+      <DependentUpon>frmDevolucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\Movimentacao\frmEmprestimo.resx">
+      <DependentUpon>frmEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\Movimentacao\frmReserva.resx">
+      <DependentUpon>frmReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroAluno.resx">
+      <DependentUpon>frmRelatorioCadastroAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroAutores.resx">
+      <DependentUpon>frmRelatorioCadastroAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroEditoras.resx">
+      <DependentUpon>frmRelatorioCadastroEditoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroGeneros.resx">
+      <DependentUpon>frmRelatorioCadastroGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroLivros.resx">
+      <DependentUpon>frmRelatorioCadastroLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\RelatoriosdeMovimentacao\frmRelAlunosPendencias.resx">
+      <DependentUpon>frmRelAlunosPendencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosaDevolver.resx">
+      <DependentUpon>frmRelLivrosaDevolver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosEmprestados.resx">
+      <DependentUpon>frmRelLivrosEmprestados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\RelatoriosdeMovimentacao\RelLivrosReservados.resx">
+      <DependentUpon>RelLivrosReservados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>

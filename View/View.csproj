@@ -138,17 +138,35 @@
     <Compile Include="4BI\Movimentacao\frmDevolucao.Designer.cs">
       <DependentUpon>frmDevolucao.cs</DependentUpon>
     </Compile>
+    <Compile Include="4BI\Movimentacao\frmDevolucaoLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\Movimentacao\frmDevolucaoLivro.Designer.cs">
+      <DependentUpon>frmDevolucaoLivro.cs</DependentUpon>
+    </Compile>
     <Compile Include="4BI\Movimentacao\frmEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="4BI\Movimentacao\frmEmprestimo.Designer.cs">
       <DependentUpon>frmEmprestimo.cs</DependentUpon>
     </Compile>
+    <Compile Include="4BI\Movimentacao\frmEmprestimoLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\Movimentacao\frmEmprestimoLivro.Designer.cs">
+      <DependentUpon>frmEmprestimoLivro.cs</DependentUpon>
+    </Compile>
     <Compile Include="4BI\Movimentacao\frmReserva.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="4BI\Movimentacao\frmReserva.Designer.cs">
       <DependentUpon>frmReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\Movimentacao\frmReservaLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\Movimentacao\frmReservaLivro.Designer.cs">
+      <DependentUpon>frmReservaLivro.cs</DependentUpon>
     </Compile>
     <Compile Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroAluno.cs">
       <SubType>Form</SubType>
@@ -293,11 +311,20 @@
     <EmbeddedResource Include="4BI\Movimentacao\frmDevolucao.resx">
       <DependentUpon>frmDevolucao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="4BI\Movimentacao\frmDevolucaoLivro.resx">
+      <DependentUpon>frmDevolucaoLivro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="4BI\Movimentacao\frmEmprestimo.resx">
       <DependentUpon>frmEmprestimo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="4BI\Movimentacao\frmEmprestimoLivro.resx">
+      <DependentUpon>frmEmprestimoLivro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="4BI\Movimentacao\frmReserva.resx">
       <DependentUpon>frmReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4BI\Movimentacao\frmReservaLivro.resx">
+      <DependentUpon>frmReservaLivro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroAluno.resx">
       <DependentUpon>frmRelatorioCadastroAluno.cs</DependentUpon>

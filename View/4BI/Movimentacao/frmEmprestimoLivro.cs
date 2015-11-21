@@ -16,5 +16,10 @@ namespace View._4BI.Movimentacao
         {
             InitializeComponent();
         }
+
+        private void frmEmprestimoLivro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

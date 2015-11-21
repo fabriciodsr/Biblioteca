@@ -105,5 +105,13 @@ namespace View
         {
 
         }
+
+        private void eMPRESTIMOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            eMPRESTIMOToolStripMenuItem.Enabled = false;
+            View._4BI.Movimentacao.frmEmprestimo frm = new _4BI.Movimentacao.frmEmprestimo();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

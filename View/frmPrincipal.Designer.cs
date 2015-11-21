@@ -126,35 +126,35 @@
             // aLUNOToolStripMenuItem
             // 
             this.aLUNOToolStripMenuItem.Name = "aLUNOToolStripMenuItem";
-            this.aLUNOToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.aLUNOToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.aLUNOToolStripMenuItem.Text = "ALUNO";
             this.aLUNOToolStripMenuItem.Click += new System.EventHandler(this.aLUNOToolStripMenuItem_Click);
             // 
             // aUTORToolStripMenuItem
             // 
             this.aUTORToolStripMenuItem.Name = "aUTORToolStripMenuItem";
-            this.aUTORToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.aUTORToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.aUTORToolStripMenuItem.Text = "AUTOR";
             this.aUTORToolStripMenuItem.Click += new System.EventHandler(this.aUTORToolStripMenuItem_Click);
             // 
             // eDITORAToolStripMenuItem
             // 
             this.eDITORAToolStripMenuItem.Name = "eDITORAToolStripMenuItem";
-            this.eDITORAToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.eDITORAToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.eDITORAToolStripMenuItem.Text = "EDITORA";
             this.eDITORAToolStripMenuItem.Click += new System.EventHandler(this.eDITORAToolStripMenuItem_Click);
             // 
             // gENEROToolStripMenuItem
             // 
             this.gENEROToolStripMenuItem.Name = "gENEROToolStripMenuItem";
-            this.gENEROToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.gENEROToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.gENEROToolStripMenuItem.Text = "GENERO";
             this.gENEROToolStripMenuItem.Click += new System.EventHandler(this.gENEROToolStripMenuItem_Click);
             // 
             // lIVROToolStripMenuItem
             // 
             this.lIVROToolStripMenuItem.Name = "lIVROToolStripMenuItem";
-            this.lIVROToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.lIVROToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.lIVROToolStripMenuItem.Text = "LIVRO";
             this.lIVROToolStripMenuItem.Click += new System.EventHandler(this.lIVROToolStripMenuItem_Click);
             // 
@@ -179,6 +179,7 @@
             this.eMPRESTIMOToolStripMenuItem.Name = "eMPRESTIMOToolStripMenuItem";
             this.eMPRESTIMOToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
             this.eMPRESTIMOToolStripMenuItem.Text = "EMPRESTIMO";
+            this.eMPRESTIMOToolStripMenuItem.Click += new System.EventHandler(this.eMPRESTIMOToolStripMenuItem_Click);
             // 
             // dEVOLUÇÃOToolStripMenuItem
             // 

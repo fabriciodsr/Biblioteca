@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelatorioCadastroAluno));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.dtgReservas = new System.Windows.Forms.DataGridView();
+            this.btnPesquisarAluno = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgReservas)).BeginInit();
@@ -94,7 +96,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Controls.Add(this.btnPesquisarAluno);
+            this.groupBox2.Controls.Add(this.txtNome);
             this.groupBox2.Controls.Add(this.radioButton3);
             this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Location = new System.Drawing.Point(311, 12);
@@ -104,38 +107,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Classificar por:";
             // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(97, 34);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(49, 17);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "autor";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(33, 34);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(135, 17);
+            this.radioButton1.Size = new System.Drawing.Size(58, 17);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "com livros emprestados";
+            this.radioButton1.Text = "gênero";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(174, 34);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(116, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "com reserva aberta";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(317, 34);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(103, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "com pendências";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // dtgReservas
             // 
@@ -144,6 +136,27 @@
             this.dtgReservas.Name = "dtgReservas";
             this.dtgReservas.Size = new System.Drawing.Size(764, 336);
             this.dtgReservas.TabIndex = 102;
+            // 
+            // btnPesquisarAluno
+            // 
+            this.btnPesquisarAluno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPesquisarAluno.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnPesquisarAluno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisarAluno.BackgroundImage")));
+            this.btnPesquisarAluno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPesquisarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPesquisarAluno.Location = new System.Drawing.Point(404, 28);
+            this.btnPesquisarAluno.Name = "btnPesquisarAluno";
+            this.btnPesquisarAluno.Size = new System.Drawing.Size(26, 21);
+            this.btnPesquisarAluno.TabIndex = 109;
+            this.btnPesquisarAluno.UseVisualStyleBackColor = false;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(166, 25);
+            this.txtNome.MaxLength = 50;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(223, 20);
+            this.txtNome.TabIndex = 108;
             // 
             // frmRelatorioCadastroAluno
             // 
@@ -175,7 +188,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.DataGridView dtgReservas;
+        private System.Windows.Forms.Button btnPesquisarAluno;
+        private System.Windows.Forms.TextBox txtNome;
     }
 }

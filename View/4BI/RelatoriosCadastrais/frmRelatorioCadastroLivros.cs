@@ -16,5 +16,7 @@ namespace View._4BI.RelatoriosCadastrais
         {
             InitializeComponent();
         }
+
+       
     }
 }

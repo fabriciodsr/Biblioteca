@@ -77,7 +77,7 @@
     <Compile Include="EDITORA.cs">
       <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
     </Compile>
-    <Compile Include="EMPRESTIMO.cs">
+    <Compile Include="Emprestimo.cs">
       <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
     </Compile>
     <Compile Include="GENERO.cs">

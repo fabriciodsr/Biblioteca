@@ -16,14 +16,12 @@ namespace Model
     {
         public RESERVA()
         {
-            this.ALUNO = new HashSet<ALUNO>();
             this.LIVRO = new HashSet<LIVRO>();
         }
     
         public int ID_RESERVA { get; set; }
         public System.DateTime DATA_RES { get; set; }
     
-        public virtual ICollection<ALUNO> ALUNO { get; set; }
         public virtual ICollection<LIVRO> LIVRO { get; set; }
     }
 }

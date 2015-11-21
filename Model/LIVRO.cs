@@ -16,7 +16,7 @@ namespace Model
     {
         public LIVRO()
         {
-            this.EMPRESTIMO = new HashSet<EMPRESTIMO>();
+            this.Emprestimo = new HashSet<Emprestimo>();
             this.AUTOR = new HashSet<AUTOR>();
             this.GENERO = new HashSet<GENERO>();
             this.RESERVA = new HashSet<RESERVA>();
@@ -32,7 +32,7 @@ namespace Model
         public string SUMARIO { get; set; }
     
         public virtual EDITORA EDITORA { get; set; }
-        public virtual ICollection<EMPRESTIMO> EMPRESTIMO { get; set; }
+        public virtual ICollection<Emprestimo> Emprestimo { get; set; }
         public virtual ICollection<AUTOR> AUTOR { get; set; }
         public virtual ICollection<GENERO> GENERO { get; set; }
         public virtual ICollection<RESERVA> RESERVA { get; set; }

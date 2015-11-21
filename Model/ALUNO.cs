@@ -16,7 +16,7 @@ namespace Model
     {
         public ALUNO()
         {
-            this.EMPRESTIMO = new HashSet<EMPRESTIMO>();
+            this.Emprestimo = new HashSet<Emprestimo>();
         }
     
         public int ID_ALUNO { get; set; }
@@ -32,10 +32,8 @@ namespace Model
         public string PAIS { get; set; }
         public string TEL_RES { get; set; }
         public string TEL_CEL { get; set; }
-        public Nullable<int> ID_RESERVA { get; set; }
         public string EMAIL { get; set; }
     
-        public virtual RESERVA RESERVA { get; set; }
-        public virtual ICollection<EMPRESTIMO> EMPRESTIMO { get; set; }
+        public virtual ICollection<Emprestimo> Emprestimo { get; set; }
     }
 }

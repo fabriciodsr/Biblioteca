@@ -48,65 +48,161 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastros\frmCadastroAluno.cs">
+    <Compile Include="3BI\Cadastros\frmCadastroAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\frmCadastroAluno.designer.cs">
+    <Compile Include="3BI\Cadastros\frmCadastroAluno.designer.cs">
       <DependentUpon>frmCadastroAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\frmCadastroAutor.cs">
+    <Compile Include="3BI\Cadastros\frmCadastroAutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\frmCadastroAutor.designer.cs">
+    <Compile Include="3BI\Cadastros\frmCadastroAutor.designer.cs">
       <DependentUpon>frmCadastroAutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\frmCadastroEditora.cs">
+    <Compile Include="3BI\Cadastros\frmCadastroEditora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\frmCadastroEditora.designer.cs">
+    <Compile Include="3BI\Cadastros\frmCadastroEditora.designer.cs">
       <DependentUpon>frmCadastroEditora.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\frmCadastroGenero.cs">
+    <Compile Include="3BI\Cadastros\frmCadastroGenero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\frmCadastroGenero.designer.cs">
+    <Compile Include="3BI\Cadastros\frmCadastroGenero.designer.cs">
       <DependentUpon>frmCadastroGenero.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\frmCadastroLivro.cs">
+    <Compile Include="3BI\Cadastros\frmCadastroLivro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\frmCadastroLivro.designer.cs">
+    <Compile Include="3BI\Cadastros\frmCadastroLivro.designer.cs">
       <DependentUpon>frmCadastroLivro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\frmConsultaAlunos.cs">
+    <Compile Include="3BI\Consultas\frmConsultaAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\frmConsultaAlunos.designer.cs">
+    <Compile Include="3BI\Consultas\frmConsultaAlunos.designer.cs">
       <DependentUpon>frmConsultaAlunos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\frmConsultaAutores.cs">
+    <Compile Include="3BI\Consultas\frmConsultaAutores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\frmConsultaAutores.designer.cs">
+    <Compile Include="3BI\Consultas\frmConsultaAutores.designer.cs">
       <DependentUpon>frmConsultaAutores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\frmConsultaEditoras.cs">
+    <Compile Include="3BI\Consultas\frmConsultaEditoras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\frmConsultaEditoras.designer.cs">
+    <Compile Include="3BI\Consultas\frmConsultaEditoras.designer.cs">
       <DependentUpon>frmConsultaEditoras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\frmConsultaGeneros.cs">
+    <Compile Include="3BI\Consultas\frmConsultaGeneros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\frmConsultaGeneros.designer.cs">
+    <Compile Include="3BI\Consultas\frmConsultaGeneros.designer.cs">
       <DependentUpon>frmConsultaGeneros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\frmConsultaLivros.cs">
+    <Compile Include="3BI\Consultas\frmConsultaLivros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\frmConsultaLivros.designer.cs">
+    <Compile Include="3BI\Consultas\frmConsultaLivros.designer.cs">
       <DependentUpon>frmConsultaLivros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\ConsultaMovimentacao\frmConsultaDevolucao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\ConsultaMovimentacao\frmConsultaDevolucao.Designer.cs">
+      <DependentUpon>frmConsultaDevolucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\ConsultaMovimentacao\frmConsultaEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\ConsultaMovimentacao\frmConsultaEmprestimo.Designer.cs">
+      <DependentUpon>frmConsultaEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\ConsultaMovimentacao\frmConsultaLivrosReservados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\ConsultaMovimentacao\frmConsultaLivrosReservados.Designer.cs">
+      <DependentUpon>frmConsultaLivrosReservados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\ConsultaMovimentacao\frmConsultaPendencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\ConsultaMovimentacao\frmConsultaPendencias.Designer.cs">
+      <DependentUpon>frmConsultaPendencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\Movimentacao\frmDevolucao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\Movimentacao\frmDevolucao.Designer.cs">
+      <DependentUpon>frmDevolucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\Movimentacao\frmEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\Movimentacao\frmEmprestimo.Designer.cs">
+      <DependentUpon>frmEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\Movimentacao\frmReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\Movimentacao\frmReserva.Designer.cs">
+      <DependentUpon>frmReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroAluno.Designer.cs">
+      <DependentUpon>frmRelatorioCadastroAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroAutores.Designer.cs">
+      <DependentUpon>frmRelatorioCadastroAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroEditoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroEditoras.Designer.cs">
+      <DependentUpon>frmRelatorioCadastroEditoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroGeneros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroGeneros.Designer.cs">
+      <DependentUpon>frmRelatorioCadastroGeneros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\RelatoriosCadastrais\frmRelatorioCadastroLivros.Designer.cs">
+      <DependentUpon>frmRelatorioCadastroLivros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\RelatoriosdeMovimentacao\frmRelAlunosPendencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\RelatoriosdeMovimentacao\frmRelAlunosPendencias.Designer.cs">
+      <DependentUpon>frmRelAlunosPendencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosaDevolver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosaDevolver.Designer.cs">
+      <DependentUpon>frmRelLivrosaDevolver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosEmprestados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosEmprestados.Designer.cs">
+      <DependentUpon>frmRelLivrosEmprestados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4BI\RelatoriosdeMovimentacao\RelLivrosReservados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4BI\RelatoriosdeMovimentacao\RelLivrosReservados.Designer.cs">
+      <DependentUpon>RelLivrosReservados.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -152,34 +248,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cadastros\frmCadastroAluno.resx">
+    <EmbeddedResource Include="3BI\Cadastros\frmCadastroAluno.resx">
       <DependentUpon>frmCadastroAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\frmCadastroAutor.resx">
+    <EmbeddedResource Include="3BI\Cadastros\frmCadastroAutor.resx">
       <DependentUpon>frmCadastroAutor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\frmCadastroEditora.resx">
+    <EmbeddedResource Include="3BI\Cadastros\frmCadastroEditora.resx">
       <DependentUpon>frmCadastroEditora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\frmCadastroGenero.resx">
+    <EmbeddedResource Include="3BI\Cadastros\frmCadastroGenero.resx">
       <DependentUpon>frmCadastroGenero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\frmCadastroLivro.resx">
+    <EmbeddedResource Include="3BI\Cadastros\frmCadastroLivro.resx">
       <DependentUpon>frmCadastroLivro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\frmConsultaAlunos.resx">
+    <EmbeddedResource Include="3BI\Consultas\frmConsultaAlunos.resx">
       <DependentUpon>frmConsultaAlunos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\frmConsultaAutores.resx">
+    <EmbeddedResource Include="3BI\Consultas\frmConsultaAutores.resx">
       <DependentUpon>frmConsultaAutores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\frmConsultaEditoras.resx">
+    <EmbeddedResource Include="3BI\Consultas\frmConsultaEditoras.resx">
       <DependentUpon>frmConsultaEditoras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\frmConsultaGeneros.resx">
+    <EmbeddedResource Include="3BI\Consultas\frmConsultaGeneros.resx">
       <DependentUpon>frmConsultaGeneros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\frmConsultaLivros.resx">
+    <EmbeddedResource Include="3BI\Consultas\frmConsultaLivros.resx">
       <DependentUpon>frmConsultaLivros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
@@ -343,6 +439,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

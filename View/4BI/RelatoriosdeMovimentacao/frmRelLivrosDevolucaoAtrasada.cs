@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace View._4BI.RelatoriosdeMovimentacao
 {
-    public partial class frmRelLivrosaDevolver : Form
+    public partial class frmRelLivrosDevolucaoAtrasada : Form
     {
-        public frmRelLivrosaDevolver()
+        public frmRelLivrosDevolucaoAtrasada()
         {
             InitializeComponent();
         }

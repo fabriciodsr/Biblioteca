@@ -204,11 +204,11 @@
     <Compile Include="4BI\RelatoriosdeMovimentacao\frmRelAlunosPendencias.Designer.cs">
       <DependentUpon>frmRelAlunosPendencias.cs</DependentUpon>
     </Compile>
-    <Compile Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosaDevolver.cs">
+    <Compile Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosDevolucaoAtrasada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosaDevolver.Designer.cs">
-      <DependentUpon>frmRelLivrosaDevolver.cs</DependentUpon>
+    <Compile Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosDevolucaoAtrasada.Designer.cs">
+      <DependentUpon>frmRelLivrosDevolucaoAtrasada.cs</DependentUpon>
     </Compile>
     <Compile Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosEmprestados.cs">
       <SubType>Form</SubType>
@@ -344,8 +344,8 @@
     <EmbeddedResource Include="4BI\RelatoriosdeMovimentacao\frmRelAlunosPendencias.resx">
       <DependentUpon>frmRelAlunosPendencias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosaDevolver.resx">
-      <DependentUpon>frmRelLivrosaDevolver.cs</DependentUpon>
+    <EmbeddedResource Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosDevolucaoAtrasada.resx">
+      <DependentUpon>frmRelLivrosDevolucaoAtrasada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="4BI\RelatoriosdeMovimentacao\frmRelLivrosEmprestados.resx">
       <DependentUpon>frmRelLivrosEmprestados.cs</DependentUpon>

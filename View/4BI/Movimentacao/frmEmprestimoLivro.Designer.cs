@@ -42,9 +42,9 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblCpf = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnRenovar = new System.Windows.Forms.Button();
+            this.btnDevolução = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtAluno
@@ -184,47 +184,41 @@
             this.txtCpf.Size = new System.Drawing.Size(133, 22);
             this.txtCpf.TabIndex = 132;
             // 
-            // label1
+            // btnCancelar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(162, 402);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
-            this.label1.TabIndex = 134;
-            this.label1.Text = "Renovar";
+            this.btnCancelar.Location = new System.Drawing.Point(407, 361);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(82, 50);
+            this.btnCancelar.TabIndex = 159;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // btnRenovar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(248, 402);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
-            this.label2.TabIndex = 135;
-            this.label2.Text = "Cancelar";
+            this.btnRenovar.Location = new System.Drawing.Point(257, 361);
+            this.btnRenovar.Name = "btnRenovar";
+            this.btnRenovar.Size = new System.Drawing.Size(82, 50);
+            this.btnRenovar.TabIndex = 158;
+            this.btnRenovar.Text = "Renovar";
+            this.btnRenovar.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // btnDevolução
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(58, 402);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 20);
-            this.label3.TabIndex = 136;
-            this.label3.Text = "Devolução";
+            this.btnDevolução.Location = new System.Drawing.Point(107, 361);
+            this.btnDevolução.Name = "btnDevolução";
+            this.btnDevolução.Size = new System.Drawing.Size(86, 50);
+            this.btnDevolução.TabIndex = 157;
+            this.btnDevolução.Text = "Devolução";
+            this.btnDevolução.UseVisualStyleBackColor = true;
             // 
             // frmEmprestimoLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 444);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnRenovar);
+            this.Controls.Add(this.btnDevolução);
             this.Controls.Add(this.lblCpf);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtAluno);
@@ -265,8 +259,8 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblCpf;
         private System.Windows.Forms.TextBox txtCpf;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnRenovar;
+        private System.Windows.Forms.Button btnDevolução;
     }
 }

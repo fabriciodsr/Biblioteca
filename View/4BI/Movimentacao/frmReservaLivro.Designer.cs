@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.txtAluno = new System.Windows.Forms.TextBox();
@@ -44,29 +42,10 @@
             this.txtEditora = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnRenovar = new System.Windows.Forms.Button();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 399);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 20);
-            this.label3.TabIndex = 170;
-            this.label3.Text = "Confirmar";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(129, 399);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
-            this.label2.TabIndex = 169;
-            this.label2.Text = "Cancelar";
             // 
             // lblCpf
             // 
@@ -205,13 +184,41 @@
             this.txtID.Size = new System.Drawing.Size(133, 22);
             this.txtID.TabIndex = 154;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(420, 353);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(82, 50);
+            this.btnCancelar.TabIndex = 170;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnRenovar
+            // 
+            this.btnRenovar.Location = new System.Drawing.Point(270, 353);
+            this.btnRenovar.Name = "btnRenovar";
+            this.btnRenovar.Size = new System.Drawing.Size(82, 50);
+            this.btnRenovar.TabIndex = 169;
+            this.btnRenovar.Text = "Renovar";
+            this.btnRenovar.UseVisualStyleBackColor = true;
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Location = new System.Drawing.Point(120, 353);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(82, 50);
+            this.btnConfirmar.TabIndex = 168;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            // 
             // frmReservaLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 444);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnRenovar);
+            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.lblCpf);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtAluno);
@@ -227,7 +234,7 @@
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.txtID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmReservaLivro";
             this.Text = "RESERVA";
             this.ResumeLayout(false);
@@ -236,9 +243,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCpf;
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.TextBox txtAluno;
@@ -253,5 +257,8 @@
         private System.Windows.Forms.TextBox txtEditora;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnRenovar;
+        private System.Windows.Forms.Button btnConfirmar;
     }
 }

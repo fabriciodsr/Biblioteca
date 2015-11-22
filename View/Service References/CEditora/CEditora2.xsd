@@ -25,7 +25,6 @@
   <xs:element name="ArrayOfLIVRO" nillable="true" type="tns:ArrayOfLIVRO" />
   <xs:complexType name="LIVRO">
     <xs:sequence>
-      <xs:element minOccurs="0" name="AUTOR" nillable="true" type="tns:ArrayOfAUTOR" />
       <xs:element minOccurs="0" name="DATA_PUBLIC" type="xs:dateTime" />
       <xs:element minOccurs="0" name="EDITORA" nillable="true" type="tns:EDITORA" />
       <xs:element minOccurs="0" name="EMPRESTIMO" nillable="true" type="tns:ArrayOfEMPRESTIMO" />
@@ -33,6 +32,7 @@
       <xs:element minOccurs="0" name="ID_EDITORA" type="xs:int" />
       <xs:element minOccurs="0" name="ID_GENERO" type="xs:int" />
       <xs:element minOccurs="0" name="ID_LIVRO" type="xs:int" />
+      <xs:element minOccurs="0" name="LIVROS_AUTORES" nillable="true" type="tns:ArrayOfLIVROS_AUTORES" />
       <xs:element minOccurs="0" name="QTD_EXEMP" type="xs:int" />
       <xs:element minOccurs="0" name="RESERVAS_LIVROS_ALUNOS" nillable="true" type="tns:ArrayOfRESERVAS_LIVROS_ALUNOS" />
       <xs:element minOccurs="0" name="SUMARIO" nillable="true" type="xs:string" />
@@ -41,23 +41,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="LIVRO" nillable="true" type="tns:LIVRO" />
-  <xs:complexType name="ArrayOfAUTOR">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="AUTOR" nillable="true" type="tns:AUTOR" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfAUTOR" nillable="true" type="tns:ArrayOfAUTOR" />
-  <xs:complexType name="AUTOR">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="BIOGRAFIA" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ID_AUTOR" type="xs:int" />
-      <xs:element minOccurs="0" name="LIVRO" nillable="true" type="tns:ArrayOfLIVRO" />
-      <xs:element minOccurs="0" name="NOME" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SITE" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SOBRENOME" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="AUTOR" nillable="true" type="tns:AUTOR" />
   <xs:complexType name="ArrayOfEMPRESTIMO">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="EMPRESTIMO" nillable="true" type="tns:EMPRESTIMO" />
@@ -133,6 +116,33 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="GENERO" nillable="true" type="tns:GENERO" />
+  <xs:complexType name="ArrayOfLIVROS_AUTORES">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LIVROS_AUTORES" nillable="true" type="tns:LIVROS_AUTORES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLIVROS_AUTORES" nillable="true" type="tns:ArrayOfLIVROS_AUTORES" />
+  <xs:complexType name="LIVROS_AUTORES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AUTOR" nillable="true" type="tns:AUTOR" />
+      <xs:element minOccurs="0" name="ID_AUTOR" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_LIVRO" type="xs:int" />
+      <xs:element minOccurs="0" name="LIVRO" nillable="true" type="tns:LIVRO" />
+      <xs:element minOccurs="0" name="test" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LIVROS_AUTORES" nillable="true" type="tns:LIVROS_AUTORES" />
+  <xs:complexType name="AUTOR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BIOGRAFIA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_AUTOR" type="xs:int" />
+      <xs:element minOccurs="0" name="LIVROS_AUTORES" nillable="true" type="tns:ArrayOfLIVROS_AUTORES" />
+      <xs:element minOccurs="0" name="NOME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SITE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SOBRENOME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AUTOR" nillable="true" type="tns:AUTOR" />
   <xs:complexType name="ArrayOfEDITORA">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="EDITORA" nillable="true" type="tns:EDITORA" />

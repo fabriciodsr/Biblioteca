@@ -77,7 +77,7 @@ namespace View
 
                             CLivroAutor.CLivroAutorClient oProxyNpraN = new CLivroAutor.CLivroAutorClient();
                             oProxyNpraN.Open();
-                            LivroAutorMetod.InsereNpraN(oLivro, Autor1, Autor2);
+                            oProxyNpraN.InserirNpraN(oLivro, Autor1, Autor2);
                             oProxyNpraN.Close();
                         }
                         else

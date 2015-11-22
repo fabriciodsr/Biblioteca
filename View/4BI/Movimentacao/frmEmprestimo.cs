@@ -98,9 +98,10 @@ namespace View._4BI.Movimentacao
                     txtTitulo.Text = oLivro.TITULO;
                     txtVolume.Text = Convert.ToString(oLivro.VOLUME);
 
+
                     AUTOR oAutor1 = new AUTOR();
 
-                    oAutor1 = oLivro.AUTOR.ElementAtOrDefault<AUTOR>(0);
+                    oAutor1 = oLivro.AUTOR.First();
 
                     txtAutor1.Text = oAutor1.NOME;
 
@@ -121,14 +122,22 @@ namespace View._4BI.Movimentacao
                     dtp_Publicacao.Value = oLivro.DATA_PUBLIC;
 
 
-                    GENERO oGenero = new GENERO();
+                    /*GENERO oGenero = new GENERO();
 
                     oGenero = oLivro.GENERO.ElementAtOrDefault<GENERO>(0);
 
-                    txtGenero.Text = oGenero.DESCRICAO;
+                    txtGenero.Text = oGenero.DESCRICAO;*/
 
-                    txtEditora.Text = oLivro.EDITORA.NOME;
-                   
+                    try
+                    {
+                        txtEditora.Text = oLivro.EDITORA.NOME;
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
 
 
                 }

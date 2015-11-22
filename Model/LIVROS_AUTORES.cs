@@ -12,12 +12,13 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class LIVROS_AUTORES
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int ID_LIVRO { get; set; }
+        public int ID_AUTOR { get; set; }
+        public Nullable<int> test { get; set; }
+    
+        public virtual AUTOR AUTOR { get; set; }
+        public virtual LIVRO LIVRO { get; set; }
     }
 }

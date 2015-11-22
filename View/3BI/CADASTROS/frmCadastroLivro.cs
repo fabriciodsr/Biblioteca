@@ -53,69 +53,32 @@ namespace View
                 oLivro.TITULO = txtTitulo.Text;
                 oLivro.VOLUME = Convert.ToInt32(txtVolume.Text);
                 oLivro.DATA_PUBLIC = dtp_Publicacao.Value;
-                oLivro.QTD_EXMPLARES = Convert.ToInt32(txtQuantidade.Text);
+                oLivro.QTD_EXEMP = Convert.ToInt32(txtQuantidade.Text);
                 oLivro.SUMARIO = txtSumario.Text;
-                oLivro.QTD_DISP_EMPR = Convert.ToInt32(txtQuantidade.Text);
                 oLivro.ID_EDITORA = cmbEditora.SelectedIndex;
+                oLivro.ID_GENERO = cmbGenero1.SelectedIndex;
 
-
-                CAutor.CAutorClient oProxy = new CAutor.CAutorClient();
+                int Autor1 = cmbAutor1.SelectedIndex;
+                int Autor2 = cmbAutor2.SelectedIndex;
+                        
+                CLivro.CLivroClient oProxy = new CLivro.CLivroClient();
                 oProxy.Open();
-
-                AUTOR xAutor = oProxy.SelecionarNome(cmbAutor1.Text);
-                AUTOR xAutor2 = oProxy.SelecionarNome(cmbAutor2.Text);
-
-                oLivro.AUTOR.Add(xAutor);
-                oLivro.AUTOR.Add(xAutor2);
-
-                oProxy.Close();
-
-                
-
-                CEditora.CEditoraClient oProxy2 = new CEditora.CEditoraClient();
-                oProxy2.Open();
-
-                EDITORA xEditora = oProxy2.SelecionarNome(cmbEditora.Text);
-                oLivro.EDITORA = xEditora;
-
-                oProxy2.Close();
-
-
-
-
-                CGenero.CGeneroClient oProxy3 = new CGenero.CGeneroClient();
-                oProxy3.Open();
-
-                GENERO xGenero = oProxy3.SelecionarDescricao(cmbGenero1.Text);
-                oLivro.GENERO.Add(xGenero);
-
-                oProxy3.Close();
-
-
-
-
-
-                //oLivro.QTD_DISP_EMPR = ??????????
-                //oLivro.ID_EDITORA = cmbEditora.SelectedIndex;
-                //oLivro.GENERO = 
-                //oLivro.Emprestimo = ???????????
-                //oLivro.RESERVA = ???????
-
-
-                CLivro.CLivroClient oProxy4 = new CLivro.CLivroClient();
-                oProxy4.Open();
 
                 if (var == 0)
                 {
 
                     try
                     {
-                        if (oProxy4.Cadastrar(oLivro))
+                        if (oProxy.Cadastrar(oLivro))
                         {
-
+                            
                             MessageBox.Show("Cadastro realizado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LimpaCampos();
 
+                            CLivroAutor.CLivroAutorClient oProxyNpraN = new CLivroAutor.CLivroAutorClient();
+                            oProxyNpraN.Open();
+                            LivroAutorMetod.InsereNpraN(oLivro, Autor1, Autor2);
+                            oProxyNpraN.Close();
                         }
                         else
                         {
@@ -131,19 +94,18 @@ namespace View
 
 
 
-                                LIVRO xLivro = oProxy4.SelecionarTitulo(var);
+                                LIVRO xLivro = oProxy.SelecionarTitulo(var);
 
                                 int var2 = xLivro.ID_LIVRO;
 
                                 txtTitulo.Text = xLivro.TITULO;
-                                //???????? = oLivro.QTD_DISP_EMPR;
-                                txtQuantidade.Text = xLivro.QTD_EXMPLARES.ToString();
+                                txtQuantidade.Text = xLivro.QTD_EXEMP.ToString();
                                 txtSumario.Text = xLivro.SUMARIO;
                                 dtp_Publicacao.Value = xLivro.DATA_PUBLIC;
                                 cmbEditora.Text = xLivro.EDITORA.NOME;
-                                cmbAutor1.Text = xLivro.AUTOR.ElementAt(0).NOME;
-                                cmbAutor2.Text = xLivro.AUTOR.ElementAt(1).NOME;
-                                cmbGenero1.Text = xLivro.GENERO.ElementAt(0).DESCRICAO;
+                               // cmbAutor1.Text = xLivro.AUTOR.ElementAt(0).NOME;
+                                //cmbAutor2.Text = xLivro.AUTOR.ElementAt(1).NOME;
+                                //cmbGenero1.Text = xLivro.GENERO.ElementAt(0).DESCRICAO;
                                 //???????? = .GENERO; 
                                 //???????? = oLivro.Emprestimo;
                                 //???????? = oLivro.RESERVA;
@@ -169,7 +131,7 @@ namespace View
 
                     try
                     {
-                        if (oProxy4.Alterar(oLivro))
+                        if (oProxy.Alterar(oLivro))
                         {
                             MessageBox.Show("Alteração realizada com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LimpaCampos();
@@ -375,7 +337,7 @@ namespace View
 
                     txtTitulo.Text = oLivro.TITULO;
                     //???????? = oLivro.QTD_DISP_EMPR;
-                    txtQuantidade.Text = oLivro.QTD_EXMPLARES.ToString();
+                    //txtQuantidade.Text = oLivro.QTD_EXMPLARES.ToString();
                     txtSumario.Text = oLivro.SUMARIO;
                     dtp_Publicacao.Value = oLivro.DATA_PUBLIC;
                     cmbEditora.SelectedIndex = oLivro.ID_EDITORA;
@@ -412,7 +374,7 @@ namespace View
 
                     txtTitulo.Text = oLivro.TITULO;
                     //???????? = oLivro.QTD_DISP_EMPR;
-                    txtQuantidade.Text = oLivro.QTD_EXMPLARES.ToString();
+                    //txtQuantidade.Text = oLivro.QTD_EXMPLARES.ToString();
                     txtSumario.Text = oLivro.SUMARIO;
                     dtp_Publicacao.Value = oLivro.DATA_PUBLIC;
                     cmbEditora.SelectedIndex = oLivro.ID_EDITORA;

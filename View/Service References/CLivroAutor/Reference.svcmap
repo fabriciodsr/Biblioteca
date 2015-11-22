@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2947e6bc-0d36-4a23-9448-929bfe276c1b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26759/CLivroAutor.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CLivroAutor.xsd" MetadataType="Schema" ID="cd363c6f-2528-4a06-8f05-3db206c1cb85" SourceId="1" SourceUrl="http://localhost:26759/CLivroAutor.svc?xsd=xsd1" />
+    <MetadataFile FileName="CLivroAutor1.xsd" MetadataType="Schema" ID="6288ca57-437f-4f6c-ba49-2b0853a3cc49" SourceId="1" SourceUrl="http://localhost:26759/CLivroAutor.svc?xsd=xsd0" />
+    <MetadataFile FileName="CLivroAutor.wsdl" MetadataType="Wsdl" ID="bd903e9a-9662-44f3-a8d9-af06f1543f75" SourceId="1" SourceUrl="http://localhost:26759/CLivroAutor.svc?wsdl" />
+    <MetadataFile FileName="CLivroAutor2.xsd" MetadataType="Schema" ID="4a4f8744-99d2-4c7f-a688-de31f613ea4b" SourceId="1" SourceUrl="http://localhost:26759/CLivroAutor.svc?xsd=xsd2" />
+    <MetadataFile FileName="CLivroAutor.disco" MetadataType="Disco" ID="1bbc12f3-d96f-491a-8731-b811e1105cb2" SourceId="1" SourceUrl="http://localhost:26759/CLivroAutor.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

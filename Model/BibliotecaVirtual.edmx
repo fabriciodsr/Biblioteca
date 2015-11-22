@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BibliotecaVirtualModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BibliotecaVirtualModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ALUNO">
           <Key>
             <PropertyRef Name="ID_ALUNO" />
@@ -15,13 +15,13 @@
           <Property Name="CPF" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="NASC" Type="datetime" Nullable="false" />
           <Property Name="ENDERECO" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="BAIRRO" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="CIDADE" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="BAIRRO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CIDADE" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="UF" Type="varchar" MaxLength="30" Nullable="false" />
-          <Property Name="CEP" Type="varchar" MaxLength="9" Nullable="false" />
-          <Property Name="PAIS" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="TEL_RES" Type="varchar" MaxLength="13" Nullable="false" />
-          <Property Name="TEL_CEL" Type="varchar" MaxLength="14" />
+          <Property Name="CEP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="PAIS" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="TEL_RES" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="TEL_CEL" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="EMAIL" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="AUTOR">
@@ -39,30 +39,26 @@
             <PropertyRef Name="ID_EDITORA" />
           </Key>
           <Property Name="ID_EDITORA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NOME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NOME" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="ENDERECO" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="BAIRRO" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="CIDADE" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="UF" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="CEP" Type="varchar" MaxLength="10" />
-          <Property Name="PAIS" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="TEL_1" Type="varchar" MaxLength="14" Nullable="false" />
-          <Property Name="TEL_2" Type="varchar" MaxLength="14" />
-          <Property Name="EMAIL" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="BAIRRO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CIDADE" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="UF" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CEP" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="PAIS" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="TEL_1" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="TEL_2" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="Emprestimo">
+        <EntityType Name="EMPRESTIMO">
           <Key>
             <PropertyRef Name="ID_EMPRESTIMO" />
-            <PropertyRef Name="ID_ALUNO" />
-            <PropertyRef Name="ID_LIVRO" />
-            <PropertyRef Name="ID_EDITORA" />
           </Key>
-          <Property Name="ID_EMPRESTIMO" Type="int" Nullable="false" />
-          <Property Name="ID_ALUNO" Type="int" Nullable="false" />
-          <Property Name="ID_LIVRO" Type="int" Nullable="false" />
-          <Property Name="ID_EDITORA" Type="int" Nullable="false" />
+          <Property Name="ID_EMPRESTIMO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DATA_EMP" Type="datetime" Nullable="false" />
           <Property Name="DATA_DEVOL" Type="datetime" Nullable="false" />
+          <Property Name="ID_ALUNO" Type="int" Nullable="false" />
+          <Property Name="ID_LIVRO" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="GENERO">
           <Key>
@@ -72,96 +68,72 @@
           <Property Name="DESCRICAO" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="ANDAR" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="CORREDOR" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="PRETELEIRA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="PRATELEIRA" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
         <EntityType Name="LIVRO">
           <Key>
             <PropertyRef Name="ID_LIVRO" />
-            <PropertyRef Name="ID_EDITORA" />
           </Key>
           <Property Name="ID_LIVRO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ID_EDITORA" Type="int" Nullable="false" />
-          <Property Name="TITULO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="TITULO" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="VOLUME" Type="int" Nullable="false" />
           <Property Name="DATA_PUBLIC" Type="datetime" Nullable="false" />
-          <Property Name="QTD_EXMPLARES" Type="int" Nullable="false" />
-          <Property Name="QTD_DISP_EMPR" Type="int" Nullable="false" />
-          <Property Name="SUMARIO" Type="varchar" MaxLength="10" Nullable="false" />
-        </EntityType>
-        <EntityType Name="LivroAutor">
-          <Key>
-            <PropertyRef Name="ID_AUTOR" />
-            <PropertyRef Name="ID_LIVRO" />
-            <PropertyRef Name="ID_EDITORA" />
-          </Key>
-          <Property Name="ID_AUTOR" Type="int" Nullable="false" />
-          <Property Name="ID_LIVRO" Type="int" Nullable="false" />
+          <Property Name="QTD_EXEMP" Type="int" Nullable="false" />
+          <Property Name="SUMARIO" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ID_EDITORA" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="LivroGenero">
-          <Key>
-            <PropertyRef Name="ID_LIVRO" />
-            <PropertyRef Name="ID_GENERO" />
-            <PropertyRef Name="ID_EDITORA" />
-          </Key>
-          <Property Name="ID_LIVRO" Type="int" Nullable="false" />
           <Property Name="ID_GENERO" Type="int" Nullable="false" />
-          <Property Name="ID_EDITORA" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LIVROS_AUTORES">
+          <Key>
+            <PropertyRef Name="ID_LIVRO" />
+            <PropertyRef Name="ID_AUTOR" />
+          </Key>
+          <Property Name="ID_LIVRO" Type="int" Nullable="false" />
+          <Property Name="ID_AUTOR" Type="int" Nullable="false" />
+          <Property Name="test" Type="int" />
         </EntityType>
         <EntityType Name="RESERVA">
           <Key>
             <PropertyRef Name="ID_RESERVA" />
           </Key>
           <Property Name="ID_RESERVA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DATA_RES" Type="datetime" Nullable="false" />
+          <Property Name="DATA_RESERVA" Type="datetime" Nullable="false" />
         </EntityType>
-        <EntityType Name="ReservaLivro">
+        <EntityType Name="RESERVAS_LIVROS_ALUNOS">
           <Key>
-            <PropertyRef Name="ID_LIVRO" />
             <PropertyRef Name="ID_RESERVA" />
-            <PropertyRef Name="ID_EDITORA" />
+            <PropertyRef Name="ID_LIVRO" />
+            <PropertyRef Name="ID_ALUNO" />
           </Key>
-          <Property Name="ID_LIVRO" Type="int" Nullable="false" />
           <Property Name="ID_RESERVA" Type="int" Nullable="false" />
-          <Property Name="ID_EDITORA" Type="int" Nullable="false" />
+          <Property Name="ID_LIVRO" Type="int" Nullable="false" />
+          <Property Name="ID_ALUNO" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
-        <Association Name="FK_Emprestimo_0">
+        <Association Name="FK_EMPRESTIMO_ALUNO">
           <End Role="ALUNO" Type="Self.ALUNO" Multiplicity="1" />
-          <End Role="Emprestimo" Type="Self.Emprestimo" Multiplicity="*" />
+          <End Role="EMPRESTIMO" Type="Self.EMPRESTIMO" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ALUNO">
               <PropertyRef Name="ID_ALUNO" />
             </Principal>
-            <Dependent Role="Emprestimo">
+            <Dependent Role="EMPRESTIMO">
               <PropertyRef Name="ID_ALUNO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Emprestimo_1">
+        <Association Name="FK_EMPRESTIMO_LIVRO">
           <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="1" />
-          <End Role="Emprestimo" Type="Self.Emprestimo" Multiplicity="*" />
+          <End Role="EMPRESTIMO" Type="Self.EMPRESTIMO" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LIVRO">
               <PropertyRef Name="ID_LIVRO" />
-              <PropertyRef Name="ID_EDITORA" />
             </Principal>
-            <Dependent Role="Emprestimo">
+            <Dependent Role="EMPRESTIMO">
               <PropertyRef Name="ID_LIVRO" />
-              <PropertyRef Name="ID_EDITORA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_LIVRO_0">
+        <Association Name="FK_LIVRO_EDITORA">
           <End Role="EDITORA" Type="Self.EDITORA" Multiplicity="1" />
           <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -173,81 +145,75 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_LivroAutor_0">
-          <End Role="AUTOR" Type="Self.AUTOR" Multiplicity="1" />
-          <End Role="LivroAutor" Type="Self.LivroAutor" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AUTOR">
-              <PropertyRef Name="ID_AUTOR" />
-            </Principal>
-            <Dependent Role="LivroAutor">
-              <PropertyRef Name="ID_AUTOR" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_LivroAutor_1">
-          <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="1" />
-          <End Role="LivroAutor" Type="Self.LivroAutor" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="LIVRO">
-              <PropertyRef Name="ID_LIVRO" />
-              <PropertyRef Name="ID_EDITORA" />
-            </Principal>
-            <Dependent Role="LivroAutor">
-              <PropertyRef Name="ID_LIVRO" />
-              <PropertyRef Name="ID_EDITORA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_LivroGenero_0">
-          <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="1" />
-          <End Role="LivroGenero" Type="Self.LivroGenero" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="LIVRO">
-              <PropertyRef Name="ID_LIVRO" />
-              <PropertyRef Name="ID_EDITORA" />
-            </Principal>
-            <Dependent Role="LivroGenero">
-              <PropertyRef Name="ID_LIVRO" />
-              <PropertyRef Name="ID_EDITORA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_LivroGenero_1">
+        <Association Name="FK_LIVRO_GENERO">
           <End Role="GENERO" Type="Self.GENERO" Multiplicity="1" />
-          <End Role="LivroGenero" Type="Self.LivroGenero" Multiplicity="*" />
+          <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GENERO">
               <PropertyRef Name="ID_GENERO" />
             </Principal>
-            <Dependent Role="LivroGenero">
+            <Dependent Role="LIVRO">
               <PropertyRef Name="ID_GENERO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ReservaLivro_0">
+        <Association Name="FK_LIVROS_AUTORES2">
           <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="1" />
-          <End Role="ReservaLivro" Type="Self.ReservaLivro" Multiplicity="*" />
+          <End Role="LIVROS_AUTORES" Type="Self.LIVROS_AUTORES" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LIVRO">
               <PropertyRef Name="ID_LIVRO" />
-              <PropertyRef Name="ID_EDITORA" />
             </Principal>
-            <Dependent Role="ReservaLivro">
+            <Dependent Role="LIVROS_AUTORES">
               <PropertyRef Name="ID_LIVRO" />
-              <PropertyRef Name="ID_EDITORA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ReservaLivro_1">
+        <Association Name="FK_LIVROS_AUTORES3">
+          <End Role="AUTOR" Type="Self.AUTOR" Multiplicity="1" />
+          <End Role="LIVROS_AUTORES" Type="Self.LIVROS_AUTORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AUTOR">
+              <PropertyRef Name="ID_AUTOR" />
+            </Principal>
+            <Dependent Role="LIVROS_AUTORES">
+              <PropertyRef Name="ID_AUTOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESERVAS_LIVROS_ALUNOS2">
           <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="1" />
-          <End Role="ReservaLivro" Type="Self.ReservaLivro" Multiplicity="*" />
+          <End Role="RESERVAS_LIVROS_ALUNOS" Type="Self.RESERVAS_LIVROS_ALUNOS" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="RESERVA">
               <PropertyRef Name="ID_RESERVA" />
             </Principal>
-            <Dependent Role="ReservaLivro">
+            <Dependent Role="RESERVAS_LIVROS_ALUNOS">
               <PropertyRef Name="ID_RESERVA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESERVAS_LIVROS_ALUNOS3">
+          <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="1" />
+          <End Role="RESERVAS_LIVROS_ALUNOS" Type="Self.RESERVAS_LIVROS_ALUNOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LIVRO">
+              <PropertyRef Name="ID_LIVRO" />
+            </Principal>
+            <Dependent Role="RESERVAS_LIVROS_ALUNOS">
+              <PropertyRef Name="ID_LIVRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESERVAS_LIVROS_ALUNOS4">
+          <End Role="ALUNO" Type="Self.ALUNO" Multiplicity="1" />
+          <End Role="RESERVAS_LIVROS_ALUNOS" Type="Self.RESERVAS_LIVROS_ALUNOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ALUNO">
+              <PropertyRef Name="ID_ALUNO" />
+            </Principal>
+            <Dependent Role="RESERVAS_LIVROS_ALUNOS">
+              <PropertyRef Name="ID_ALUNO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -255,183 +221,261 @@
           <EntitySet Name="ALUNO" EntityType="Self.ALUNO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AUTOR" EntityType="Self.AUTOR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EDITORA" EntityType="Self.EDITORA" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Emprestimo" EntityType="Self.Emprestimo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPRESTIMO" EntityType="Self.EMPRESTIMO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GENERO" EntityType="Self.GENERO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LIVRO" EntityType="Self.LIVRO" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="LivroAutor" EntityType="Self.LivroAutor" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="LivroGenero" EntityType="Self.LivroGenero" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LIVROS_AUTORES" EntityType="Self.LIVROS_AUTORES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RESERVA" EntityType="Self.RESERVA" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ReservaLivro" EntityType="Self.ReservaLivro" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Emprestimo_0" Association="Self.FK_Emprestimo_0">
+          <EntitySet Name="RESERVAS_LIVROS_ALUNOS" EntityType="Self.RESERVAS_LIVROS_ALUNOS" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_EMPRESTIMO_ALUNO" Association="Self.FK_EMPRESTIMO_ALUNO">
             <End Role="ALUNO" EntitySet="ALUNO" />
-            <End Role="Emprestimo" EntitySet="Emprestimo" />
+            <End Role="EMPRESTIMO" EntitySet="EMPRESTIMO" />
           </AssociationSet>
-          <AssociationSet Name="FK_Emprestimo_1" Association="Self.FK_Emprestimo_1">
+          <AssociationSet Name="FK_EMPRESTIMO_LIVRO" Association="Self.FK_EMPRESTIMO_LIVRO">
             <End Role="LIVRO" EntitySet="LIVRO" />
-            <End Role="Emprestimo" EntitySet="Emprestimo" />
+            <End Role="EMPRESTIMO" EntitySet="EMPRESTIMO" />
           </AssociationSet>
-          <AssociationSet Name="FK_LIVRO_0" Association="Self.FK_LIVRO_0">
+          <AssociationSet Name="FK_LIVRO_EDITORA" Association="Self.FK_LIVRO_EDITORA">
             <End Role="EDITORA" EntitySet="EDITORA" />
             <End Role="LIVRO" EntitySet="LIVRO" />
           </AssociationSet>
-          <AssociationSet Name="FK_LivroAutor_0" Association="Self.FK_LivroAutor_0">
-            <End Role="AUTOR" EntitySet="AUTOR" />
-            <End Role="LivroAutor" EntitySet="LivroAutor" />
-          </AssociationSet>
-          <AssociationSet Name="FK_LivroAutor_1" Association="Self.FK_LivroAutor_1">
-            <End Role="LIVRO" EntitySet="LIVRO" />
-            <End Role="LivroAutor" EntitySet="LivroAutor" />
-          </AssociationSet>
-          <AssociationSet Name="FK_LivroGenero_0" Association="Self.FK_LivroGenero_0">
-            <End Role="LIVRO" EntitySet="LIVRO" />
-            <End Role="LivroGenero" EntitySet="LivroGenero" />
-          </AssociationSet>
-          <AssociationSet Name="FK_LivroGenero_1" Association="Self.FK_LivroGenero_1">
+          <AssociationSet Name="FK_LIVRO_GENERO" Association="Self.FK_LIVRO_GENERO">
             <End Role="GENERO" EntitySet="GENERO" />
-            <End Role="LivroGenero" EntitySet="LivroGenero" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ReservaLivro_0" Association="Self.FK_ReservaLivro_0">
             <End Role="LIVRO" EntitySet="LIVRO" />
-            <End Role="ReservaLivro" EntitySet="ReservaLivro" />
           </AssociationSet>
-          <AssociationSet Name="FK_ReservaLivro_1" Association="Self.FK_ReservaLivro_1">
+          <AssociationSet Name="FK_LIVROS_AUTORES2" Association="Self.FK_LIVROS_AUTORES2">
+            <End Role="LIVRO" EntitySet="LIVRO" />
+            <End Role="LIVROS_AUTORES" EntitySet="LIVROS_AUTORES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LIVROS_AUTORES3" Association="Self.FK_LIVROS_AUTORES3">
+            <End Role="AUTOR" EntitySet="AUTOR" />
+            <End Role="LIVROS_AUTORES" EntitySet="LIVROS_AUTORES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESERVAS_LIVROS_ALUNOS2" Association="Self.FK_RESERVAS_LIVROS_ALUNOS2">
             <End Role="RESERVA" EntitySet="RESERVA" />
-            <End Role="ReservaLivro" EntitySet="ReservaLivro" />
+            <End Role="RESERVAS_LIVROS_ALUNOS" EntitySet="RESERVAS_LIVROS_ALUNOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESERVAS_LIVROS_ALUNOS3" Association="Self.FK_RESERVAS_LIVROS_ALUNOS3">
+            <End Role="LIVRO" EntitySet="LIVRO" />
+            <End Role="RESERVAS_LIVROS_ALUNOS" EntitySet="RESERVAS_LIVROS_ALUNOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESERVAS_LIVROS_ALUNOS4" Association="Self.FK_RESERVAS_LIVROS_ALUNOS4">
+            <End Role="ALUNO" EntitySet="ALUNO" />
+            <End Role="RESERVAS_LIVROS_ALUNOS" EntitySet="RESERVAS_LIVROS_ALUNOS" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BibliotecaVirtualModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BibliotecaVirtualEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ALUNO" EntityType="BibliotecaVirtualModel.ALUNO" />
+          <EntitySet Name="AUTOR" EntityType="BibliotecaVirtualModel.AUTOR" />
+          <EntitySet Name="EDITORA" EntityType="BibliotecaVirtualModel.EDITORA" />
+          <EntitySet Name="EMPRESTIMO" EntityType="BibliotecaVirtualModel.EMPRESTIMO" />
+          <EntitySet Name="GENERO" EntityType="BibliotecaVirtualModel.GENERO" />
+          <EntitySet Name="LIVRO" EntityType="BibliotecaVirtualModel.LIVRO" />
+          <EntitySet Name="LIVROS_AUTORES" EntityType="BibliotecaVirtualModel.LIVROS_AUTORES" />
+          <EntitySet Name="RESERVA" EntityType="BibliotecaVirtualModel.RESERVA" />
+          <EntitySet Name="RESERVAS_LIVROS_ALUNOS" EntityType="BibliotecaVirtualModel.RESERVAS_LIVROS_ALUNOS" />
+          <AssociationSet Name="FK_EMPRESTIMO_ALUNO" Association="BibliotecaVirtualModel.FK_EMPRESTIMO_ALUNO">
+            <End Role="ALUNO" EntitySet="ALUNO" />
+            <End Role="EMPRESTIMO" EntitySet="EMPRESTIMO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESERVAS_LIVROS_ALUNOS4" Association="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS4">
+            <End Role="ALUNO" EntitySet="ALUNO" />
+            <End Role="RESERVAS_LIVROS_ALUNOS" EntitySet="RESERVAS_LIVROS_ALUNOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LIVROS_AUTORES3" Association="BibliotecaVirtualModel.FK_LIVROS_AUTORES3">
+            <End Role="AUTOR" EntitySet="AUTOR" />
+            <End Role="LIVROS_AUTORES" EntitySet="LIVROS_AUTORES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LIVRO_EDITORA" Association="BibliotecaVirtualModel.FK_LIVRO_EDITORA">
+            <End Role="EDITORA" EntitySet="EDITORA" />
+            <End Role="LIVRO" EntitySet="LIVRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPRESTIMO_LIVRO" Association="BibliotecaVirtualModel.FK_EMPRESTIMO_LIVRO">
+            <End Role="LIVRO" EntitySet="LIVRO" />
+            <End Role="EMPRESTIMO" EntitySet="EMPRESTIMO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LIVRO_GENERO" Association="BibliotecaVirtualModel.FK_LIVRO_GENERO">
+            <End Role="GENERO" EntitySet="GENERO" />
+            <End Role="LIVRO" EntitySet="LIVRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LIVROS_AUTORES2" Association="BibliotecaVirtualModel.FK_LIVROS_AUTORES2">
+            <End Role="LIVRO" EntitySet="LIVRO" />
+            <End Role="LIVROS_AUTORES" EntitySet="LIVROS_AUTORES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESERVAS_LIVROS_ALUNOS3" Association="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS3">
+            <End Role="LIVRO" EntitySet="LIVRO" />
+            <End Role="RESERVAS_LIVROS_ALUNOS" EntitySet="RESERVAS_LIVROS_ALUNOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESERVAS_LIVROS_ALUNOS2" Association="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS2">
+            <End Role="RESERVA" EntitySet="RESERVA" />
+            <End Role="RESERVAS_LIVROS_ALUNOS" EntitySet="RESERVAS_LIVROS_ALUNOS" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="ALUNO">
           <Key>
             <PropertyRef Name="ID_ALUNO" />
           </Key>
           <Property Name="ID_ALUNO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NOME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SOBRENOME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SOBRENOME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CPF" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="NASC" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="ENDERECO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BAIRRO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CIDADE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="UF" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CEP" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PAIS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TEL_RES" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TEL_CEL" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
-          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Emprestimo" Relationship="Self.FK_Emprestimo_0" FromRole="ALUNO" ToRole="Emprestimo" />
+          <Property Name="ENDERECO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BAIRRO" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CIDADE" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="UF" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CEP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PAIS" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_RES" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_CEL" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EMPRESTIMO" Relationship="BibliotecaVirtualModel.FK_EMPRESTIMO_ALUNO" FromRole="ALUNO" ToRole="EMPRESTIMO" />
+          <NavigationProperty Name="RESERVAS_LIVROS_ALUNOS" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS4" FromRole="ALUNO" ToRole="RESERVAS_LIVROS_ALUNOS" />
         </EntityType>
         <EntityType Name="AUTOR">
           <Key>
             <PropertyRef Name="ID_AUTOR" />
           </Key>
           <Property Name="ID_AUTOR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NOME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SOBRENOME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BIOGRAFIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SITE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="LIVRO" Relationship="Self.LivroAutor" FromRole="AUTOR" ToRole="LIVRO" />
+          <Property Name="NOME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SOBRENOME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BIOGRAFIA" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SITE" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="LIVROS_AUTORES" Relationship="BibliotecaVirtualModel.FK_LIVROS_AUTORES3" FromRole="AUTOR" ToRole="LIVROS_AUTORES" />
         </EntityType>
         <EntityType Name="EDITORA">
           <Key>
             <PropertyRef Name="ID_EDITORA" />
           </Key>
           <Property Name="ID_EDITORA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NOME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ENDERECO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BAIRRO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CIDADE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="UF" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CEP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="PAIS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TEL_1" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TEL_2" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
-          <Property Name="EMAIL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="LIVRO" Relationship="Self.FK_LIVRO_0" FromRole="EDITORA" ToRole="LIVRO" />
+          <Property Name="NOME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ENDERECO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BAIRRO" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CIDADE" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="UF" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CEP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PAIS" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_1" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_2" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="LIVRO" Relationship="BibliotecaVirtualModel.FK_LIVRO_EDITORA" FromRole="EDITORA" ToRole="LIVRO" />
         </EntityType>
-        <EntityType Name="Emprestimo">
+        <EntityType Name="EMPRESTIMO">
           <Key>
             <PropertyRef Name="ID_EMPRESTIMO" />
-            <PropertyRef Name="ID_ALUNO" />
-            <PropertyRef Name="ID_LIVRO" />
-            <PropertyRef Name="ID_EDITORA" />
           </Key>
-          <Property Name="ID_EMPRESTIMO" Type="Int32" Nullable="false" />
-          <Property Name="ID_ALUNO" Type="Int32" Nullable="false" />
-          <Property Name="ID_LIVRO" Type="Int32" Nullable="false" />
-          <Property Name="ID_EDITORA" Type="Int32" Nullable="false" />
+          <Property Name="ID_EMPRESTIMO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DATA_EMP" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="DATA_DEVOL" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="ALUNO" Relationship="Self.FK_Emprestimo_0" FromRole="Emprestimo" ToRole="ALUNO" />
-          <NavigationProperty Name="LIVRO" Relationship="Self.FK_Emprestimo_1" FromRole="Emprestimo" ToRole="LIVRO" />
+          <Property Name="ID_ALUNO" Type="Int32" Nullable="false" />
+          <Property Name="ID_LIVRO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ALUNO" Relationship="BibliotecaVirtualModel.FK_EMPRESTIMO_ALUNO" FromRole="EMPRESTIMO" ToRole="ALUNO" />
+          <NavigationProperty Name="LIVRO" Relationship="BibliotecaVirtualModel.FK_EMPRESTIMO_LIVRO" FromRole="EMPRESTIMO" ToRole="LIVRO" />
         </EntityType>
         <EntityType Name="GENERO">
           <Key>
             <PropertyRef Name="ID_GENERO" />
           </Key>
           <Property Name="ID_GENERO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DESCRICAO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ANDAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CORREDOR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PRETELEIRA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="LIVRO" Relationship="Self.LivroGenero" FromRole="GENERO" ToRole="LIVRO" />
+          <Property Name="DESCRICAO" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ANDAR" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CORREDOR" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PRATELEIRA" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="LIVRO" Relationship="BibliotecaVirtualModel.FK_LIVRO_GENERO" FromRole="GENERO" ToRole="LIVRO" />
         </EntityType>
         <EntityType Name="LIVRO">
           <Key>
             <PropertyRef Name="ID_LIVRO" />
-            <PropertyRef Name="ID_EDITORA" />
           </Key>
           <Property Name="ID_LIVRO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ID_EDITORA" Type="Int32" Nullable="false" />
-          <Property Name="TITULO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TITULO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="VOLUME" Type="Int32" Nullable="false" />
           <Property Name="DATA_PUBLIC" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="QTD_EXMPLARES" Type="Int32" Nullable="false" />
-          <Property Name="QTD_DISP_EMPR" Type="Int32" Nullable="false" />
-          <Property Name="SUMARIO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="EDITORA" Relationship="Self.FK_LIVRO_0" FromRole="LIVRO" ToRole="EDITORA" />
-          <NavigationProperty Name="Emprestimo" Relationship="Self.FK_Emprestimo_1" FromRole="LIVRO" ToRole="Emprestimo" />
-          <NavigationProperty Name="AUTOR" Relationship="Self.LivroAutor" FromRole="LIVRO" ToRole="AUTOR" />
-          <NavigationProperty Name="GENERO" Relationship="Self.LivroGenero" FromRole="LIVRO" ToRole="GENERO" />
-          <NavigationProperty Name="RESERVA" Relationship="Self.ReservaLivro" FromRole="LIVRO" ToRole="RESERVA" />
+          <Property Name="QTD_EXEMP" Type="Int32" Nullable="false" />
+          <Property Name="SUMARIO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ID_EDITORA" Type="Int32" Nullable="false" />
+          <Property Name="ID_GENERO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EDITORA" Relationship="BibliotecaVirtualModel.FK_LIVRO_EDITORA" FromRole="LIVRO" ToRole="EDITORA" />
+          <NavigationProperty Name="EMPRESTIMO" Relationship="BibliotecaVirtualModel.FK_EMPRESTIMO_LIVRO" FromRole="LIVRO" ToRole="EMPRESTIMO" />
+          <NavigationProperty Name="GENERO" Relationship="BibliotecaVirtualModel.FK_LIVRO_GENERO" FromRole="LIVRO" ToRole="GENERO" />
+          <NavigationProperty Name="LIVROS_AUTORES" Relationship="BibliotecaVirtualModel.FK_LIVROS_AUTORES2" FromRole="LIVRO" ToRole="LIVROS_AUTORES" />
+          <NavigationProperty Name="RESERVAS_LIVROS_ALUNOS" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS3" FromRole="LIVRO" ToRole="RESERVAS_LIVROS_ALUNOS" />
+        </EntityType>
+        <EntityType Name="LIVROS_AUTORES">
+          <Key>
+            <PropertyRef Name="ID_LIVRO" />
+            <PropertyRef Name="ID_AUTOR" />
+          </Key>
+          <Property Name="ID_LIVRO" Type="Int32" Nullable="false" />
+          <Property Name="ID_AUTOR" Type="Int32" Nullable="false" />
+          <Property Name="test" Type="Int32" />
+          <NavigationProperty Name="AUTOR" Relationship="BibliotecaVirtualModel.FK_LIVROS_AUTORES3" FromRole="LIVROS_AUTORES" ToRole="AUTOR" />
+          <NavigationProperty Name="LIVRO" Relationship="BibliotecaVirtualModel.FK_LIVROS_AUTORES2" FromRole="LIVROS_AUTORES" ToRole="LIVRO" />
         </EntityType>
         <EntityType Name="RESERVA">
           <Key>
             <PropertyRef Name="ID_RESERVA" />
           </Key>
           <Property Name="ID_RESERVA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DATA_RES" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="LIVRO" Relationship="Self.ReservaLivro" FromRole="RESERVA" ToRole="LIVRO" />
+          <Property Name="DATA_RESERVA" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="RESERVAS_LIVROS_ALUNOS" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS2" FromRole="RESERVA" ToRole="RESERVAS_LIVROS_ALUNOS" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
+        <EntityType Name="RESERVAS_LIVROS_ALUNOS">
           <Key>
-            <PropertyRef Name="diagram_id" />
+            <PropertyRef Name="ID_RESERVA" />
+            <PropertyRef Name="ID_LIVRO" />
+            <PropertyRef Name="ID_ALUNO" />
           </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ID_RESERVA" Type="Int32" Nullable="false" />
+          <Property Name="ID_LIVRO" Type="Int32" Nullable="false" />
+          <Property Name="ID_ALUNO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ALUNO" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS4" FromRole="RESERVAS_LIVROS_ALUNOS" ToRole="ALUNO" />
+          <NavigationProperty Name="LIVRO" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS3" FromRole="RESERVAS_LIVROS_ALUNOS" ToRole="LIVRO" />
+          <NavigationProperty Name="RESERVA" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS2" FromRole="RESERVAS_LIVROS_ALUNOS" ToRole="RESERVA" />
         </EntityType>
-        <Association Name="FK_Emprestimo_0">
-          <End Role="ALUNO" Type="Self.ALUNO" Multiplicity="1" />
-          <End Role="Emprestimo" Type="Self.Emprestimo" Multiplicity="*" />
+        <Association Name="FK_EMPRESTIMO_ALUNO">
+          <End Type="BibliotecaVirtualModel.ALUNO" Role="ALUNO" Multiplicity="1" />
+          <End Type="BibliotecaVirtualModel.EMPRESTIMO" Role="EMPRESTIMO" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ALUNO">
               <PropertyRef Name="ID_ALUNO" />
             </Principal>
-            <Dependent Role="Emprestimo">
+            <Dependent Role="EMPRESTIMO">
               <PropertyRef Name="ID_ALUNO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_LIVRO_0">
-          <End Role="EDITORA" Type="Self.EDITORA" Multiplicity="1" />
-          <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="*" />
+        <Association Name="FK_RESERVAS_LIVROS_ALUNOS4">
+          <End Type="BibliotecaVirtualModel.ALUNO" Role="ALUNO" Multiplicity="1" />
+          <End Type="BibliotecaVirtualModel.RESERVAS_LIVROS_ALUNOS" Role="RESERVAS_LIVROS_ALUNOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ALUNO">
+              <PropertyRef Name="ID_ALUNO" />
+            </Principal>
+            <Dependent Role="RESERVAS_LIVROS_ALUNOS">
+              <PropertyRef Name="ID_ALUNO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LIVROS_AUTORES3">
+          <End Type="BibliotecaVirtualModel.AUTOR" Role="AUTOR" Multiplicity="1" />
+          <End Type="BibliotecaVirtualModel.LIVROS_AUTORES" Role="LIVROS_AUTORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AUTOR">
+              <PropertyRef Name="ID_AUTOR" />
+            </Principal>
+            <Dependent Role="LIVROS_AUTORES">
+              <PropertyRef Name="ID_AUTOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LIVRO_EDITORA">
+          <End Type="BibliotecaVirtualModel.EDITORA" Role="EDITORA" Multiplicity="1" />
+          <End Type="BibliotecaVirtualModel.LIVRO" Role="LIVRO" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="EDITORA">
               <PropertyRef Name="ID_EDITORA" />
@@ -441,67 +485,67 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Emprestimo_1">
-          <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="1" />
-          <End Role="Emprestimo" Type="Self.Emprestimo" Multiplicity="*" />
+        <Association Name="FK_EMPRESTIMO_LIVRO">
+          <End Type="BibliotecaVirtualModel.LIVRO" Role="LIVRO" Multiplicity="1" />
+          <End Type="BibliotecaVirtualModel.EMPRESTIMO" Role="EMPRESTIMO" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LIVRO">
               <PropertyRef Name="ID_LIVRO" />
-              <PropertyRef Name="ID_EDITORA" />
             </Principal>
-            <Dependent Role="Emprestimo">
+            <Dependent Role="EMPRESTIMO">
               <PropertyRef Name="ID_LIVRO" />
-              <PropertyRef Name="ID_EDITORA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="LivroAutor">
-          <End Role="AUTOR" Type="Self.AUTOR" Multiplicity="*" />
-          <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="*" />
+        <Association Name="FK_LIVRO_GENERO">
+          <End Type="BibliotecaVirtualModel.GENERO" Role="GENERO" Multiplicity="1" />
+          <End Type="BibliotecaVirtualModel.LIVRO" Role="LIVRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GENERO">
+              <PropertyRef Name="ID_GENERO" />
+            </Principal>
+            <Dependent Role="LIVRO">
+              <PropertyRef Name="ID_GENERO" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
-        <Association Name="LivroGenero">
-          <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="*" />
-          <End Role="GENERO" Type="Self.GENERO" Multiplicity="*" />
+        <Association Name="FK_LIVROS_AUTORES2">
+          <End Type="BibliotecaVirtualModel.LIVRO" Role="LIVRO" Multiplicity="1" />
+          <End Type="BibliotecaVirtualModel.LIVROS_AUTORES" Role="LIVROS_AUTORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LIVRO">
+              <PropertyRef Name="ID_LIVRO" />
+            </Principal>
+            <Dependent Role="LIVROS_AUTORES">
+              <PropertyRef Name="ID_LIVRO" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
-        <Association Name="ReservaLivro">
-          <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="*" />
-          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+        <Association Name="FK_RESERVAS_LIVROS_ALUNOS3">
+          <End Type="BibliotecaVirtualModel.LIVRO" Role="LIVRO" Multiplicity="1" />
+          <End Type="BibliotecaVirtualModel.RESERVAS_LIVROS_ALUNOS" Role="RESERVAS_LIVROS_ALUNOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LIVRO">
+              <PropertyRef Name="ID_LIVRO" />
+            </Principal>
+            <Dependent Role="RESERVAS_LIVROS_ALUNOS">
+              <PropertyRef Name="ID_LIVRO" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BibliotecaVirtualEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="ALUNO" EntityType="Self.ALUNO" />
-          <EntitySet Name="AUTOR" EntityType="Self.AUTOR" />
-          <EntitySet Name="EDITORA" EntityType="Self.EDITORA" />
-          <EntitySet Name="Emprestimo" EntityType="Self.Emprestimo" />
-          <EntitySet Name="GENERO" EntityType="Self.GENERO" />
-          <EntitySet Name="LIVRO" EntityType="Self.LIVRO" />
-          <EntitySet Name="RESERVA" EntityType="Self.RESERVA" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-          <AssociationSet Name="FK_Emprestimo_0" Association="Self.FK_Emprestimo_0">
-            <End Role="ALUNO" EntitySet="ALUNO" />
-            <End Role="Emprestimo" EntitySet="Emprestimo" />
-          </AssociationSet>
-          <AssociationSet Name="FK_LIVRO_0" Association="Self.FK_LIVRO_0">
-            <End Role="EDITORA" EntitySet="EDITORA" />
-            <End Role="LIVRO" EntitySet="LIVRO" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Emprestimo_1" Association="Self.FK_Emprestimo_1">
-            <End Role="LIVRO" EntitySet="LIVRO" />
-            <End Role="Emprestimo" EntitySet="Emprestimo" />
-          </AssociationSet>
-          <AssociationSet Name="LivroAutor" Association="Self.LivroAutor">
-            <End Role="AUTOR" EntitySet="AUTOR" />
-            <End Role="LIVRO" EntitySet="LIVRO" />
-          </AssociationSet>
-          <AssociationSet Name="LivroGenero" Association="Self.LivroGenero">
-            <End Role="LIVRO" EntitySet="LIVRO" />
-            <End Role="GENERO" EntitySet="GENERO" />
-          </AssociationSet>
-          <AssociationSet Name="ReservaLivro" Association="Self.ReservaLivro">
-            <End Role="LIVRO" EntitySet="LIVRO" />
-            <End Role="RESERVA" EntitySet="RESERVA" />
-          </AssociationSet>
-        </EntityContainer>
-      </Schema>
+        <Association Name="FK_RESERVAS_LIVROS_ALUNOS2">
+          <End Type="BibliotecaVirtualModel.RESERVA" Role="RESERVA" Multiplicity="1" />
+          <End Type="BibliotecaVirtualModel.RESERVAS_LIVROS_ALUNOS" Role="RESERVAS_LIVROS_ALUNOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RESERVA">
+              <PropertyRef Name="ID_RESERVA" />
+            </Principal>
+            <Dependent Role="RESERVAS_LIVROS_ALUNOS">
+              <PropertyRef Name="ID_RESERVA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -510,134 +554,113 @@
           <EntitySetMapping Name="ALUNO">
             <EntityTypeMapping TypeName="BibliotecaVirtualModel.ALUNO">
               <MappingFragment StoreEntitySet="ALUNO">
-                <ScalarProperty Name="ID_ALUNO" ColumnName="ID_ALUNO" />
-                <ScalarProperty Name="NOME" ColumnName="NOME" />
-                <ScalarProperty Name="SOBRENOME" ColumnName="SOBRENOME" />
-                <ScalarProperty Name="CPF" ColumnName="CPF" />
-                <ScalarProperty Name="NASC" ColumnName="NASC" />
-                <ScalarProperty Name="ENDERECO" ColumnName="ENDERECO" />
-                <ScalarProperty Name="BAIRRO" ColumnName="BAIRRO" />
-                <ScalarProperty Name="CIDADE" ColumnName="CIDADE" />
-                <ScalarProperty Name="UF" ColumnName="UF" />
-                <ScalarProperty Name="CEP" ColumnName="CEP" />
-                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
-                <ScalarProperty Name="TEL_RES" ColumnName="TEL_RES" />
-                <ScalarProperty Name="TEL_CEL" ColumnName="TEL_CEL" />
                 <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="TEL_CEL" ColumnName="TEL_CEL" />
+                <ScalarProperty Name="TEL_RES" ColumnName="TEL_RES" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="UF" ColumnName="UF" />
+                <ScalarProperty Name="CIDADE" ColumnName="CIDADE" />
+                <ScalarProperty Name="BAIRRO" ColumnName="BAIRRO" />
+                <ScalarProperty Name="ENDERECO" ColumnName="ENDERECO" />
+                <ScalarProperty Name="NASC" ColumnName="NASC" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="SOBRENOME" ColumnName="SOBRENOME" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="ID_ALUNO" ColumnName="ID_ALUNO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="AUTOR">
             <EntityTypeMapping TypeName="BibliotecaVirtualModel.AUTOR">
               <MappingFragment StoreEntitySet="AUTOR">
-                <ScalarProperty Name="ID_AUTOR" ColumnName="ID_AUTOR" />
-                <ScalarProperty Name="NOME" ColumnName="NOME" />
-                <ScalarProperty Name="SOBRENOME" ColumnName="SOBRENOME" />
-                <ScalarProperty Name="BIOGRAFIA" ColumnName="BIOGRAFIA" />
                 <ScalarProperty Name="SITE" ColumnName="SITE" />
+                <ScalarProperty Name="BIOGRAFIA" ColumnName="BIOGRAFIA" />
+                <ScalarProperty Name="SOBRENOME" ColumnName="SOBRENOME" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="ID_AUTOR" ColumnName="ID_AUTOR" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="EDITORA">
             <EntityTypeMapping TypeName="BibliotecaVirtualModel.EDITORA">
               <MappingFragment StoreEntitySet="EDITORA">
-                <ScalarProperty Name="ID_EDITORA" ColumnName="ID_EDITORA" />
-                <ScalarProperty Name="NOME" ColumnName="NOME" />
-                <ScalarProperty Name="ENDERECO" ColumnName="ENDERECO" />
-                <ScalarProperty Name="BAIRRO" ColumnName="BAIRRO" />
-                <ScalarProperty Name="CIDADE" ColumnName="CIDADE" />
-                <ScalarProperty Name="UF" ColumnName="UF" />
-                <ScalarProperty Name="CEP" ColumnName="CEP" />
-                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
-                <ScalarProperty Name="TEL_1" ColumnName="TEL_1" />
-                <ScalarProperty Name="TEL_2" ColumnName="TEL_2" />
                 <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="TEL_2" ColumnName="TEL_2" />
+                <ScalarProperty Name="TEL_1" ColumnName="TEL_1" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="UF" ColumnName="UF" />
+                <ScalarProperty Name="CIDADE" ColumnName="CIDADE" />
+                <ScalarProperty Name="BAIRRO" ColumnName="BAIRRO" />
+                <ScalarProperty Name="ENDERECO" ColumnName="ENDERECO" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="ID_EDITORA" ColumnName="ID_EDITORA" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Emprestimo">
-            <EntityTypeMapping TypeName="BibliotecaVirtualModel.Emprestimo">
-              <MappingFragment StoreEntitySet="Emprestimo">
-                <ScalarProperty Name="ID_EMPRESTIMO" ColumnName="ID_EMPRESTIMO" />
-                <ScalarProperty Name="ID_ALUNO" ColumnName="ID_ALUNO" />
+          <EntitySetMapping Name="EMPRESTIMO">
+            <EntityTypeMapping TypeName="BibliotecaVirtualModel.EMPRESTIMO">
+              <MappingFragment StoreEntitySet="EMPRESTIMO">
                 <ScalarProperty Name="ID_LIVRO" ColumnName="ID_LIVRO" />
-                <ScalarProperty Name="ID_EDITORA" ColumnName="ID_EDITORA" />
-                <ScalarProperty Name="DATA_EMP" ColumnName="DATA_EMP" />
+                <ScalarProperty Name="ID_ALUNO" ColumnName="ID_ALUNO" />
                 <ScalarProperty Name="DATA_DEVOL" ColumnName="DATA_DEVOL" />
+                <ScalarProperty Name="DATA_EMP" ColumnName="DATA_EMP" />
+                <ScalarProperty Name="ID_EMPRESTIMO" ColumnName="ID_EMPRESTIMO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GENERO">
             <EntityTypeMapping TypeName="BibliotecaVirtualModel.GENERO">
               <MappingFragment StoreEntitySet="GENERO">
-                <ScalarProperty Name="ID_GENERO" ColumnName="ID_GENERO" />
-                <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
-                <ScalarProperty Name="ANDAR" ColumnName="ANDAR" />
+                <ScalarProperty Name="PRATELEIRA" ColumnName="PRATELEIRA" />
                 <ScalarProperty Name="CORREDOR" ColumnName="CORREDOR" />
-                <ScalarProperty Name="PRETELEIRA" ColumnName="PRETELEIRA" />
+                <ScalarProperty Name="ANDAR" ColumnName="ANDAR" />
+                <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+                <ScalarProperty Name="ID_GENERO" ColumnName="ID_GENERO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LIVRO">
             <EntityTypeMapping TypeName="BibliotecaVirtualModel.LIVRO">
               <MappingFragment StoreEntitySet="LIVRO">
-                <ScalarProperty Name="ID_LIVRO" ColumnName="ID_LIVRO" />
+                <ScalarProperty Name="ID_GENERO" ColumnName="ID_GENERO" />
                 <ScalarProperty Name="ID_EDITORA" ColumnName="ID_EDITORA" />
-                <ScalarProperty Name="TITULO" ColumnName="TITULO" />
-                <ScalarProperty Name="VOLUME" ColumnName="VOLUME" />
-                <ScalarProperty Name="DATA_PUBLIC" ColumnName="DATA_PUBLIC" />
-                <ScalarProperty Name="QTD_EXMPLARES" ColumnName="QTD_EXMPLARES" />
-                <ScalarProperty Name="QTD_DISP_EMPR" ColumnName="QTD_DISP_EMPR" />
                 <ScalarProperty Name="SUMARIO" ColumnName="SUMARIO" />
+                <ScalarProperty Name="QTD_EXEMP" ColumnName="QTD_EXEMP" />
+                <ScalarProperty Name="DATA_PUBLIC" ColumnName="DATA_PUBLIC" />
+                <ScalarProperty Name="VOLUME" ColumnName="VOLUME" />
+                <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+                <ScalarProperty Name="ID_LIVRO" ColumnName="ID_LIVRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LIVROS_AUTORES">
+            <EntityTypeMapping TypeName="BibliotecaVirtualModel.LIVROS_AUTORES">
+              <MappingFragment StoreEntitySet="LIVROS_AUTORES">
+                <ScalarProperty Name="test" ColumnName="test" />
+                <ScalarProperty Name="ID_AUTOR" ColumnName="ID_AUTOR" />
+                <ScalarProperty Name="ID_LIVRO" ColumnName="ID_LIVRO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="RESERVA">
             <EntityTypeMapping TypeName="BibliotecaVirtualModel.RESERVA">
               <MappingFragment StoreEntitySet="RESERVA">
+                <ScalarProperty Name="DATA_RESERVA" ColumnName="DATA_RESERVA" />
                 <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
-                <ScalarProperty Name="DATA_RES" ColumnName="DATA_RES" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="BibliotecaVirtualModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
+          <EntitySetMapping Name="RESERVAS_LIVROS_ALUNOS">
+            <EntityTypeMapping TypeName="BibliotecaVirtualModel.RESERVAS_LIVROS_ALUNOS">
+              <MappingFragment StoreEntitySet="RESERVAS_LIVROS_ALUNOS">
+                <ScalarProperty Name="ID_ALUNO" ColumnName="ID_ALUNO" />
+                <ScalarProperty Name="ID_LIVRO" ColumnName="ID_LIVRO" />
+                <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="LivroAutor" TypeName="BibliotecaVirtualModel.LivroAutor" StoreEntitySet="LivroAutor">
-            <EndProperty Name="AUTOR">
-              <ScalarProperty Name="ID_AUTOR" ColumnName="ID_AUTOR" />
-            </EndProperty>
-            <EndProperty Name="LIVRO">
-              <ScalarProperty Name="ID_LIVRO" ColumnName="ID_LIVRO" />
-              <ScalarProperty Name="ID_EDITORA" ColumnName="ID_EDITORA" />
-            </EndProperty>
-          </AssociationSetMapping>
-          <AssociationSetMapping Name="LivroGenero" TypeName="BibliotecaVirtualModel.LivroGenero" StoreEntitySet="LivroGenero">
-            <EndProperty Name="LIVRO">
-              <ScalarProperty Name="ID_LIVRO" ColumnName="ID_LIVRO" />
-              <ScalarProperty Name="ID_EDITORA" ColumnName="ID_EDITORA" />
-            </EndProperty>
-            <EndProperty Name="GENERO">
-              <ScalarProperty Name="ID_GENERO" ColumnName="ID_GENERO" />
-            </EndProperty>
-          </AssociationSetMapping>
-          <AssociationSetMapping Name="ReservaLivro" TypeName="BibliotecaVirtualModel.ReservaLivro" StoreEntitySet="ReservaLivro">
-            <EndProperty Name="LIVRO">
-              <ScalarProperty Name="ID_LIVRO" ColumnName="ID_LIVRO" />
-              <ScalarProperty Name="ID_EDITORA" ColumnName="ID_EDITORA" />
-            </EndProperty>
-            <EndProperty Name="RESERVA">
-              <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
-            </EndProperty>
-          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

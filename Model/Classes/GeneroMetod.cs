@@ -71,7 +71,7 @@ namespace Model
                     ConsultaGENERO.DESCRICAO = pGENERO.DESCRICAO;
                     ConsultaGENERO.ANDAR = pGENERO.ANDAR;
                     ConsultaGENERO.CORREDOR = pGENERO.CORREDOR;
-                    ConsultaGENERO.PRETELEIRA = pGENERO.PRETELEIRA;
+                    ConsultaGENERO.PRATELEIRA = pGENERO.PRATELEIRA;
 
 
                     oDB.SaveChanges();

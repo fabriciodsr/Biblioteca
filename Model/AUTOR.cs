@@ -16,7 +16,7 @@ namespace Model
     {
         public AUTOR()
         {
-            this.LIVRO = new HashSet<LIVRO>();
+            this.LIVROS_AUTORES = new HashSet<LIVROS_AUTORES>();
         }
     
         public int ID_AUTOR { get; set; }
@@ -25,6 +25,6 @@ namespace Model
         public string BIOGRAFIA { get; set; }
         public string SITE { get; set; }
     
-        public virtual ICollection<LIVRO> LIVRO { get; set; }
+        public virtual ICollection<LIVROS_AUTORES> LIVROS_AUTORES { get; set; }
     }
 }

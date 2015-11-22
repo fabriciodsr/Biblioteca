@@ -60,7 +60,7 @@ namespace View
                 GENERO oGenero = new GENERO();
 
                 oGenero.DESCRICAO = txtDescricao.Text;
-                oGenero.PRETELEIRA= cmbPrateleira.SelectedItem.ToString();
+                oGenero.PRATELEIRA= cmbPrateleira.SelectedItem.ToString();
                 oGenero.CORREDOR = cmbCorredor.SelectedItem.ToString();
                 oGenero.ANDAR= cmbAndar.SelectedItem.ToString();
 
@@ -97,7 +97,7 @@ namespace View
                                 txtDescricao.Text = xGenero.DESCRICAO;
                                 cmbAndar.SelectedItem = xGenero.ANDAR;
                                 cmbCorredor.SelectedItem = xGenero.CORREDOR;
-                                cmbPrateleira.SelectedItem = xGenero.PRETELEIRA;
+                                cmbPrateleira.SelectedItem = xGenero.PRATELEIRA;
 
 
                                 DesabilitaCampos();
@@ -191,7 +191,7 @@ namespace View
                     txtDescricao.Text = oGenero.DESCRICAO;
                     cmbAndar.SelectedItem = oGenero.ANDAR;
                     cmbCorredor.SelectedItem = oGenero.CORREDOR;
-                    cmbPrateleira.SelectedItem = oGenero.PRETELEIRA;
+                    cmbPrateleira.SelectedItem = oGenero.PRATELEIRA;
                     txtID.Text = Convert.ToString(oGenero.ID_GENERO);
 
 
@@ -221,7 +221,7 @@ namespace View
                     txtDescricao.Text = oGenero.DESCRICAO;
                     cmbAndar.SelectedItem = oGenero.ANDAR;
                     cmbCorredor.SelectedItem = oGenero.CORREDOR;
-                    cmbPrateleira.SelectedItem = oGenero.PRETELEIRA;
+                    cmbPrateleira.SelectedItem = oGenero.PRATELEIRA;
                     txtID.Text = Convert.ToString(oGenero.ID_GENERO);
 
                     DesabilitaCampos();

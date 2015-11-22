@@ -98,11 +98,11 @@ namespace View._4BI.Movimentacao
                     txtTitulo.Text = oLivro.TITULO;
                     txtVolume.Text = Convert.ToString(oLivro.VOLUME);
 
-                    AUTOR oAutor1 = new AUTOR();
+                    /*AUTOR oAutor1 = new AUTOR();
 
                     oAutor1 = oLivro.AUTOR.ElementAtOrDefault<AUTOR>(0);
 
-                    txtAutor1.Text = oAutor1.NOME;
+                    txtAutor1.Text = oAutor1.NOME;*/
 
                     /*
                     try
@@ -123,7 +123,7 @@ namespace View._4BI.Movimentacao
 
                     GENERO oGenero = new GENERO();
 
-                    oGenero = oLivro.GENERO.ElementAtOrDefault<GENERO>(0);
+                    //oGenero = oLivro.GENERO.ElementAtOrDefault<GENERO>(0);
 
                     txtGenero.Text = oGenero.DESCRICAO;
 
@@ -153,11 +153,11 @@ namespace View._4BI.Movimentacao
                     txtTitulo.Text = oLivro.TITULO;
                     txtVolume.Text = Convert.ToString(oLivro.VOLUME);
 
-                    AUTOR oAutor1 = new AUTOR();
+                    /*AUTOR oAutor1 = new AUTOR();
 
                     oAutor1 = oLivro.AUTOR.ElementAtOrDefault<AUTOR>(0);
 
-                    txtAutor1.Text = oAutor1.NOME;
+                    txtAutor1.Text = oAutor1.NOME;*/
 
                     /*
                     try
@@ -178,7 +178,7 @@ namespace View._4BI.Movimentacao
 
                     GENERO oGenero = new GENERO();
 
-                    oGenero = oLivro.GENERO.ElementAtOrDefault<GENERO>(0);
+                    //oGenero = oLivro.GENERO.ElementAtOrDefault<GENERO>(0);
 
                     txtGenero.Text = oGenero.DESCRICAO;
 

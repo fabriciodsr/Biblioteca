@@ -4,21 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c0bc1b6465d6451d828975ea2b3424c3" Name="Diagram1">
-        <EntityTypeShape EntityType="BibliotecaVirtualModel.ALUNO" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BibliotecaVirtualModel.AUTOR" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BibliotecaVirtualModel.EDITORA" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="BibliotecaVirtualModel.Emprestimo" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BibliotecaVirtualModel.GENERO" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BibliotecaVirtualModel.LIVRO" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="BibliotecaVirtualModel.RESERVA" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BibliotecaVirtualModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="3.375" IsExpanded="true" />
-        <AssociationConnector Association="BibliotecaVirtualModel.FK_Emprestimo_0" ManuallyRouted="false" />
-        <AssociationConnector Association="BibliotecaVirtualModel.FK_LIVRO_0" ManuallyRouted="false" />
-        <AssociationConnector Association="BibliotecaVirtualModel.FK_Emprestimo_1" ManuallyRouted="false" />
-        <AssociationConnector Association="BibliotecaVirtualModel.LivroAutor" ManuallyRouted="false" />
-        <AssociationConnector Association="BibliotecaVirtualModel.LivroGenero" ManuallyRouted="false" />
-        <AssociationConnector Association="BibliotecaVirtualModel.ReservaLivro" ManuallyRouted="false" />
+      <Diagram DiagramId="f191c64313654806b033c92f250f61cc" Name="Diagram1">
+        <EntityTypeShape EntityType="BibliotecaVirtualModel.ALUNO" Width="1.5" PointX="3" PointY="8.75" />
+        <EntityTypeShape EntityType="BibliotecaVirtualModel.AUTOR" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="BibliotecaVirtualModel.EDITORA" Width="1.5" PointX="0.75" PointY="4.125" />
+        <EntityTypeShape EntityType="BibliotecaVirtualModel.EMPRESTIMO" Width="1.5" PointX="5.25" PointY="4.625" />
+        <EntityTypeShape EntityType="BibliotecaVirtualModel.GENERO" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BibliotecaVirtualModel.LIVRO" Width="1.5" PointX="3" PointY="4.125" />
+        <EntityTypeShape EntityType="BibliotecaVirtualModel.LIVROS_AUTORES" Width="1.5" PointX="5.25" PointY="1.875" />
+        <EntityTypeShape EntityType="BibliotecaVirtualModel.RESERVA" Width="1.5" PointX="3" PointY="14" />
+        <EntityTypeShape EntityType="BibliotecaVirtualModel.RESERVAS_LIVROS_ALUNOS" Width="1.5" PointX="5.25" PointY="7.75" />
+        <AssociationConnector Association="BibliotecaVirtualModel.FK_EMPRESTIMO_ALUNO" />
+        <AssociationConnector Association="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS4" />
+        <AssociationConnector Association="BibliotecaVirtualModel.FK_LIVROS_AUTORES3" />
+        <AssociationConnector Association="BibliotecaVirtualModel.FK_LIVRO_EDITORA" />
+        <AssociationConnector Association="BibliotecaVirtualModel.FK_EMPRESTIMO_LIVRO" />
+        <AssociationConnector Association="BibliotecaVirtualModel.FK_LIVRO_GENERO" />
+        <AssociationConnector Association="BibliotecaVirtualModel.FK_LIVROS_AUTORES2" />
+        <AssociationConnector Association="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS3" />
+        <AssociationConnector Association="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS2" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -261,6 +261,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CLivroAutor\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\CLivro\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -408,6 +413,16 @@
     <None Include="Service References\CGenero\CGenero2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CLivroAutor\CLivroAutor.wsdl" />
+    <None Include="Service References\CLivroAutor\CLivroAutor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CLivroAutor\CLivroAutor1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CLivroAutor\CLivroAutor2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CLivro\CLivro.wsdl" />
     <None Include="Service References\CLivro\CLivro.xsd">
       <SubType>Designer</SubType>
@@ -437,6 +452,7 @@
     <WCFMetadataStorage Include="Service References\CAutor\" />
     <WCFMetadataStorage Include="Service References\CEditora\" />
     <WCFMetadataStorage Include="Service References\CGenero\" />
+    <WCFMetadataStorage Include="Service References\CLivroAutor\" />
     <WCFMetadataStorage Include="Service References\CLivro\" />
   </ItemGroup>
   <ItemGroup>
@@ -516,6 +532,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Entregar Livro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivroAutor\CLivroAutor.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivroAutor\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivroAutor\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CLivroAutor\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

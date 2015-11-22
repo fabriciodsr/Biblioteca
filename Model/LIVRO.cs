@@ -16,25 +16,24 @@ namespace Model
     {
         public LIVRO()
         {
-            this.Emprestimo = new HashSet<Emprestimo>();
-            this.AUTOR = new HashSet<AUTOR>();
-            this.GENERO = new HashSet<GENERO>();
-            this.RESERVA = new HashSet<RESERVA>();
+            this.EMPRESTIMO = new HashSet<EMPRESTIMO>();
+            this.LIVROS_AUTORES = new HashSet<LIVROS_AUTORES>();
+            this.RESERVAS_LIVROS_ALUNOS = new HashSet<RESERVAS_LIVROS_ALUNOS>();
         }
     
         public int ID_LIVRO { get; set; }
-        public int ID_EDITORA { get; set; }
         public string TITULO { get; set; }
         public int VOLUME { get; set; }
         public System.DateTime DATA_PUBLIC { get; set; }
-        public int QTD_EXMPLARES { get; set; }
-        public int QTD_DISP_EMPR { get; set; }
+        public int QTD_EXEMP { get; set; }
         public string SUMARIO { get; set; }
+        public int ID_EDITORA { get; set; }
+        public int ID_GENERO { get; set; }
     
         public virtual EDITORA EDITORA { get; set; }
-        public virtual ICollection<Emprestimo> Emprestimo { get; set; }
-        public virtual ICollection<AUTOR> AUTOR { get; set; }
-        public virtual ICollection<GENERO> GENERO { get; set; }
-        public virtual ICollection<RESERVA> RESERVA { get; set; }
+        public virtual ICollection<EMPRESTIMO> EMPRESTIMO { get; set; }
+        public virtual GENERO GENERO { get; set; }
+        public virtual ICollection<LIVROS_AUTORES> LIVROS_AUTORES { get; set; }
+        public virtual ICollection<RESERVAS_LIVROS_ALUNOS> RESERVAS_LIVROS_ALUNOS { get; set; }
     }
 }

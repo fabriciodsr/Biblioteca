@@ -34,9 +34,10 @@ namespace Model
                         //xLivro.AUTOR = oLivro.AUTOR;
                         xLivro.VOLUME = oLivro.VOLUME;
                         xLivro.DATA_PUBLIC = oLivro.DATA_PUBLIC;
-                        xLivro.QTD_EXMPLARES = oLivro.QTD_EXMPLARES;
+                        xLivro.QTD_EXEMP = oLivro.QTD_EXEMP;
                         xLivro.SUMARIO = oLivro.SUMARIO;
                         xLivro.ID_EDITORA = oLivro.ID_EDITORA;
+                        xLivro.ID_GENERO = oLivro.ID_GENERO;
                         
                         oDB.LIVRO.Add(xLivro);
                         oDB.SaveChanges();

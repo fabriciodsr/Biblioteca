@@ -357,6 +357,8 @@
             // 
             this.cmbAutor1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAutor1.FormattingEnabled = true;
+            this.cmbAutor1.Items.AddRange(new object[] {
+            "< Selecione um Autor >"});
             this.cmbAutor1.Location = new System.Drawing.Point(287, 101);
             this.cmbAutor1.Name = "cmbAutor1";
             this.cmbAutor1.Size = new System.Drawing.Size(452, 21);
@@ -366,6 +368,8 @@
             // 
             this.cmbAutor2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAutor2.FormattingEnabled = true;
+            this.cmbAutor2.Items.AddRange(new object[] {
+            "< Selecione um Autor >"});
             this.cmbAutor2.Location = new System.Drawing.Point(287, 138);
             this.cmbAutor2.Name = "cmbAutor2";
             this.cmbAutor2.Size = new System.Drawing.Size(452, 21);
@@ -375,6 +379,8 @@
             // 
             this.cmbEditora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEditora.FormattingEnabled = true;
+            this.cmbEditora.Items.AddRange(new object[] {
+            "< Selecione uma Editora >"});
             this.cmbEditora.Location = new System.Drawing.Point(104, 255);
             this.cmbEditora.Name = "cmbEditora";
             this.cmbEditora.Size = new System.Drawing.Size(294, 21);
@@ -384,6 +390,8 @@
             // 
             this.cmbGenero1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero1.FormattingEnabled = true;
+            this.cmbGenero1.Items.AddRange(new object[] {
+            "< Selecione um Gênero >"});
             this.cmbGenero1.Location = new System.Drawing.Point(503, 255);
             this.cmbGenero1.Name = "cmbGenero1";
             this.cmbGenero1.Size = new System.Drawing.Size(236, 21);

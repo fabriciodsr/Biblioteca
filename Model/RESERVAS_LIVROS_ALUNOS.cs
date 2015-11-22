@@ -12,19 +12,14 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class GENERO
+    public partial class RESERVAS_LIVROS_ALUNOS
     {
-        public GENERO()
-        {
-            this.LIVRO = new HashSet<LIVRO>();
-        }
+        public int ID_RESERVA { get; set; }
+        public int ID_LIVRO { get; set; }
+        public int ID_ALUNO { get; set; }
     
-        public int ID_GENERO { get; set; }
-        public string DESCRICAO { get; set; }
-        public string ANDAR { get; set; }
-        public string CORREDOR { get; set; }
-        public string PRATELEIRA { get; set; }
-    
-        public virtual ICollection<LIVRO> LIVRO { get; set; }
+        public virtual ALUNO ALUNO { get; set; }
+        public virtual LIVRO LIVRO { get; set; }
+        public virtual RESERVA RESERVA { get; set; }
     }
 }

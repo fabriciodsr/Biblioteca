@@ -45,9 +45,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSituacaoAluno = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnProcurarLivro = new System.Windows.Forms.Button();
             this.cmbPesquisaLivro = new System.Windows.Forms.ComboBox();
             this.txtProcurarLivro = new System.Windows.Forms.TextBox();
+            this.btnProcurarLivro = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -99,6 +99,7 @@
             this.btnInserir.Size = new System.Drawing.Size(50, 50);
             this.btnInserir.TabIndex = 116;
             this.btnInserir.UseVisualStyleBackColor = false;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // groupBox1
             // 
@@ -248,26 +249,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Livro";
             // 
-            // btnProcurarLivro
-            // 
-            this.btnProcurarLivro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProcurarLivro.BackColor = System.Drawing.Color.Transparent;
-            this.btnProcurarLivro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProcurarLivro.BackgroundImage")));
-            this.btnProcurarLivro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnProcurarLivro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProcurarLivro.FlatAppearance.BorderSize = 0;
-            this.btnProcurarLivro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnProcurarLivro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnProcurarLivro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProcurarLivro.ForeColor = System.Drawing.Color.Transparent;
-            this.btnProcurarLivro.Location = new System.Drawing.Point(716, 11);
-            this.btnProcurarLivro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnProcurarLivro.Name = "btnProcurarLivro";
-            this.btnProcurarLivro.Size = new System.Drawing.Size(31, 26);
-            this.btnProcurarLivro.TabIndex = 2;
-            this.btnProcurarLivro.UseVisualStyleBackColor = false;
-            this.btnProcurarLivro.Click += new System.EventHandler(this.btnProcurarLivro_Click);
-            // 
             // cmbPesquisaLivro
             // 
             this.cmbPesquisaLivro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -287,6 +268,26 @@
             this.txtProcurarLivro.Name = "txtProcurarLivro";
             this.txtProcurarLivro.Size = new System.Drawing.Size(445, 20);
             this.txtProcurarLivro.TabIndex = 131;
+            // 
+            // btnProcurarLivro
+            // 
+            this.btnProcurarLivro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProcurarLivro.BackColor = System.Drawing.Color.Transparent;
+            this.btnProcurarLivro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProcurarLivro.BackgroundImage")));
+            this.btnProcurarLivro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnProcurarLivro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProcurarLivro.FlatAppearance.BorderSize = 0;
+            this.btnProcurarLivro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnProcurarLivro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnProcurarLivro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProcurarLivro.ForeColor = System.Drawing.Color.Transparent;
+            this.btnProcurarLivro.Location = new System.Drawing.Point(716, 11);
+            this.btnProcurarLivro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnProcurarLivro.Name = "btnProcurarLivro";
+            this.btnProcurarLivro.Size = new System.Drawing.Size(31, 26);
+            this.btnProcurarLivro.TabIndex = 2;
+            this.btnProcurarLivro.UseVisualStyleBackColor = false;
+            this.btnProcurarLivro.Click += new System.EventHandler(this.btnProcurarLivro_Click);
             // 
             // label6
             // 

@@ -191,5 +191,10 @@ namespace View._4BI.Movimentacao
             }
             
         }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

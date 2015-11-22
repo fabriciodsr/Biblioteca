@@ -83,114 +83,127 @@ namespace View._4BI.Movimentacao
 
         private void btnProcurarLivro_Click(object sender, EventArgs e)
         {
-            if (cmbPesquisaLivro.SelectedIndex == 0)
+            if(txtProcurarLivro.Text.Trim() != "")
             {
-                int var2 = Convert.ToInt32(txtProcurarLivro.Text);
+                //PESQUISA PELO ID
 
-                CLivro.CLivroClient oProxy2 = new CLivro.CLivroClient();
-                oProxy2.Open();
-
-                if (oProxy2.SelecionarID(var2) != null)
+                if (cmbPesquisaLivro.SelectedIndex == 0)
                 {
-                    LIVRO oLivro = oProxy2.SelecionarID(var2);
+                    int var2 = Convert.ToInt32(txtProcurarLivro.Text);
 
-                    txtIDLivro.Text = Convert.ToString(oLivro.ID_LIVRO);
-                    txtTitulo.Text = oLivro.TITULO;
-                    txtVolume.Text = Convert.ToString(oLivro.VOLUME);
-                    dtp_Publicacao.Value = oLivro.DATA_PUBLIC;
+                    CLivro.CLivroClient oProxy2 = new CLivro.CLivroClient();
+                    oProxy2.Open();
 
-                    CGenero.CGeneroClient oProxygen = new CGenero.CGeneroClient();
-                    oProxygen.Open();
-                    var idGenero = oLivro.ID_GENERO;
-                    GENERO oGenero = oProxygen.Selecionar(idGenero);
-                    txtGenero.Text = oGenero.DESCRICAO;
-                    oProxygen.Close();
-
-                    CEditora.CEditoraClient oProxyEdit = new CEditora.CEditoraClient();
-                    oProxyEdit.Open();
-                    var idEditora = oLivro.ID_EDITORA;
-                    EDITORA oEditora = oProxyEdit.Selecionar(idEditora);
-                    txtEditora.Text = oEditora.NOME;
-                    oProxyEdit.Close();
-
-                    CLivroAutor.CLivroAutorClient oProxyLA = new CLivroAutor.CLivroAutorClient();
-                    oProxyLA.Open();
-
-                    //var autores = oProxyLA.ListarAutores(oLivro.ID_LIVRO);
-
-                    var autores = LivroAutorMetod.ListarAutores(oLivro.ID_LIVRO);
-
-                    txtAutor1.Text = autores[0].NOME;
-
-                    if(autores[1] != null)
+                    if (oProxy2.SelecionarID(var2) != null)
                     {
-                        txtAutor2.Text = autores[1].NOME;
+                        LIVRO oLivro = oProxy2.SelecionarID(var2);
+
+                        txtIDLivro.Text = Convert.ToString(oLivro.ID_LIVRO);
+                        txtTitulo.Text = oLivro.TITULO;
+                        txtVolume.Text = Convert.ToString(oLivro.VOLUME);
+                        dtp_Publicacao.Value = oLivro.DATA_PUBLIC;
+
+                        CGenero.CGeneroClient oProxygen = new CGenero.CGeneroClient();
+                        oProxygen.Open();
+                        var idGenero = oLivro.ID_GENERO;
+                        GENERO oGenero = oProxygen.Selecionar(idGenero);
+                        txtGenero.Text = oGenero.DESCRICAO;
+                        oProxygen.Close();
+
+                        CEditora.CEditoraClient oProxyEdit = new CEditora.CEditoraClient();
+                        oProxyEdit.Open();
+                        var idEditora = oLivro.ID_EDITORA;
+                        EDITORA oEditora = oProxyEdit.Selecionar(idEditora);
+                        txtEditora.Text = oEditora.NOME;
+                        oProxyEdit.Close();
+
+                        CLivroAutor.CLivroAutorClient oProxyLA = new CLivroAutor.CLivroAutorClient();
+                        oProxyLA.Open();
+
+                        //var autores = oProxyLA.ListarAutores(oLivro.ID_LIVRO);
+
+                        var autores = LivroAutorMetod.ListarAutores(oLivro.ID_LIVRO);
+
+                        txtAutor1.Text = autores[0].NOME;
+
+                        if (autores[1] != null)
+                        {
+                            txtAutor2.Text = autores[1].NOME;
+
+                        }
+
+                        oProxyLA.Close();
+
+
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Livro não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
+
+                }
+
+                //PESQUISA PELO TITULO
+
+                else
+                {
+                    CLivro.CLivroClient oProxy2 = new CLivro.CLivroClient();
+                    oProxy2.Open();
+
+                    if (oProxy2.SelecionarTitulo(txtProcurarLivro.Text) != null)
+                    {
+                        LIVRO oLivro = oProxy2.SelecionarTitulo(txtProcurarLivro.Text);
+
+                        txtIDLivro.Text = Convert.ToString(oLivro.ID_LIVRO);
+                        txtTitulo.Text = oLivro.TITULO;
+                        txtVolume.Text = Convert.ToString(oLivro.VOLUME);
+                        dtp_Publicacao.Value = oLivro.DATA_PUBLIC;
+
+                        CGenero.CGeneroClient oProxygen = new CGenero.CGeneroClient();
+                        oProxygen.Open();
+                        var idGenero = oLivro.ID_GENERO;
+                        GENERO oGenero = oProxygen.Selecionar(idGenero);
+                        txtGenero.Text = oGenero.DESCRICAO;
+                        oProxygen.Close();
+
+                        CEditora.CEditoraClient oProxyEdit = new CEditora.CEditoraClient();
+                        oProxyEdit.Open();
+                        var idEditora = oLivro.ID_EDITORA;
+                        EDITORA oEditora = oProxyEdit.Selecionar(idEditora);
+                        txtEditora.Text = oEditora.NOME;
+                        oProxyEdit.Close();
+
+                        CLivroAutor.CLivroAutorClient oProxyLA = new CLivroAutor.CLivroAutorClient();
+                        oProxyLA.Open();
+
+                        //var autores = oProxyLA.ListarAutores(oLivro.ID_LIVRO);
+
+                        var autores = LivroAutorMetod.ListarAutores(oLivro.ID_LIVRO);
+
+                        txtAutor1.Text = autores[0].NOME;
+
+                        if (autores.Count()>1)
+                        {
+                            txtAutor2.Text = autores[1].NOME;
+
+                        }
+
+                        oProxyLA.Close();
 
                     }
 
-                    oProxyLA.Close();
 
-                   
-
-
-                }
-                else
-                {
-                    MessageBox.Show("Livro não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-
-
-            }
-            else if (cmbPesquisa.SelectedIndex == 1)
-            {
-                CLivro.CLivroClient oProxy2 = new CLivro.CLivroClient();
-                oProxy2.Open();
-
-                if (oProxy2.SelecionarTitulo(txtProcurarLivro.Text) != null)
-                {
-                    LIVRO oLivro = oProxy2.SelecionarTitulo(txtProcurarLivro.Text);
-
-                    txtIDLivro.Text = Convert.ToString(oLivro.ID_LIVRO);
-                    txtTitulo.Text = oLivro.TITULO;
-                    txtVolume.Text = Convert.ToString(oLivro.VOLUME);
-
-                    /*AUTOR oAutor1 = new AUTOR();
-
-                    oAutor1 = oLivro.AUTOR.ElementAtOrDefault<AUTOR>(0);
-
-                    txtAutor1.Text = oAutor1.NOME;*/
-
-                    /*
-                    try
+                    else
                     {
-                        AUTOR oAutor2 = new AUTOR();
-
-                        oAutor2 = oLivro.AUTOR.ElementAtOrDefault<AUTOR>(1);
-
-                        txtAutor1.Text = oAutor2.NOME;
+                        MessageBox.Show("Livro não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    catch
-                    {
-
-                    }*/
-
-                    dtp_Publicacao.Value = oLivro.DATA_PUBLIC;
-
-
-                    GENERO oGenero = new GENERO();
-
-                    //oGenero = oLivro.GENERO.ElementAtOrDefault<GENERO>(0);
-
-                    txtGenero.Text = oGenero.DESCRICAO;
-
-                    txtEditora.Text = oLivro.EDITORA.NOME;
-                }
-                else
-                {
-                    MessageBox.Show("Livro não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            
             
         }
 

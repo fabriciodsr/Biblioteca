@@ -70,11 +70,11 @@ namespace Model
 
             var autores = new List<int>();
 
-            if(Consulta != null)
+            if(Consulta.Count() != 0)
             {
                 autores.Add(Consulta[0].ID_AUTOR);
 
-                if(Consulta[1]!= null)
+                if(Consulta.Count() > 1)
                 {
                     autores.Add(Consulta[1].ID_AUTOR);
                 }
@@ -85,12 +85,23 @@ namespace Model
                 return null;
             }
 
-            
+            int A1 = 0;
+
+            int A2 = 0;
 
             var ConsultaAutores = new List<AUTOR>();
 
-            var A1 = autores[0];
-            var A2 = autores[1];
+            if(autores.Count()==1)
+            {
+                A1 = autores[0];
+            }
+            else
+            {
+                A1 = autores[0];
+                A2 = autores[1];
+
+            }
+
 
 
             var oAut = (from A in oDB.AUTOR
@@ -101,11 +112,17 @@ namespace Model
                  
             //if(autores.Count()==2)
             //{
-            var oAut2 = (from A in oDB.AUTOR
-                        where A.ID_AUTOR == A2
-                        select A).SingleOrDefault();
 
-            ConsultaAutores.Add(oAut2);
+            if(autores.Count()>1)
+            {
+                var oAut2 = (from A in oDB.AUTOR
+                             where A.ID_AUTOR == A2
+                             select A).SingleOrDefault();
+
+                ConsultaAutores.Add(oAut2);
+            }
+
+            
 
             //}
             

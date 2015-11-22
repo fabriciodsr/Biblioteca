@@ -8,6 +8,15 @@ namespace Model
 {
     public class LivroAutorMetod
     {
+
+
+        /// <summary>
+        /// INSERE N PARA N
+        /// </summary>
+        
+
+
+
         public static void InsereNpraN(LIVRO oLivro, int Autor1, int Autor2)
         {
             using (BibliotecaVirtualEntities oDB = new BibliotecaVirtualEntities())
@@ -39,5 +48,80 @@ namespace Model
                 }
             }
         }
+
+
+
+
+
+        ///LISTAR AUTORES
+        /// 
+
+
+
+        public static List<AUTOR> ListarAutores(int idLivro)
+        {
+            var oDB = new BibliotecaVirtualEntities();
+
+
+            
+            var Consulta = (from CA in oDB.LIVROS_AUTORES
+                            where CA.ID_LIVRO == idLivro
+                            select CA).ToList();
+
+            var autores = new List<int>();
+
+            if(Consulta != null)
+            {
+                autores.Add(Consulta[0].ID_AUTOR);
+
+                if(Consulta[1]!= null)
+                {
+                    autores.Add(Consulta[1].ID_AUTOR);
+                }
+
+            }
+            else
+            {
+                return null;
+            }
+
+            
+
+            var ConsultaAutores = new List<AUTOR>();
+
+            var A1 = autores[0];
+            var A2 = autores[1];
+
+
+            var oAut = (from A in oDB.AUTOR
+                            where A.ID_AUTOR == A1
+                            select A).SingleOrDefault();
+
+            ConsultaAutores.Add(oAut);
+                 
+            //if(autores.Count()==2)
+            //{
+            var oAut2 = (from A in oDB.AUTOR
+                        where A.ID_AUTOR == A2
+                        select A).SingleOrDefault();
+
+            ConsultaAutores.Add(oAut2);
+
+            //}
+            
+
+
+            if (ConsultaAutores == null)
+            {
+                return null;
+            }
+
+            else
+            {
+                return ConsultaAutores;
+            }
+        }
+
+
     }
 }

@@ -13,16 +13,35 @@
   <wsdl:message name="ICLivroAutor_InserirNpraN_OutputMessage">
     <wsdl:part name="parameters" element="tns:InserirNpraNResponse" />
   </wsdl:message>
+  <wsdl:message name="ICLivroAutor_ListarAutores_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarAutores" />
+  </wsdl:message>
+  <wsdl:message name="ICLivroAutor_ListarAutores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarAutoresResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICLivroAutor">
     <wsdl:operation name="InserirNpraN">
       <wsdl:input wsaw:Action="http://tempuri.org/ICLivroAutor/InserirNpraN" message="tns:ICLivroAutor_InserirNpraN_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICLivroAutor/InserirNpraNResponse" message="tns:ICLivroAutor_InserirNpraN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarAutores">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICLivroAutor/ListarAutores" message="tns:ICLivroAutor_ListarAutores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICLivroAutor/ListarAutoresResponse" message="tns:ICLivroAutor_ListarAutores_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICLivroAutor" type="tns:ICLivroAutor">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="InserirNpraN">
       <soap:operation soapAction="http://tempuri.org/ICLivroAutor/InserirNpraN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarAutores">
+      <soap:operation soapAction="http://tempuri.org/ICLivroAutor/ListarAutores" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

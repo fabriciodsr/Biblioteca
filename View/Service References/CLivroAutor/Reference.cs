@@ -20,6 +20,12 @@ namespace View.CLivroAutor {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivroAutor/InserirNpraN", ReplyAction="http://tempuri.org/ICLivroAutor/InserirNpraNResponse")]
         System.Threading.Tasks.Task InserirNpraNAsync(Model.LIVRO oLivro, int Autor1, int Autor2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivroAutor/ListarAutores", ReplyAction="http://tempuri.org/ICLivroAutor/ListarAutoresResponse")]
+        Model.AUTOR[] ListarAutores(int idLivro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICLivroAutor/ListarAutores", ReplyAction="http://tempuri.org/ICLivroAutor/ListarAutoresResponse")]
+        System.Threading.Tasks.Task<Model.AUTOR[]> ListarAutoresAsync(int idLivro);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +61,14 @@ namespace View.CLivroAutor {
         
         public System.Threading.Tasks.Task InserirNpraNAsync(Model.LIVRO oLivro, int Autor1, int Autor2) {
             return base.Channel.InserirNpraNAsync(oLivro, Autor1, Autor2);
+        }
+        
+        public Model.AUTOR[] ListarAutores(int idLivro) {
+            return base.Channel.ListarAutores(idLivro);
+        }
+        
+        public System.Threading.Tasks.Task<Model.AUTOR[]> ListarAutoresAsync(int idLivro) {
+            return base.Channel.ListarAutoresAsync(idLivro);
         }
     }
 }

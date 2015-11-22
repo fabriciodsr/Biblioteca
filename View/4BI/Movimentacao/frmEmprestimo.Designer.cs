@@ -64,7 +64,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtIDLivro = new System.Windows.Forms.TextBox();
             this.txtAutor1 = new System.Windows.Forms.TextBox();
-            this.txtAluno2 = new System.Windows.Forms.TextBox();
+            this.txtAutor2 = new System.Windows.Forms.TextBox();
             this.txtEditora = new System.Windows.Forms.TextBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmprestimos)).BeginInit();
@@ -438,13 +438,13 @@
             this.txtAutor1.Size = new System.Drawing.Size(246, 20);
             this.txtAutor1.TabIndex = 148;
             // 
-            // txtAluno2
+            // txtAutor2
             // 
-            this.txtAluno2.Enabled = false;
-            this.txtAluno2.Location = new System.Drawing.Point(265, 195);
-            this.txtAluno2.Name = "txtAluno2";
-            this.txtAluno2.Size = new System.Drawing.Size(246, 20);
-            this.txtAluno2.TabIndex = 149;
+            this.txtAutor2.Enabled = false;
+            this.txtAutor2.Location = new System.Drawing.Point(265, 195);
+            this.txtAutor2.Name = "txtAutor2";
+            this.txtAutor2.Size = new System.Drawing.Size(246, 20);
+            this.txtAutor2.TabIndex = 149;
             // 
             // txtEditora
             // 
@@ -469,7 +469,7 @@
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.txtEditora);
-            this.Controls.Add(this.txtAluno2);
+            this.Controls.Add(this.txtAutor2);
             this.Controls.Add(this.txtAutor1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -548,7 +548,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtIDLivro;
         private System.Windows.Forms.TextBox txtAutor1;
-        private System.Windows.Forms.TextBox txtAluno2;
+        private System.Windows.Forms.TextBox txtAutor2;
         private System.Windows.Forms.TextBox txtEditora;
         private System.Windows.Forms.TextBox txtGenero;
     }

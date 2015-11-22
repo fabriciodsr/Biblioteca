@@ -143,4 +143,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="AUTOR" nillable="true" type="tns:AUTOR" />
+  <xs:complexType name="ArrayOfAUTOR">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AUTOR" nillable="true" type="tns:AUTOR" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAUTOR" nillable="true" type="tns:ArrayOfAUTOR" />
 </xs:schema>

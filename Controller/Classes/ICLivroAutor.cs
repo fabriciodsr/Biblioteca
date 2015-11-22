@@ -14,5 +14,8 @@ namespace Controller
     {
         [OperationContract]
         void InserirNpraN(LIVRO oLivro, int Autor1, int Autor2);
+
+        [OperationContract]
+        List<AUTOR> ListarAutores(int idLivro);
     }
 }

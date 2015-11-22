@@ -16,5 +16,20 @@ namespace Controller
         {
             LivroAutorMetod.InsereNpraN(oLivro, Autor1, Autor2);
         }
+
+
+        public List<AUTOR> ListarAutores(int idLivro)
+        {
+            try
+            {
+                return LivroAutorMetod.ListarAutores(idLivro);
+
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
     }
 }

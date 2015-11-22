@@ -97,37 +97,39 @@ namespace View._4BI.Movimentacao
                     txtIDLivro.Text = Convert.ToString(oLivro.ID_LIVRO);
                     txtTitulo.Text = oLivro.TITULO;
                     txtVolume.Text = Convert.ToString(oLivro.VOLUME);
-
-                    /*AUTOR oAutor1 = new AUTOR();
-
-                    oAutor1 = oLivro.AUTOR.ElementAtOrDefault<AUTOR>(0);
-
-                    txtAutor1.Text = oAutor1.NOME;*/
-
-                    /*
-                    try
-                    {
-                        AUTOR oAutor2 = new AUTOR();
-
-                        oAutor2 = oLivro.AUTOR.ElementAtOrDefault<AUTOR>(1);
-
-                        txtAutor1.Text = oAutor2.NOME;
-                    }
-                    catch
-                    {
-
-                    }*/
-
                     dtp_Publicacao.Value = oLivro.DATA_PUBLIC;
 
-
-                    GENERO oGenero = new GENERO();
-
-                    //oGenero = oLivro.GENERO.ElementAtOrDefault<GENERO>(0);
-
+                    CGenero.CGeneroClient oProxygen = new CGenero.CGeneroClient();
+                    oProxygen.Open();
+                    var idGenero = oLivro.ID_GENERO;
+                    GENERO oGenero = oProxygen.Selecionar(idGenero);
                     txtGenero.Text = oGenero.DESCRICAO;
+                    oProxygen.Close();
 
-                    txtEditora.Text = oLivro.EDITORA.NOME;
+                    CEditora.CEditoraClient oProxyEdit = new CEditora.CEditoraClient();
+                    oProxyEdit.Open();
+                    var idEditora = oLivro.ID_EDITORA;
+                    EDITORA oEditora = oProxyEdit.Selecionar(idEditora);
+                    txtEditora.Text = oEditora.NOME;
+                    oProxyEdit.Close();
+
+                    CLivroAutor.CLivroAutorClient oProxyLA = new CLivroAutor.CLivroAutorClient();
+                    oProxyLA.Open();
+
+                    //var autores = oProxyLA.ListarAutores(oLivro.ID_LIVRO);
+
+                    var autores = LivroAutorMetod.ListarAutores(oLivro.ID_LIVRO);
+
+                    txtAutor1.Text = autores[0].NOME;
+
+                    if(autores[1] != null)
+                    {
+                        txtAutor2.Text = autores[1].NOME;
+
+                    }
+
+                    oProxyLA.Close();
+
                    
 
 

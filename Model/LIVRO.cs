@@ -18,13 +18,14 @@ namespace Model
         {
             this.EMPRESTIMO = new HashSet<EMPRESTIMO>();
             this.LIVROS_AUTORES = new HashSet<LIVROS_AUTORES>();
-            this.RESERVAS_LIVROS_ALUNOS = new HashSet<RESERVAS_LIVROS_ALUNOS>();
+            this.RESERVA = new HashSet<RESERVA>();
         }
     
         public int ID_LIVRO { get; set; }
         public string TITULO { get; set; }
         public int VOLUME { get; set; }
         public System.DateTime DATA_PUBLIC { get; set; }
+        public int QTD_DISP { get; set; }
         public int QTD_EXEMP { get; set; }
         public string SUMARIO { get; set; }
         public int ID_EDITORA { get; set; }
@@ -34,6 +35,6 @@ namespace Model
         public virtual ICollection<EMPRESTIMO> EMPRESTIMO { get; set; }
         public virtual GENERO GENERO { get; set; }
         public virtual ICollection<LIVROS_AUTORES> LIVROS_AUTORES { get; set; }
-        public virtual ICollection<RESERVAS_LIVROS_ALUNOS> RESERVAS_LIVROS_ALUNOS { get; set; }
+        public virtual ICollection<RESERVA> RESERVA { get; set; }
     }
 }

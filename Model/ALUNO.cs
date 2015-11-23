@@ -17,7 +17,7 @@ namespace Model
         public ALUNO()
         {
             this.EMPRESTIMO = new HashSet<EMPRESTIMO>();
-            this.RESERVAS_LIVROS_ALUNOS = new HashSet<RESERVAS_LIVROS_ALUNOS>();
+            this.RESERVA = new HashSet<RESERVA>();
         }
     
         public int ID_ALUNO { get; set; }
@@ -36,6 +36,6 @@ namespace Model
         public string EMAIL { get; set; }
     
         public virtual ICollection<EMPRESTIMO> EMPRESTIMO { get; set; }
-        public virtual ICollection<RESERVAS_LIVROS_ALUNOS> RESERVAS_LIVROS_ALUNOS { get; set; }
+        public virtual ICollection<RESERVA> RESERVA { get; set; }
     }
 }

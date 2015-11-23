@@ -71,6 +71,7 @@
     <Compile Include="Classes\AlunoMetod.cs" />
     <Compile Include="Classes\AutorMetod.cs" />
     <Compile Include="Classes\EditoraMetod.cs" />
+    <Compile Include="Classes\EmprestimoMethod.cs" />
     <Compile Include="Classes\GeneroMetod.cs" />
     <Compile Include="Classes\ListaPais.cs" />
     <Compile Include="Classes\LivroAutorMetod.cs" />
@@ -92,9 +93,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RESERVA.cs">
-      <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
-    </Compile>
-    <Compile Include="RESERVAS_LIVROS_ALUNOS.cs">
       <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
     </Compile>
   </ItemGroup>

@@ -256,6 +256,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CEmprestimo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\CGenero\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -403,6 +408,13 @@
     <None Include="Service References\CEditora\CEditora2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CEmprestimo\CEmprestimo.wsdl" />
+    <None Include="Service References\CEmprestimo\CEmprestimo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CEmprestimo\CEmprestimo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CGenero\CGenero.wsdl" />
     <None Include="Service References\CGenero\CGenero.xsd">
       <SubType>Designer</SubType>
@@ -451,6 +463,7 @@
     <WCFMetadataStorage Include="Service References\CAluno\" />
     <WCFMetadataStorage Include="Service References\CAutor\" />
     <WCFMetadataStorage Include="Service References\CEditora\" />
+    <WCFMetadataStorage Include="Service References\CEmprestimo\" />
     <WCFMetadataStorage Include="Service References\CGenero\" />
     <WCFMetadataStorage Include="Service References\CLivroAutor\" />
     <WCFMetadataStorage Include="Service References\CLivro\" />
@@ -544,6 +557,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CLivroAutor\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CEmprestimo\CEmprestimo.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CEmprestimo\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CEmprestimo\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CEmprestimo\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

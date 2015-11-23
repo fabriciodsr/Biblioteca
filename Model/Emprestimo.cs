@@ -19,6 +19,7 @@ namespace Model
         public System.DateTime DATA_DEVOL { get; set; }
         public int ID_ALUNO { get; set; }
         public int ID_LIVRO { get; set; }
+        public string SITUACAO { get; set; }
     
         public virtual ALUNO ALUNO { get; set; }
         public virtual LIVRO LIVRO { get; set; }

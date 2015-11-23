@@ -67,6 +67,7 @@
     <Content Include="CAluno.svc" />
     <Content Include="CAutor.svc" />
     <Content Include="CEditora.svc" />
+    <Content Include="CEmprestimo.svc" />
     <Content Include="CGenero.svc" />
     <Content Include="CLivro.svc" />
     <Content Include="CLivroAutor.svc" />
@@ -81,6 +82,9 @@
     </Compile>
     <Compile Include="CEditora.svc.cs">
       <DependentUpon>CEditora.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CEmprestimo.svc.cs">
+      <DependentUpon>CEmprestimo.svc</DependentUpon>
     </Compile>
     <Compile Include="CGenero.svc.cs">
       <DependentUpon>CGenero.svc</DependentUpon>
@@ -97,6 +101,7 @@
       <DependentUpon>CLivroAutor.svc</DependentUpon>
     </Compile>
     <Compile Include="Classes\ICLivroAutor.cs" />
+    <Compile Include="Classes\ICEmprestimo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

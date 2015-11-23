@@ -34,6 +34,5 @@ namespace Model
         public DbSet<LIVRO> LIVRO { get; set; }
         public DbSet<LIVROS_AUTORES> LIVROS_AUTORES { get; set; }
         public DbSet<RESERVA> RESERVA { get; set; }
-        public DbSet<RESERVAS_LIVROS_ALUNOS> RESERVAS_LIVROS_ALUNOS { get; set; }
     }
 }

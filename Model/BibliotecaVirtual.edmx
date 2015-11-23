@@ -59,6 +59,7 @@
           <Property Name="DATA_DEVOL" Type="datetime" Nullable="false" />
           <Property Name="ID_ALUNO" Type="int" Nullable="false" />
           <Property Name="ID_LIVRO" Type="int" Nullable="false" />
+          <Property Name="SITUACAO" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="GENERO">
           <Key>
@@ -78,6 +79,7 @@
           <Property Name="TITULO" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="VOLUME" Type="int" Nullable="false" />
           <Property Name="DATA_PUBLIC" Type="datetime" Nullable="false" />
+          <Property Name="QTD_DISP" Type="int" Nullable="false" />
           <Property Name="QTD_EXEMP" Type="int" Nullable="false" />
           <Property Name="SUMARIO" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ID_EDITORA" Type="int" Nullable="false" />
@@ -97,17 +99,9 @@
             <PropertyRef Name="ID_RESERVA" />
           </Key>
           <Property Name="ID_RESERVA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DATA_RESERVA" Type="datetime" Nullable="false" />
-        </EntityType>
-        <EntityType Name="RESERVAS_LIVROS_ALUNOS">
-          <Key>
-            <PropertyRef Name="ID_RESERVA" />
-            <PropertyRef Name="ID_LIVRO" />
-            <PropertyRef Name="ID_ALUNO" />
-          </Key>
-          <Property Name="ID_RESERVA" Type="int" Nullable="false" />
           <Property Name="ID_LIVRO" Type="int" Nullable="false" />
           <Property Name="ID_ALUNO" Type="int" Nullable="false" />
+          <Property Name="DATA_RESERVA" Type="datetime" Nullable="false" />
         </EntityType>
         <Association Name="FK_EMPRESTIMO_ALUNO">
           <End Role="ALUNO" Type="Self.ALUNO" Multiplicity="1" />
@@ -181,38 +175,26 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_RESERVAS_LIVROS_ALUNOS2">
-          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="1" />
-          <End Role="RESERVAS_LIVROS_ALUNOS" Type="Self.RESERVAS_LIVROS_ALUNOS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="RESERVA">
-              <PropertyRef Name="ID_RESERVA" />
-            </Principal>
-            <Dependent Role="RESERVAS_LIVROS_ALUNOS">
-              <PropertyRef Name="ID_RESERVA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_RESERVAS_LIVROS_ALUNOS3">
           <End Role="LIVRO" Type="Self.LIVRO" Multiplicity="1" />
-          <End Role="RESERVAS_LIVROS_ALUNOS" Type="Self.RESERVAS_LIVROS_ALUNOS" Multiplicity="*" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LIVRO">
               <PropertyRef Name="ID_LIVRO" />
             </Principal>
-            <Dependent Role="RESERVAS_LIVROS_ALUNOS">
+            <Dependent Role="RESERVA">
               <PropertyRef Name="ID_LIVRO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_RESERVAS_LIVROS_ALUNOS4">
           <End Role="ALUNO" Type="Self.ALUNO" Multiplicity="1" />
-          <End Role="RESERVAS_LIVROS_ALUNOS" Type="Self.RESERVAS_LIVROS_ALUNOS" Multiplicity="*" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ALUNO">
               <PropertyRef Name="ID_ALUNO" />
             </Principal>
-            <Dependent Role="RESERVAS_LIVROS_ALUNOS">
+            <Dependent Role="RESERVA">
               <PropertyRef Name="ID_ALUNO" />
             </Dependent>
           </ReferentialConstraint>
@@ -226,7 +208,6 @@
           <EntitySet Name="LIVRO" EntityType="Self.LIVRO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LIVROS_AUTORES" EntityType="Self.LIVROS_AUTORES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RESERVA" EntityType="Self.RESERVA" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="RESERVAS_LIVROS_ALUNOS" EntityType="Self.RESERVAS_LIVROS_ALUNOS" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_EMPRESTIMO_ALUNO" Association="Self.FK_EMPRESTIMO_ALUNO">
             <End Role="ALUNO" EntitySet="ALUNO" />
             <End Role="EMPRESTIMO" EntitySet="EMPRESTIMO" />
@@ -251,17 +232,13 @@
             <End Role="AUTOR" EntitySet="AUTOR" />
             <End Role="LIVROS_AUTORES" EntitySet="LIVROS_AUTORES" />
           </AssociationSet>
-          <AssociationSet Name="FK_RESERVAS_LIVROS_ALUNOS2" Association="Self.FK_RESERVAS_LIVROS_ALUNOS2">
-            <End Role="RESERVA" EntitySet="RESERVA" />
-            <End Role="RESERVAS_LIVROS_ALUNOS" EntitySet="RESERVAS_LIVROS_ALUNOS" />
-          </AssociationSet>
           <AssociationSet Name="FK_RESERVAS_LIVROS_ALUNOS3" Association="Self.FK_RESERVAS_LIVROS_ALUNOS3">
             <End Role="LIVRO" EntitySet="LIVRO" />
-            <End Role="RESERVAS_LIVROS_ALUNOS" EntitySet="RESERVAS_LIVROS_ALUNOS" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
           </AssociationSet>
           <AssociationSet Name="FK_RESERVAS_LIVROS_ALUNOS4" Association="Self.FK_RESERVAS_LIVROS_ALUNOS4">
             <End Role="ALUNO" EntitySet="ALUNO" />
-            <End Role="RESERVAS_LIVROS_ALUNOS" EntitySet="RESERVAS_LIVROS_ALUNOS" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -277,14 +254,13 @@
           <EntitySet Name="LIVRO" EntityType="BibliotecaVirtualModel.LIVRO" />
           <EntitySet Name="LIVROS_AUTORES" EntityType="BibliotecaVirtualModel.LIVROS_AUTORES" />
           <EntitySet Name="RESERVA" EntityType="BibliotecaVirtualModel.RESERVA" />
-          <EntitySet Name="RESERVAS_LIVROS_ALUNOS" EntityType="BibliotecaVirtualModel.RESERVAS_LIVROS_ALUNOS" />
           <AssociationSet Name="FK_EMPRESTIMO_ALUNO" Association="BibliotecaVirtualModel.FK_EMPRESTIMO_ALUNO">
             <End Role="ALUNO" EntitySet="ALUNO" />
             <End Role="EMPRESTIMO" EntitySet="EMPRESTIMO" />
           </AssociationSet>
           <AssociationSet Name="FK_RESERVAS_LIVROS_ALUNOS4" Association="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS4">
             <End Role="ALUNO" EntitySet="ALUNO" />
-            <End Role="RESERVAS_LIVROS_ALUNOS" EntitySet="RESERVAS_LIVROS_ALUNOS" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
           </AssociationSet>
           <AssociationSet Name="FK_LIVROS_AUTORES3" Association="BibliotecaVirtualModel.FK_LIVROS_AUTORES3">
             <End Role="AUTOR" EntitySet="AUTOR" />
@@ -308,11 +284,7 @@
           </AssociationSet>
           <AssociationSet Name="FK_RESERVAS_LIVROS_ALUNOS3" Association="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS3">
             <End Role="LIVRO" EntitySet="LIVRO" />
-            <End Role="RESERVAS_LIVROS_ALUNOS" EntitySet="RESERVAS_LIVROS_ALUNOS" />
-          </AssociationSet>
-          <AssociationSet Name="FK_RESERVAS_LIVROS_ALUNOS2" Association="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS2">
             <End Role="RESERVA" EntitySet="RESERVA" />
-            <End Role="RESERVAS_LIVROS_ALUNOS" EntitySet="RESERVAS_LIVROS_ALUNOS" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="ALUNO">
@@ -334,7 +306,7 @@
           <Property Name="TEL_CEL" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="EMPRESTIMO" Relationship="BibliotecaVirtualModel.FK_EMPRESTIMO_ALUNO" FromRole="ALUNO" ToRole="EMPRESTIMO" />
-          <NavigationProperty Name="RESERVAS_LIVROS_ALUNOS" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS4" FromRole="ALUNO" ToRole="RESERVAS_LIVROS_ALUNOS" />
+          <NavigationProperty Name="RESERVA" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS4" FromRole="ALUNO" ToRole="RESERVA" />
         </EntityType>
         <EntityType Name="AUTOR">
           <Key>
@@ -373,6 +345,7 @@
           <Property Name="DATA_DEVOL" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="ID_ALUNO" Type="Int32" Nullable="false" />
           <Property Name="ID_LIVRO" Type="Int32" Nullable="false" />
+          <Property Name="SITUACAO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="ALUNO" Relationship="BibliotecaVirtualModel.FK_EMPRESTIMO_ALUNO" FromRole="EMPRESTIMO" ToRole="ALUNO" />
           <NavigationProperty Name="LIVRO" Relationship="BibliotecaVirtualModel.FK_EMPRESTIMO_LIVRO" FromRole="EMPRESTIMO" ToRole="LIVRO" />
         </EntityType>
@@ -395,6 +368,7 @@
           <Property Name="TITULO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="VOLUME" Type="Int32" Nullable="false" />
           <Property Name="DATA_PUBLIC" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="QTD_DISP" Type="Int32" Nullable="false" />
           <Property Name="QTD_EXEMP" Type="Int32" Nullable="false" />
           <Property Name="SUMARIO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ID_EDITORA" Type="Int32" Nullable="false" />
@@ -403,7 +377,7 @@
           <NavigationProperty Name="EMPRESTIMO" Relationship="BibliotecaVirtualModel.FK_EMPRESTIMO_LIVRO" FromRole="LIVRO" ToRole="EMPRESTIMO" />
           <NavigationProperty Name="GENERO" Relationship="BibliotecaVirtualModel.FK_LIVRO_GENERO" FromRole="LIVRO" ToRole="GENERO" />
           <NavigationProperty Name="LIVROS_AUTORES" Relationship="BibliotecaVirtualModel.FK_LIVROS_AUTORES2" FromRole="LIVRO" ToRole="LIVROS_AUTORES" />
-          <NavigationProperty Name="RESERVAS_LIVROS_ALUNOS" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS3" FromRole="LIVRO" ToRole="RESERVAS_LIVROS_ALUNOS" />
+          <NavigationProperty Name="RESERVA" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS3" FromRole="LIVRO" ToRole="RESERVA" />
         </EntityType>
         <EntityType Name="LIVROS_AUTORES">
           <Key>
@@ -421,21 +395,11 @@
             <PropertyRef Name="ID_RESERVA" />
           </Key>
           <Property Name="ID_RESERVA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DATA_RESERVA" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="RESERVAS_LIVROS_ALUNOS" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS2" FromRole="RESERVA" ToRole="RESERVAS_LIVROS_ALUNOS" />
-        </EntityType>
-        <EntityType Name="RESERVAS_LIVROS_ALUNOS">
-          <Key>
-            <PropertyRef Name="ID_RESERVA" />
-            <PropertyRef Name="ID_LIVRO" />
-            <PropertyRef Name="ID_ALUNO" />
-          </Key>
-          <Property Name="ID_RESERVA" Type="Int32" Nullable="false" />
           <Property Name="ID_LIVRO" Type="Int32" Nullable="false" />
           <Property Name="ID_ALUNO" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ALUNO" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS4" FromRole="RESERVAS_LIVROS_ALUNOS" ToRole="ALUNO" />
-          <NavigationProperty Name="LIVRO" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS3" FromRole="RESERVAS_LIVROS_ALUNOS" ToRole="LIVRO" />
-          <NavigationProperty Name="RESERVA" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS2" FromRole="RESERVAS_LIVROS_ALUNOS" ToRole="RESERVA" />
+          <Property Name="DATA_RESERVA" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ALUNO" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS4" FromRole="RESERVA" ToRole="ALUNO" />
+          <NavigationProperty Name="LIVRO" Relationship="BibliotecaVirtualModel.FK_RESERVAS_LIVROS_ALUNOS3" FromRole="RESERVA" ToRole="LIVRO" />
         </EntityType>
         <Association Name="FK_EMPRESTIMO_ALUNO">
           <End Type="BibliotecaVirtualModel.ALUNO" Role="ALUNO" Multiplicity="1" />
@@ -451,12 +415,12 @@
         </Association>
         <Association Name="FK_RESERVAS_LIVROS_ALUNOS4">
           <End Type="BibliotecaVirtualModel.ALUNO" Role="ALUNO" Multiplicity="1" />
-          <End Type="BibliotecaVirtualModel.RESERVAS_LIVROS_ALUNOS" Role="RESERVAS_LIVROS_ALUNOS" Multiplicity="*" />
+          <End Type="BibliotecaVirtualModel.RESERVA" Role="RESERVA" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ALUNO">
               <PropertyRef Name="ID_ALUNO" />
             </Principal>
-            <Dependent Role="RESERVAS_LIVROS_ALUNOS">
+            <Dependent Role="RESERVA">
               <PropertyRef Name="ID_ALUNO" />
             </Dependent>
           </ReferentialConstraint>
@@ -523,29 +487,17 @@
         </Association>
         <Association Name="FK_RESERVAS_LIVROS_ALUNOS3">
           <End Type="BibliotecaVirtualModel.LIVRO" Role="LIVRO" Multiplicity="1" />
-          <End Type="BibliotecaVirtualModel.RESERVAS_LIVROS_ALUNOS" Role="RESERVAS_LIVROS_ALUNOS" Multiplicity="*" />
+          <End Type="BibliotecaVirtualModel.RESERVA" Role="RESERVA" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LIVRO">
               <PropertyRef Name="ID_LIVRO" />
             </Principal>
-            <Dependent Role="RESERVAS_LIVROS_ALUNOS">
+            <Dependent Role="RESERVA">
               <PropertyRef Name="ID_LIVRO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_RESERVAS_LIVROS_ALUNOS2">
-          <End Type="BibliotecaVirtualModel.RESERVA" Role="RESERVA" Multiplicity="1" />
-          <End Type="BibliotecaVirtualModel.RESERVAS_LIVROS_ALUNOS" Role="RESERVAS_LIVROS_ALUNOS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="RESERVA">
-              <PropertyRef Name="ID_RESERVA" />
-            </Principal>
-            <Dependent Role="RESERVAS_LIVROS_ALUNOS">
-              <PropertyRef Name="ID_RESERVA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -602,6 +554,7 @@
           <EntitySetMapping Name="EMPRESTIMO">
             <EntityTypeMapping TypeName="BibliotecaVirtualModel.EMPRESTIMO">
               <MappingFragment StoreEntitySet="EMPRESTIMO">
+                <ScalarProperty Name="SITUACAO" ColumnName="SITUACAO" />
                 <ScalarProperty Name="ID_LIVRO" ColumnName="ID_LIVRO" />
                 <ScalarProperty Name="ID_ALUNO" ColumnName="ID_ALUNO" />
                 <ScalarProperty Name="DATA_DEVOL" ColumnName="DATA_DEVOL" />
@@ -628,6 +581,7 @@
                 <ScalarProperty Name="ID_EDITORA" ColumnName="ID_EDITORA" />
                 <ScalarProperty Name="SUMARIO" ColumnName="SUMARIO" />
                 <ScalarProperty Name="QTD_EXEMP" ColumnName="QTD_EXEMP" />
+                <ScalarProperty Name="QTD_DISP" ColumnName="QTD_DISP" />
                 <ScalarProperty Name="DATA_PUBLIC" ColumnName="DATA_PUBLIC" />
                 <ScalarProperty Name="VOLUME" ColumnName="VOLUME" />
                 <ScalarProperty Name="TITULO" ColumnName="TITULO" />
@@ -648,13 +602,6 @@
             <EntityTypeMapping TypeName="BibliotecaVirtualModel.RESERVA">
               <MappingFragment StoreEntitySet="RESERVA">
                 <ScalarProperty Name="DATA_RESERVA" ColumnName="DATA_RESERVA" />
-                <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="RESERVAS_LIVROS_ALUNOS">
-            <EntityTypeMapping TypeName="BibliotecaVirtualModel.RESERVAS_LIVROS_ALUNOS">
-              <MappingFragment StoreEntitySet="RESERVAS_LIVROS_ALUNOS">
                 <ScalarProperty Name="ID_ALUNO" ColumnName="ID_ALUNO" />
                 <ScalarProperty Name="ID_LIVRO" ColumnName="ID_LIVRO" />
                 <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />

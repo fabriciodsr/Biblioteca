@@ -87,6 +87,7 @@
             this.btnInserir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInserir.BackgroundImage")));
             this.btnInserir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnInserir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInserir.Enabled = false;
             this.btnInserir.FlatAppearance.BorderSize = 0;
             this.btnInserir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnInserir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;

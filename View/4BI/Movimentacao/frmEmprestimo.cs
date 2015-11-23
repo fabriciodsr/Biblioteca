@@ -68,6 +68,11 @@ namespace View._4BI.Movimentacao
                     MessageBox.Show("Aluno não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            if ((txtID.Text.Trim() != "") && (txtIDLivro.Text.Trim() != ""))
+            {
+                btnInserir.Enabled = true;
+            }
         }
 
         private void frmEmprestimo_FormClosed(object sender, FormClosedEventArgs e)
@@ -124,9 +129,10 @@ namespace View._4BI.Movimentacao
 
                         var autores = LivroAutorMetod.ListarAutores(oLivro.ID_LIVRO);
 
+
                         txtAutor1.Text = autores[0].NOME;
 
-                        if (autores[1] != null)
+                        if (autores.Count()>1)
                         {
                             txtAutor2.Text = autores[1].NOME;
 
@@ -203,12 +209,43 @@ namespace View._4BI.Movimentacao
                     }
                 }
             }
+
+            if ((txtID.Text.Trim()!= "") && (txtIDLivro.Text.Trim() != ""))
+            {
+                btnInserir.Enabled = true;
+            }
+                
             
             
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
+
+            var aluno = Convert.ToInt32(txtID.Text);
+
+            var livro = Convert.ToInt32(txtIDLivro.Text);
+
+
+            CEmprestimo.CEmprestimoClient oProxy = new CEmprestimo.CEmprestimoClient();
+            oProxy.Open();
+
+            try
+            {
+                oProxy.Emprestar(aluno, livro);
+
+                MessageBox.Show("Empréstimo realizado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                
+
+                oProxy.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
         }
     }

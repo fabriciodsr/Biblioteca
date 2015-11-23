@@ -72,13 +72,15 @@ namespace View
                         if (oProxy.Cadastrar(oLivro))
                         {
                             
-                            MessageBox.Show("Cadastro realizado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            LimpaCampos();
+                            
 
                             CLivroAutor.CLivroAutorClient oProxyNpraN = new CLivroAutor.CLivroAutorClient();
                             oProxyNpraN.Open();
                             oProxyNpraN.InserirNpraN(oLivro, Autor1, Autor2);
                             oProxyNpraN.Close();
+
+                            MessageBox.Show("Cadastro realizado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimpaCampos();
                         }
                         else
                         {

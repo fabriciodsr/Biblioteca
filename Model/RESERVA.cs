@@ -14,14 +14,12 @@ namespace Model
     
     public partial class RESERVA
     {
-        public RESERVA()
-        {
-            this.RESERVAS_LIVROS_ALUNOS = new HashSet<RESERVAS_LIVROS_ALUNOS>();
-        }
-    
         public int ID_RESERVA { get; set; }
+        public int ID_LIVRO { get; set; }
+        public int ID_ALUNO { get; set; }
         public System.DateTime DATA_RESERVA { get; set; }
     
-        public virtual ICollection<RESERVAS_LIVROS_ALUNOS> RESERVAS_LIVROS_ALUNOS { get; set; }
+        public virtual ALUNO ALUNO { get; set; }
+        public virtual LIVRO LIVRO { get; set; }
     }
 }

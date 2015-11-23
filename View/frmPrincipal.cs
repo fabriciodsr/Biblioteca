@@ -113,5 +113,113 @@ namespace View
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void rESERVAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rESERVAToolStripMenuItem.Enabled = false;
+            View._4BI.Movimentacao.frmReserva frm = new _4BI.Movimentacao.frmReserva();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void dEVOLUÇÃOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dEVOLUÇÃOToolStripMenuItem.Enabled = false;
+            View._4BI.Movimentacao.frmDevolucao frm = new _4BI.Movimentacao.frmDevolucao();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void rELATÓRIOMOVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void relCadastroAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            relCadastroAlunosToolStripMenuItem.Enabled = false;
+            View._4BI.RelatoriosCadastrais.frmRelatorioCadastroAluno frm = new _4BI.RelatoriosCadastrais.frmRelatorioCadastroAluno();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void relAlunosPendenciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            relAlunosPendenciasToolStripMenuItem.Enabled = false;
+            View._4BI.RelatoriosdeMovimentacao.frmRelAlunosPendencias frm = new _4BI.RelatoriosdeMovimentacao.frmRelAlunosPendencias();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void relLivrosDevAtrasadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           relLivrosDevAtrasadoToolStripMenuItem.Enabled = false;
+            View._4BI.RelatoriosdeMovimentacao.frmRelLivrosDevolucaoAtrasada frm = new _4BI.RelatoriosdeMovimentacao.frmRelLivrosDevolucaoAtrasada();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void sOBREToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mOVIMENTAÇÃOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void relLivrosEmprestadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            relLivrosEmprestadosToolStripMenuItem.Enabled = false;
+            View._4BI.RelatoriosdeMovimentacao.frmRelLivrosEmprestados frm = new _4BI.RelatoriosdeMovimentacao.frmRelLivrosEmprestados();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void relLivrosReservadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            relLivrosReservadosToolStripMenuItem.Enabled = false;
+            View._4BI.RelatoriosdeMovimentacao.RelLivrosReservados frm = new _4BI.RelatoriosdeMovimentacao.RelLivrosReservados();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void relCadastroAutoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            relCadastroAutoresToolStripMenuItem.Enabled = false;
+            View._4BI.RelatoriosCadastrais.frmRelatorioCadastroAutores frm = new _4BI.RelatoriosCadastrais.frmRelatorioCadastroAutores();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void relCadastroEditoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            relCadastroEditoresToolStripMenuItem.Enabled = false;
+            View._4BI.RelatoriosCadastrais.frmRelatorioCadastroEditoras frm = new _4BI.RelatoriosCadastrais.frmRelatorioCadastroEditoras();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void relCadastroGenerosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            relCadastroGenerosToolStripMenuItem.Enabled = false;
+            View._4BI.RelatoriosCadastrais.frmRelatorioCadastroGeneros frm = new _4BI.RelatoriosCadastrais.frmRelatorioCadastroGeneros();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void relCadastroLivrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           relCadastroLivrosToolStripMenuItem.Enabled = false;
+            View._4BI.RelatoriosCadastrais.frmRelatorioCadastroLivros frm = new _4BI.RelatoriosCadastrais.frmRelatorioCadastroLivros();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void bIBLIOTECAVIRTUALToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

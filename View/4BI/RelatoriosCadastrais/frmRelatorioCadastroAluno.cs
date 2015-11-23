@@ -16,5 +16,10 @@ namespace View._4BI.RelatoriosCadastrais
         {
             InitializeComponent();
         }
+
+        private void frmRelatorioCadastroAluno_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+        }
     }
 }

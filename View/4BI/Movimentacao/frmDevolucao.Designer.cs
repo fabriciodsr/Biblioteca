@@ -52,7 +52,7 @@
             // 
             this.dtgReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgReservas.Location = new System.Drawing.Point(13, 165);
-            this.dtgReservas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgReservas.Margin = new System.Windows.Forms.Padding(4);
             this.dtgReservas.Name = "dtgReservas";
             this.dtgReservas.Size = new System.Drawing.Size(1019, 383);
             this.dtgReservas.TabIndex = 101;
@@ -81,7 +81,7 @@
             // 
             this.txtAutores.Enabled = false;
             this.txtAutores.Location = new System.Drawing.Point(371, 121);
-            this.txtAutores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAutores.Margin = new System.Windows.Forms.Padding(4);
             this.txtAutores.Name = "txtAutores";
             this.txtAutores.Size = new System.Drawing.Size(487, 22);
             this.txtAutores.TabIndex = 99;
@@ -105,7 +105,7 @@
             this.btnPesquisaTitulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPesquisaTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPesquisaTitulo.Location = new System.Drawing.Point(881, 69);
-            this.btnPesquisaTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPesquisaTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisaTitulo.Name = "btnPesquisaTitulo";
             this.btnPesquisaTitulo.Size = new System.Drawing.Size(35, 26);
             this.btnPesquisaTitulo.TabIndex = 97;
@@ -125,7 +125,7 @@
             // txtVolume
             // 
             this.txtVolume.Location = new System.Drawing.Point(108, 121);
-            this.txtVolume.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVolume.Margin = new System.Windows.Forms.Padding(4);
             this.txtVolume.Name = "txtVolume";
             this.txtVolume.Size = new System.Drawing.Size(133, 22);
             this.txtVolume.TabIndex = 95;
@@ -144,7 +144,7 @@
             // txtTitulo
             // 
             this.txtTitulo.Location = new System.Drawing.Point(371, 73);
-            this.txtTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(487, 22);
             this.txtTitulo.TabIndex = 93;
@@ -164,7 +164,7 @@
             // 
             this.txtIDLivro.Enabled = false;
             this.txtIDLivro.Location = new System.Drawing.Point(108, 71);
-            this.txtIDLivro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIDLivro.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDLivro.Name = "txtIDLivro";
             this.txtIDLivro.Size = new System.Drawing.Size(133, 22);
             this.txtIDLivro.TabIndex = 91;
@@ -177,7 +177,7 @@
             this.btnPesquisarAluno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPesquisarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPesquisarAluno.Location = new System.Drawing.Point(881, 18);
-            this.btnPesquisarAluno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPesquisarAluno.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisarAluno.Name = "btnPesquisarAluno";
             this.btnPesquisarAluno.Size = new System.Drawing.Size(35, 26);
             this.btnPesquisarAluno.TabIndex = 90;
@@ -197,7 +197,7 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(371, 23);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(487, 22);
@@ -218,7 +218,7 @@
             // 
             this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(108, 21);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(133, 22);
             this.txtID.TabIndex = 86;
@@ -245,9 +245,11 @@
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.txtID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDevolucao";
             this.Text = "DEVOLUÇÃO";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDevolucao_FormClosed);
+            this.Load += new System.EventHandler(this.frmDevolucao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgReservas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -16,5 +16,16 @@ namespace View._4BI.Movimentacao
         {
             InitializeComponent();
         }
+
+        private void frmDevolucao_Load(object sender, EventArgs e)
+        {
+            ((frmPrincipal)this.MdiParent).dEVOLUÇÃOToolStripMenuItem.Enabled = false;
+
+        }
+
+        private void frmDevolucao_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ((frmPrincipal)this.MdiParent).dEVOLUÇÃOToolStripMenuItem.Enabled = true;
+        }
     }
 }

@@ -31,5 +31,11 @@ namespace View._4BI.Movimentacao
         {
 
         }
+
+        private void frmReserva_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ((frmPrincipal)this.MdiParent).rESERVAToolStripMenuItem.Enabled = true;
+
+        }
     }
 }

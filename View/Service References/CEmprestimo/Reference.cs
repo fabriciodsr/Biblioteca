@@ -26,6 +26,12 @@ namespace View.CEmprestimo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICEmprestimo/listaTodosEmprestimosAluno", ReplyAction="http://tempuri.org/ICEmprestimo/listaTodosEmprestimosAlunoResponse")]
         System.Threading.Tasks.Task<Model.EMPRESTIMO[]> listaTodosEmprestimosAlunoAsync(int idAluno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICEmprestimo/RenovarEmprestimo", ReplyAction="http://tempuri.org/ICEmprestimo/RenovarEmprestimoResponse")]
+        void RenovarEmprestimo(int idEmp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICEmprestimo/RenovarEmprestimo", ReplyAction="http://tempuri.org/ICEmprestimo/RenovarEmprestimoResponse")]
+        System.Threading.Tasks.Task RenovarEmprestimoAsync(int idEmp);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +75,14 @@ namespace View.CEmprestimo {
         
         public System.Threading.Tasks.Task<Model.EMPRESTIMO[]> listaTodosEmprestimosAlunoAsync(int idAluno) {
             return base.Channel.listaTodosEmprestimosAlunoAsync(idAluno);
+        }
+        
+        public void RenovarEmprestimo(int idEmp) {
+            base.Channel.RenovarEmprestimo(idEmp);
+        }
+        
+        public System.Threading.Tasks.Task RenovarEmprestimoAsync(int idEmp) {
+            return base.Channel.RenovarEmprestimoAsync(idEmp);
         }
     }
 }

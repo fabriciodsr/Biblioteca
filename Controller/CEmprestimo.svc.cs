@@ -23,5 +23,10 @@ namespace Controller
         {
             return EmprestimoMethod.ListaTodosEmprestimosAluno(idAluno);
         }
+
+        public void RenovarEmprestimo(int idEmp)
+        {
+            EmprestimoMethod.RenovarEmprestimo(idEmp);
+        }
     }
 }

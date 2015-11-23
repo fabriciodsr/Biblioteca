@@ -95,6 +95,7 @@
     <Compile Include="RESERVA.cs">
       <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\ReservaMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

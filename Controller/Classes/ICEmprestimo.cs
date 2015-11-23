@@ -17,5 +17,9 @@ namespace Controller
 
         [OperationContract]
         List<EMPRESTIMO> listaTodosEmprestimosAluno(int idAluno);
+
+        [OperationContract]
+        void RenovarEmprestimo(int idEmp);
+
     }
 }

@@ -25,6 +25,13 @@ namespace Model
                     oEmprestimo.ID_LIVRO = idLivro;
                     oEmprestimo.SITUACAO = "OK";
 
+                    var L = (from p in oDB.LIVRO
+                             where p.ID_LIVRO == idLivro
+                             select p).SingleOrDefault();
+
+                    L.QTD_DISP = L.QTD_DISP - 1;
+                    
+
                     oDB.EMPRESTIMO.Add(oEmprestimo);
                     oDB.SaveChanges();
                     oDB.Dispose();
@@ -66,6 +73,22 @@ namespace Model
 
 
 
+
+        public static void RenovarEmprestimo(int idEmp)
+        {
+            using (var oDB = new BibliotecaVirtualEntities())
+            {
+                var consulta = (from p in oDB.EMPRESTIMO
+                                where p.ID_EMPRESTIMO == idEmp
+                                select p).SingleOrDefault();
+
+                consulta.DATA_DEVOL = consulta.DATA_DEVOL.AddDays(10);
+
+                oDB.SaveChanges();
+                oDB.Dispose();
+
+            }
+        }
 
 
 

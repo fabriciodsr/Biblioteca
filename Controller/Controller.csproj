@@ -71,6 +71,7 @@
     <Content Include="CGenero.svc" />
     <Content Include="CLivro.svc" />
     <Content Include="CLivroAutor.svc" />
+    <Content Include="CReserva.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +103,10 @@
     </Compile>
     <Compile Include="Classes\ICLivroAutor.cs" />
     <Compile Include="Classes\ICEmprestimo.cs" />
+    <Compile Include="CReserva.svc.cs">
+      <DependentUpon>CReserva.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ICReserva.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

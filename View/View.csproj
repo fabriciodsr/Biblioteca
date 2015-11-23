@@ -276,6 +276,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CReserva\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="3BI\Cadastros\frmCadastroAluno.resx">
       <DependentUpon>frmCadastroAluno.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +387,7 @@
     <None Include="Properties\DataSources\Model.EMPRESTIMO.datasource" />
     <None Include="Properties\DataSources\Model.GENERO.datasource" />
     <None Include="Properties\DataSources\Model.LIVRO.datasource" />
+    <None Include="Properties\DataSources\Model.RESERVA.datasource" />
     <None Include="Service References\CAluno\CAluno.wsdl" />
     <None Include="Service References\CAluno\CAluno.xsd">
       <SubType>Designer</SubType>
@@ -452,6 +458,16 @@
     <None Include="Service References\CLivro\CLivro2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CReserva\CReserva.wsdl" />
+    <None Include="Service References\CReserva\CReserva.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CReserva\CReserva1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CReserva\CReserva2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Controller\Controller.csproj">
@@ -474,6 +490,7 @@
     <WCFMetadataStorage Include="Service References\CGenero\" />
     <WCFMetadataStorage Include="Service References\CLivroAutor\" />
     <WCFMetadataStorage Include="Service References\CLivro\" />
+    <WCFMetadataStorage Include="Service References\CReserva\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CAluno\CAluno.disco" />
@@ -585,6 +602,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CAPA111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CReserva\CReserva.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CReserva\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CReserva\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CReserva\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

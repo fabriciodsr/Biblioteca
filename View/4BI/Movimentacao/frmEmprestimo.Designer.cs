@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmprestimo));
             this.dtgEmprestimos = new System.Windows.Forms.DataGridView();
-            this.ID_EMPRESTIMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TITULO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_DEVOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_EMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInserir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbPesquisa = new System.Windows.Forms.ComboBox();
@@ -73,6 +67,12 @@
             this.txtAutor2 = new System.Windows.Forms.TextBox();
             this.txtEditora = new System.Windows.Forms.TextBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
+            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_EMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_DEVOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TITULO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_EMPRESTIMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmprestimos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -97,46 +97,6 @@
             this.dtgEmprestimos.Size = new System.Drawing.Size(764, 195);
             this.dtgEmprestimos.TabIndex = 117;
             this.dtgEmprestimos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEmprestimos_CellDoubleClick);
-            // 
-            // ID_EMPRESTIMO
-            // 
-            this.ID_EMPRESTIMO.DataPropertyName = "ID_EMPRESTIMO";
-            this.ID_EMPRESTIMO.HeaderText = "ID EMP";
-            this.ID_EMPRESTIMO.Name = "ID_EMPRESTIMO";
-            this.ID_EMPRESTIMO.Width = 64;
-            // 
-            // TITULO
-            // 
-            this.TITULO.HeaderText = "LIVRO";
-            this.TITULO.Name = "TITULO";
-            this.TITULO.Width = 64;
-            // 
-            // SITUACAO
-            // 
-            this.SITUACAO.HeaderText = "SITUAÇÃO";
-            this.SITUACAO.Name = "SITUACAO";
-            this.SITUACAO.Width = 86;
-            // 
-            // DATA_DEVOL
-            // 
-            this.DATA_DEVOL.DataPropertyName = "DATA_DEVOL";
-            this.DATA_DEVOL.HeaderText = "DATA DE DEVOLUÇÃO";
-            this.DATA_DEVOL.Name = "DATA_DEVOL";
-            this.DATA_DEVOL.Width = 135;
-            // 
-            // DATA_EMP
-            // 
-            this.DATA_EMP.DataPropertyName = "DATA_EMP";
-            this.DATA_EMP.HeaderText = "DATA DO EMPRÉSTIMO";
-            this.DATA_EMP.Name = "DATA_EMP";
-            this.DATA_EMP.Width = 141;
-            // 
-            // NOME
-            // 
-            this.NOME.DataPropertyName = "NOME";
-            this.NOME.HeaderText = "Nome do Aluno";
-            this.NOME.Name = "NOME";
-            this.NOME.Width = 96;
             // 
             // btnInserir
             // 
@@ -520,6 +480,46 @@
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(307, 20);
             this.txtGenero.TabIndex = 151;
+            // 
+            // NOME
+            // 
+            this.NOME.DataPropertyName = "NOME";
+            this.NOME.HeaderText = "Nome do Aluno";
+            this.NOME.Name = "NOME";
+            this.NOME.Width = 96;
+            // 
+            // DATA_EMP
+            // 
+            this.DATA_EMP.DataPropertyName = "DATA_EMP";
+            this.DATA_EMP.HeaderText = "DATA DO EMPRÉSTIMO";
+            this.DATA_EMP.Name = "DATA_EMP";
+            this.DATA_EMP.Width = 141;
+            // 
+            // DATA_DEVOL
+            // 
+            this.DATA_DEVOL.DataPropertyName = "DATA_DEVOL";
+            this.DATA_DEVOL.HeaderText = "DATA DE DEVOLUÇÃO";
+            this.DATA_DEVOL.Name = "DATA_DEVOL";
+            this.DATA_DEVOL.Width = 135;
+            // 
+            // SITUACAO
+            // 
+            this.SITUACAO.HeaderText = "SITUAÇÃO";
+            this.SITUACAO.Name = "SITUACAO";
+            this.SITUACAO.Width = 86;
+            // 
+            // TITULO
+            // 
+            this.TITULO.HeaderText = "LIVRO";
+            this.TITULO.Name = "TITULO";
+            this.TITULO.Width = 64;
+            // 
+            // ID_EMPRESTIMO
+            // 
+            this.ID_EMPRESTIMO.DataPropertyName = "ID_EMPRESTIMO";
+            this.ID_EMPRESTIMO.HeaderText = "ID EMP";
+            this.ID_EMPRESTIMO.Name = "ID_EMPRESTIMO";
+            this.ID_EMPRESTIMO.Width = 69;
             // 
             // frmEmprestimo
             // 

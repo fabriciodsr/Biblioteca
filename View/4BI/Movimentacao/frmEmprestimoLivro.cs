@@ -38,7 +38,7 @@ namespace View._4BI.Movimentacao
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
         private void txtSituacao_TextChanged(object sender, EventArgs e)
@@ -52,6 +52,36 @@ namespace View._4BI.Movimentacao
                 txtSituacao.ForeColor = Color.Red;
 
             }
+        }
+
+        private void btnRenovar_Click(object sender, EventArgs e)
+        {
+
+            var ident = Convert.ToInt32(txtID.Text);
+
+            CEmprestimo.CEmprestimoClient oProxyRen = new CEmprestimo.CEmprestimoClient();
+            oProxyRen.Open();
+            try
+            {
+                oProxyRen.RenovarEmprestimo(ident);
+
+                MessageBox.Show("Seu empréstimo foi renovado por mais 10 dias!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void btnDevolução_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }

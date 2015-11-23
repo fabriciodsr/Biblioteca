@@ -308,6 +308,18 @@ namespace View._4BI.Movimentacao
             
 
 
+            frm.FormClosed += Frm_FormClosed;
+
+            dtgEmprestimos.Refresh();
+
+            
+
+
+        }
+
+        private void Frm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dtgEmprestimos.Refresh();
         }
     }
 }

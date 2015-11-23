@@ -34,6 +34,7 @@ namespace Model
                         //xLivro.AUTOR = oLivro.AUTOR;
                         xLivro.VOLUME = oLivro.VOLUME;
                         xLivro.DATA_PUBLIC = oLivro.DATA_PUBLIC;
+                        xLivro.QTD_DISP = oLivro.QTD_EXEMP;
                         xLivro.QTD_EXEMP = oLivro.QTD_EXEMP;
                         xLivro.SUMARIO = oLivro.SUMARIO;
                         xLivro.ID_EDITORA = oLivro.ID_EDITORA;

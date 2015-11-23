@@ -19,6 +19,12 @@
   <wsdl:message name="ICEmprestimo_listaTodosEmprestimosAluno_OutputMessage">
     <wsdl:part name="parameters" element="tns:listaTodosEmprestimosAlunoResponse" />
   </wsdl:message>
+  <wsdl:message name="ICEmprestimo_RenovarEmprestimo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenovarEmprestimo" />
+  </wsdl:message>
+  <wsdl:message name="ICEmprestimo_RenovarEmprestimo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenovarEmprestimoResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICEmprestimo">
     <wsdl:operation name="Emprestar">
       <wsdl:input wsaw:Action="http://tempuri.org/ICEmprestimo/Emprestar" message="tns:ICEmprestimo_Emprestar_InputMessage" />
@@ -27,6 +33,10 @@
     <wsdl:operation name="listaTodosEmprestimosAluno">
       <wsdl:input wsaw:Action="http://tempuri.org/ICEmprestimo/listaTodosEmprestimosAluno" message="tns:ICEmprestimo_listaTodosEmprestimosAluno_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICEmprestimo/listaTodosEmprestimosAlunoResponse" message="tns:ICEmprestimo_listaTodosEmprestimosAluno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenovarEmprestimo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICEmprestimo/RenovarEmprestimo" message="tns:ICEmprestimo_RenovarEmprestimo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICEmprestimo/RenovarEmprestimoResponse" message="tns:ICEmprestimo_RenovarEmprestimo_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICEmprestimo" type="tns:ICEmprestimo">
@@ -42,6 +52,15 @@
     </wsdl:operation>
     <wsdl:operation name="listaTodosEmprestimosAluno">
       <soap:operation soapAction="http://tempuri.org/ICEmprestimo/listaTodosEmprestimosAluno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenovarEmprestimo">
+      <soap:operation soapAction="http://tempuri.org/ICEmprestimo/RenovarEmprestimo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

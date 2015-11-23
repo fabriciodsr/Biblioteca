@@ -28,4 +28,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="RenovarEmprestimo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmp" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenovarEmprestimoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -34,9 +34,7 @@
             this.lblAluno = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRenovar = new System.Windows.Forms.Button();
-            this.btnDevolução = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
             this.dtpDevol = new System.Windows.Forms.DateTimePicker();
@@ -99,42 +97,23 @@
             this.txtID.Size = new System.Drawing.Size(101, 20);
             this.txtID.TabIndex = 116;
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(438, 293);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(62, 41);
-            this.btnCancelar.TabIndex = 159;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // btnRenovar
             // 
-            this.btnRenovar.Location = new System.Drawing.Point(261, 293);
-            this.btnRenovar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRenovar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRenovar.Location = new System.Drawing.Point(226, 295);
+            this.btnRenovar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRenovar.Name = "btnRenovar";
-            this.btnRenovar.Size = new System.Drawing.Size(62, 41);
+            this.btnRenovar.Size = new System.Drawing.Size(127, 41);
             this.btnRenovar.TabIndex = 158;
             this.btnRenovar.Text = "Renovar";
             this.btnRenovar.UseVisualStyleBackColor = true;
-            // 
-            // btnDevolução
-            // 
-            this.btnDevolução.Location = new System.Drawing.Point(80, 293);
-            this.btnDevolução.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnDevolução.Name = "btnDevolução";
-            this.btnDevolução.Size = new System.Drawing.Size(69, 41);
-            this.btnDevolução.TabIndex = 157;
-            this.btnDevolução.Text = "Devolução";
-            this.btnDevolução.UseVisualStyleBackColor = true;
+            this.btnRenovar.Click += new System.EventHandler(this.btnRenovar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(325, 169);
+            this.label1.Location = new System.Drawing.Point(435, 181);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 16);
             this.label1.TabIndex = 161;
@@ -172,7 +151,7 @@
             // 
             this.txtSituacao.Enabled = false;
             this.txtSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSituacao.Location = new System.Drawing.Point(290, 200);
+            this.txtSituacao.Location = new System.Drawing.Point(400, 225);
             this.txtSituacao.Multiline = true;
             this.txtSituacao.Name = "txtSituacao";
             this.txtSituacao.Size = new System.Drawing.Size(154, 34);
@@ -201,9 +180,7 @@
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSituacao);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRenovar);
-            this.Controls.Add(this.btnDevolução);
             this.Controls.Add(this.txtAluno);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtLivro);
@@ -227,9 +204,7 @@
         private System.Windows.Forms.Label lblAluno;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRenovar;
-        private System.Windows.Forms.Button btnDevolução;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.DateTimePicker dtpDevol;

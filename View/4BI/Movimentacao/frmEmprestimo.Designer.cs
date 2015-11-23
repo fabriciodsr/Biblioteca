@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmprestimo));
             this.dtgEmprestimos = new System.Windows.Forms.DataGridView();
+            this.ID_EMPRESTIMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TITULO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_DEVOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_EMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInserir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbPesquisa = new System.Windows.Forms.ComboBox();
@@ -67,15 +73,23 @@
             this.txtAutor2 = new System.Windows.Forms.TextBox();
             this.txtEditora = new System.Windows.Forms.TextBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
-            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_EMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_DEVOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TITULO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_EMPRESTIMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmprestimos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgEmprestimos
@@ -97,6 +111,46 @@
             this.dtgEmprestimos.Size = new System.Drawing.Size(764, 195);
             this.dtgEmprestimos.TabIndex = 117;
             this.dtgEmprestimos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEmprestimos_CellDoubleClick);
+            // 
+            // ID_EMPRESTIMO
+            // 
+            this.ID_EMPRESTIMO.DataPropertyName = "ID_EMPRESTIMO";
+            this.ID_EMPRESTIMO.HeaderText = "ID EMP";
+            this.ID_EMPRESTIMO.Name = "ID_EMPRESTIMO";
+            this.ID_EMPRESTIMO.Width = 64;
+            // 
+            // TITULO
+            // 
+            this.TITULO.HeaderText = "LIVRO";
+            this.TITULO.Name = "TITULO";
+            this.TITULO.Width = 64;
+            // 
+            // SITUACAO
+            // 
+            this.SITUACAO.HeaderText = "SITUAÇÃO";
+            this.SITUACAO.Name = "SITUACAO";
+            this.SITUACAO.Width = 86;
+            // 
+            // DATA_DEVOL
+            // 
+            this.DATA_DEVOL.DataPropertyName = "DATA_DEVOL";
+            this.DATA_DEVOL.HeaderText = "DATA DE DEVOLUÇÃO";
+            this.DATA_DEVOL.Name = "DATA_DEVOL";
+            this.DATA_DEVOL.Width = 135;
+            // 
+            // DATA_EMP
+            // 
+            this.DATA_EMP.DataPropertyName = "DATA_EMP";
+            this.DATA_EMP.HeaderText = "DATA DO EMPRÉSTIMO";
+            this.DATA_EMP.Name = "DATA_EMP";
+            this.DATA_EMP.Width = 141;
+            // 
+            // NOME
+            // 
+            this.NOME.DataPropertyName = "NOME";
+            this.NOME.HeaderText = "Nome do Aluno";
+            this.NOME.Name = "NOME";
+            this.NOME.Width = 96;
             // 
             // btnInserir
             // 
@@ -481,45 +535,140 @@
             this.txtGenero.Size = new System.Drawing.Size(307, 20);
             this.txtGenero.TabIndex = 151;
             // 
-            // NOME
+            // textBox1
             // 
-            this.NOME.DataPropertyName = "NOME";
-            this.NOME.HeaderText = "Nome do Aluno";
-            this.NOME.Name = "NOME";
-            this.NOME.Width = 96;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(45, 60);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(67, 20);
+            this.textBox1.TabIndex = 119;
             // 
-            // DATA_EMP
+            // label16
             // 
-            this.DATA_EMP.DataPropertyName = "DATA_EMP";
-            this.DATA_EMP.HeaderText = "DATA DO EMPRÉSTIMO";
-            this.DATA_EMP.Name = "DATA_EMP";
-            this.DATA_EMP.Width = 141;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(14, 61);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(25, 16);
+            this.label16.TabIndex = 123;
+            this.label16.Text = "Id.";
             // 
-            // DATA_DEVOL
+            // textBox2
             // 
-            this.DATA_DEVOL.DataPropertyName = "DATA_DEVOL";
-            this.DATA_DEVOL.HeaderText = "DATA DE DEVOLUÇÃO";
-            this.DATA_DEVOL.Name = "DATA_DEVOL";
-            this.DATA_DEVOL.Width = 135;
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(444, 61);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(157, 20);
+            this.textBox2.TabIndex = 121;
             // 
-            // SITUACAO
+            // label17
             // 
-            this.SITUACAO.HeaderText = "SITUAÇÃO";
-            this.SITUACAO.Name = "SITUACAO";
-            this.SITUACAO.Width = 86;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(350, 64);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(88, 16);
+            this.label17.TabIndex = 124;
+            this.label17.Text = "Sobrenome";
             // 
-            // TITULO
+            // textBox3
             // 
-            this.TITULO.HeaderText = "LIVRO";
-            this.TITULO.Name = "TITULO";
-            this.TITULO.Width = 64;
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(170, 61);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(174, 20);
+            this.textBox3.TabIndex = 120;
             // 
-            // ID_EMPRESTIMO
+            // label18
             // 
-            this.ID_EMPRESTIMO.DataPropertyName = "ID_EMPRESTIMO";
-            this.ID_EMPRESTIMO.HeaderText = "ID EMP";
-            this.ID_EMPRESTIMO.Name = "ID_EMPRESTIMO";
-            this.ID_EMPRESTIMO.Width = 69;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(114, 61);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(49, 16);
+            this.label18.TabIndex = 126;
+            this.label18.Text = "Nome";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Enabled = false;
+            this.textBox4.Location = new System.Drawing.Point(678, 59);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(93, 20);
+            this.textBox4.TabIndex = 127;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(603, 63);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(69, 16);
+            this.label19.TabIndex = 128;
+            this.label19.Text = "Situação";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Location = new System.Drawing.Point(14, 86);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(760, 42);
+            this.groupBox3.TabIndex = 129;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Livro";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ID",
+            "TITULO"});
+            this.comboBox1.Location = new System.Drawing.Point(133, 15);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(101, 21);
+            this.comboBox1.TabIndex = 130;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.cmbPesquisaLivro_SelectedIndexChanged);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(251, 16);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(445, 20);
+            this.textBox5.TabIndex = 131;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(716, 11);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 26);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnProcurarLivro_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label20.Location = new System.Drawing.Point(4, 17);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(123, 16);
+            this.label20.TabIndex = 132;
+            this.label20.Text = "Opção de Busca";
             // 
             // frmEmprestimo
             // 
@@ -544,13 +693,22 @@
             this.Controls.Add(this.txtVolume);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtIDLivro);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.txtSituacaoAluno);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.txtSobreNome);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.groupBox1);
@@ -566,6 +724,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -617,5 +777,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DATA_DEVOL;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATA_EMP;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label20;
     }
 }

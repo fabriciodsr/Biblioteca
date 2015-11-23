@@ -248,5 +248,10 @@ namespace View._4BI.Movimentacao
 
 
         }
+
+        private void frmEmprestimo_Load(object sender, EventArgs e)
+        {
+            ((frmPrincipal)this.MdiParent).eMPRESTIMOToolStripMenuItem.Enabled = false;
+        }
     }
 }

@@ -245,9 +245,10 @@
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.txtID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmReserva";
             this.Text = "RESERVAS";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmReserva_FormClosed);
             this.Load += new System.EventHandler(this.frmReserva_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgReservas)).EndInit();
             this.ResumeLayout(false);

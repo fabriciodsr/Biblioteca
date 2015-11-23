@@ -96,6 +96,7 @@
             this.dtgEmprestimos.Name = "dtgEmprestimos";
             this.dtgEmprestimos.Size = new System.Drawing.Size(764, 195);
             this.dtgEmprestimos.TabIndex = 117;
+            this.dtgEmprestimos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEmprestimos_CellDoubleClick);
             // 
             // ID_EMPRESTIMO
             // 

@@ -282,5 +282,32 @@ namespace View._4BI.Movimentacao
         {
             ((frmPrincipal)this.MdiParent).eMPRESTIMOToolStripMenuItem.Enabled = false;
         }
+
+        private void dtgEmprestimos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            var index = e.RowIndex;
+
+            var idemp = dtgEmprestimos[0, index].Value.ToString();
+
+            var titulo = dtgEmprestimos[1, index].Value.ToString();
+
+            var al = dtgEmprestimos[5, index].Value.ToString();
+
+            var dtE = dtgEmprestimos[4, index].Value.ToString();
+
+            var dtD = dtgEmprestimos[3, index].Value.ToString();
+
+            var sit = dtgEmprestimos[2, index].Value.ToString();
+
+            frmEmprestimoLivro frm = new frmEmprestimoLivro(idemp, titulo, al, sit, dtE, dtD);
+
+
+            frm.Show();
+
+            
+
+
+        }
     }
 }

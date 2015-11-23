@@ -26,16 +26,19 @@ namespace View._4BI.RelatoriosCadastrais
 
         private void btnPesquisarAluno_Click(object sender, EventArgs e)
         {
-            if(rdbId.Checked)
+            CRelatorioAluno.CRelatorioAlunoClient oProxy = new CRelatorioAluno.CRelatorioAlunoClient();
+            oProxy.Open();
+            if (rdbId.Checked)
             {
-                dtgRelatorio.DataSource = RelatoriosMetod.GerarRelatorioAlunoID();
+                dtgRelatorio.DataSource = oProxy.GerarRelatorioID();
                 dtgRelatorio.Refresh();
             }
             else if (rdbNome.Checked)
             {
-                dtgRelatorio.DataSource = RelatoriosMetod.GerarRelatorioAlunoNome();
+                dtgRelatorio.DataSource = oProxy.GerarRelatorioNome();
                 dtgRelatorio.Refresh();
             }
+            oProxy.Close();
         }
     }
 }

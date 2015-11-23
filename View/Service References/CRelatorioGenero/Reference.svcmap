@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b291608e-85fd-4e9c-abb6-3ea43cbc47c4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26759/CRelatorioGenero.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CRelatorioGenero.xsd" MetadataType="Schema" ID="f382ddb6-b6bd-45be-acbe-a4f33148b8a4" SourceId="1" SourceUrl="http://localhost:26759/CRelatorioGenero.svc?xsd=xsd1" />
+    <MetadataFile FileName="CRelatorioGenero1.xsd" MetadataType="Schema" ID="af008eec-72db-41f6-a21e-7f989a999ec5" SourceId="1" SourceUrl="http://localhost:26759/CRelatorioGenero.svc?xsd=xsd2" />
+    <MetadataFile FileName="CRelatorioGenero.wsdl" MetadataType="Wsdl" ID="b5fa2880-d3c6-4975-927f-5bd15c6f73f9" SourceId="1" SourceUrl="http://localhost:26759/CRelatorioGenero.svc?wsdl" />
+    <MetadataFile FileName="CRelatorioGenero2.xsd" MetadataType="Schema" ID="65c5c0d1-5d9b-4ad4-8f40-dfc32af969e6" SourceId="1" SourceUrl="http://localhost:26759/CRelatorioGenero.svc?xsd=xsd0" />
+    <MetadataFile FileName="CRelatorioGenero.disco" MetadataType="Disco" ID="c88f343d-489d-4ca5-9f92-ca0fc98a9e3b" SourceId="1" SourceUrl="http://localhost:26759/CRelatorioGenero.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

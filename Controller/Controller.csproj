@@ -71,6 +71,11 @@
     <Content Include="CGenero.svc" />
     <Content Include="CLivro.svc" />
     <Content Include="CLivroAutor.svc" />
+    <Content Include="CRelatorioAluno.svc" />
+    <Content Include="CRelatorioAutor.svc" />
+    <Content Include="CRelatorioEditora.svc" />
+    <Content Include="CRelatorioGenero.svc" />
+    <Content Include="CRelatorioLivro.svc" />
     <Content Include="CReserva.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -103,10 +108,30 @@
     </Compile>
     <Compile Include="Classes\ICLivroAutor.cs" />
     <Compile Include="Classes\ICEmprestimo.cs" />
+    <Compile Include="CRelatorioAluno.svc.cs">
+      <DependentUpon>CRelatorioAluno.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CRelatorioAutor.svc.cs">
+      <DependentUpon>CRelatorioAutor.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CRelatorioEditora.svc.cs">
+      <DependentUpon>CRelatorioEditora.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CRelatorioGenero.svc.cs">
+      <DependentUpon>CRelatorioGenero.svc</DependentUpon>
+    </Compile>
+    <Compile Include="CRelatorioLivro.svc.cs">
+      <DependentUpon>CRelatorioLivro.svc</DependentUpon>
+    </Compile>
     <Compile Include="CReserva.svc.cs">
       <DependentUpon>CReserva.svc</DependentUpon>
     </Compile>
     <Compile Include="Classes\ICReserva.cs" />
+    <Compile Include="Classes\ICRelatorioAluno.cs" />
+    <Compile Include="Classes\ICRelatorioAutor.cs" />
+    <Compile Include="Classes\ICRelatorioEditora.cs" />
+    <Compile Include="Classes\ICRelatorioGenero.cs" />
+    <Compile Include="Classes\ICRelatorioLivro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

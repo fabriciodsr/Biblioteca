@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelatorioCadastroLivros));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dtgReservas = new System.Windows.Forms.DataGridView();
+            this.dtgRelatorio = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.btnPesquisarLivro = new System.Windows.Forms.Button();
+            this.rdbTitulo = new System.Windows.Forms.RadioButton();
+            this.rdbId = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgReservas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRelatorio)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,19 +93,19 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(98, 20);
             this.dateTimePicker1.TabIndex = 1;
             // 
-            // dtgReservas
+            // dtgRelatorio
             // 
-            this.dtgReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgReservas.Location = new System.Drawing.Point(10, 113);
-            this.dtgReservas.Name = "dtgReservas";
-            this.dtgReservas.Size = new System.Drawing.Size(764, 336);
-            this.dtgReservas.TabIndex = 105;
+            this.dtgRelatorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgRelatorio.Location = new System.Drawing.Point(10, 113);
+            this.dtgRelatorio.Name = "dtgRelatorio";
+            this.dtgRelatorio.Size = new System.Drawing.Size(764, 336);
+            this.dtgRelatorio.TabIndex = 105;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.rdbTitulo);
+            this.groupBox2.Controls.Add(this.rdbId);
+            this.groupBox2.Controls.Add(this.btnPesquisarLivro);
             this.groupBox2.Location = new System.Drawing.Point(335, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(437, 80);
@@ -112,39 +113,40 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Classificar por:";
             // 
-            // radioButton2
+            // btnPesquisarLivro
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(317, 34);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(103, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "com pendências";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.btnPesquisarLivro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPesquisarLivro.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnPesquisarLivro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisarLivro.BackgroundImage")));
+            this.btnPesquisarLivro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPesquisarLivro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPesquisarLivro.Location = new System.Drawing.Point(393, 32);
+            this.btnPesquisarLivro.Name = "btnPesquisarLivro";
+            this.btnPesquisarLivro.Size = new System.Drawing.Size(26, 21);
+            this.btnPesquisarLivro.TabIndex = 110;
+            this.btnPesquisarLivro.UseVisualStyleBackColor = false;
+            this.btnPesquisarLivro.Click += new System.EventHandler(this.btnPesquisarLivro_Click);
             // 
-            // radioButton3
+            // rdbTitulo
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(174, 34);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(116, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "com reserva aberta";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdbTitulo.AutoSize = true;
+            this.rdbTitulo.Location = new System.Drawing.Point(88, 34);
+            this.rdbTitulo.Name = "rdbTitulo";
+            this.rdbTitulo.Size = new System.Drawing.Size(51, 17);
+            this.rdbTitulo.TabIndex = 112;
+            this.rdbTitulo.Text = "Titulo";
+            this.rdbTitulo.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdbId
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(33, 34);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(135, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "com livros emprestados";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            //this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rdbId.AutoSize = true;
+            this.rdbId.Location = new System.Drawing.Point(24, 34);
+            this.rdbId.Name = "rdbId";
+            this.rdbId.Size = new System.Drawing.Size(36, 17);
+            this.rdbId.TabIndex = 111;
+            this.rdbId.TabStop = true;
+            this.rdbId.Text = "ID";
+            this.rdbId.UseVisualStyleBackColor = true;
             // 
             // frmRelatorioCadastroLivros
             // 
@@ -153,13 +155,13 @@
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dtgReservas);
+            this.Controls.Add(this.dtgRelatorio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmRelatorioCadastroLivros";
             this.Text = "RELATÓRIO DE CADASTRO DE LIVROS";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgReservas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRelatorio)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -173,10 +175,10 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dtgReservas;
+        private System.Windows.Forms.DataGridView dtgRelatorio;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button btnPesquisarLivro;
+        private System.Windows.Forms.RadioButton rdbTitulo;
+        private System.Windows.Forms.RadioButton rdbId;
     }
 }

@@ -76,7 +76,11 @@
     <Compile Include="Classes\ListaPais.cs" />
     <Compile Include="Classes\LivroAutorMetod.cs" />
     <Compile Include="Classes\LivroMetod.cs" />
-    <Compile Include="Classes\RelatoriosMetod.cs" />
+    <Compile Include="Classes\RelatoriosAlunoMetod.cs" />
+    <Compile Include="Classes\RelatoriosAutorMetod.cs" />
+    <Compile Include="Classes\RelatoriosEditoraMetod.cs" />
+    <Compile Include="Classes\RelatoriosGeneroMetod.cs" />
+    <Compile Include="Classes\RelatoriosLivroMetod.cs" />
     <Compile Include="EDITORA.cs">
       <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
     </Compile>

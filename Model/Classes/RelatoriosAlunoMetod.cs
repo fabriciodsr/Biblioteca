@@ -7,20 +7,21 @@ using Model;
 
 namespace Model
 {
-    public class RelatoriosMetod
+    public class RelatoriosAlunoMetod
     {
-        public static List<ALUNO> GerarRelatorioAlunoID()
+        public static List<ALUNO> GerarRelatorioID()
         {
-            BibliotecaVirtualEntities oDB = new BibliotecaVirtualEntities();
-            
+            using (BibliotecaVirtualEntities oDB = new BibliotecaVirtualEntities())
+            {
                 var RelatorioPorID = (from CA in oDB.ALUNO
-                                     orderby CA.ID_ALUNO
-                                     select CA).ToList<ALUNO>();
+                                      orderby CA.ID_ALUNO
+                                      select CA).ToList<ALUNO>();
 
                 return RelatorioPorID;
+            }
         }
 
-        public static List<ALUNO> GerarRelatorioAlunoNome()
+        public static List<ALUNO> GerarRelatorioNome()
         {
             using (BibliotecaVirtualEntities oDB = new BibliotecaVirtualEntities())
             {

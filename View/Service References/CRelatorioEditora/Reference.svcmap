@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cd16a69a-3c57-420d-82a4-90780bd39e12" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:26759/CRelatorioEditora.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CRelatorioEditora.xsd" MetadataType="Schema" ID="956ffff5-0e7d-40f7-8d89-a72e203e7396" SourceId="1" SourceUrl="http://localhost:26759/CRelatorioEditora.svc?xsd=xsd0" />
+    <MetadataFile FileName="CRelatorioEditora.disco" MetadataType="Disco" ID="b8f5a5ec-857f-4988-96f8-58c362e99f18" SourceId="1" SourceUrl="http://localhost:26759/CRelatorioEditora.svc?disco" />
+    <MetadataFile FileName="CRelatorioEditora.wsdl" MetadataType="Wsdl" ID="782d7cb6-3b0b-4cbf-8177-774ff1817621" SourceId="1" SourceUrl="http://localhost:26759/CRelatorioEditora.svc?wsdl" />
+    <MetadataFile FileName="CRelatorioEditora1.xsd" MetadataType="Schema" ID="1106398e-0c23-44a1-aebc-197c03d5f09f" SourceId="1" SourceUrl="http://localhost:26759/CRelatorioEditora.svc?xsd=xsd2" />
+    <MetadataFile FileName="CRelatorioEditora2.xsd" MetadataType="Schema" ID="4dfc0640-aa9f-4444-8d71-601de984383b" SourceId="1" SourceUrl="http://localhost:26759/CRelatorioEditora.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -76,11 +76,12 @@
     <Compile Include="Classes\ListaPais.cs" />
     <Compile Include="Classes\LivroAutorMetod.cs" />
     <Compile Include="Classes\LivroMetod.cs" />
-    <Compile Include="Classes\RelatoriosAlunoMetod.cs" />
-    <Compile Include="Classes\RelatoriosAutorMetod.cs" />
-    <Compile Include="Classes\RelatoriosEditoraMetod.cs" />
-    <Compile Include="Classes\RelatoriosGeneroMetod.cs" />
-    <Compile Include="Classes\RelatoriosLivroMetod.cs" />
+    <Compile Include="Classes de Relatorios\RelatoriosAlunoMetod.cs" />
+    <Compile Include="Classes de Relatorios\RelatoriosAutorMetod.cs" />
+    <Compile Include="Classes de Relatorios\RelatoriosEditoraMetod.cs" />
+    <Compile Include="Classes de Relatorios\RelatoriosEmprestimoMetod.cs" />
+    <Compile Include="Classes de Relatorios\RelatoriosGeneroMetod.cs" />
+    <Compile Include="Classes de Relatorios\RelatoriosLivroMetod.cs" />
     <Compile Include="EDITORA.cs">
       <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
     </Compile>
@@ -97,6 +98,7 @@
       <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes de Relatorios\RelatoriosReservaMetod.cs" />
     <Compile Include="RESERVA.cs">
       <DependentUpon>BibliotecaVirtual.tt</DependentUpon>
     </Compile>

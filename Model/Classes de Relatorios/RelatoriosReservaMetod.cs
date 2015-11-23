@@ -7,30 +7,30 @@ using Model;
 
 namespace Model
 {
-    public class RelatoriosLivroMetod
+    public class RelatoriosReservaMetod
     {
-        public static List<LIVRO> GerarRelatorioID()
+        public static List<RESERVA> GerarRelatorioID()
         {
             using (BibliotecaVirtualEntities oDB = new BibliotecaVirtualEntities())
             {
-                var RelatorioPorID = (from CA in oDB.LIVRO
+                var RelatorioPorID = (from CA in oDB.RESERVA
                                       orderby CA.ID_LIVRO
-                                      select CA).ToList<LIVRO>();
+                                      select CA).ToList<RESERVA>();
 
                 return RelatorioPorID;
             }
         }
 
-        public static List<LIVRO> GerarRelatorioTitulo()
+        public static List<RESERVA> GerarRelatorioAluno()
         {
             using (BibliotecaVirtualEntities oDB = new BibliotecaVirtualEntities())
             {
 
-                var RelatorioPorTitulo = (from CA in oDB.LIVRO
-                                        orderby CA.TITULO
-                                        select CA).ToList<LIVRO>();
+                var RelatorioPorAluno = (from CA in oDB.RESERVA
+                                         orderby CA.ID_ALUNO
+                                          select CA).ToList<RESERVA>();
 
-                return RelatorioPorTitulo;
+                return RelatorioPorAluno;
             }
         }
     }

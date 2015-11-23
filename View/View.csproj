@@ -291,12 +291,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CRelatorioEmprestimo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\CRelatorioGenero\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\CRelatorioLivro\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRelatorioReserva\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -513,6 +523,16 @@
     <None Include="Service References\CRelatorioEditora\CRelatorioEditora2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CRelatorioEmprestimo\CRelatorioEmprestimo.wsdl" />
+    <None Include="Service References\CRelatorioEmprestimo\CRelatorioEmprestimo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRelatorioEmprestimo\CRelatorioEmprestimo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRelatorioEmprestimo\CRelatorioEmprestimo2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CRelatorioGenero\CRelatorioGenero.wsdl" />
     <None Include="Service References\CRelatorioGenero\CRelatorioGenero.xsd">
       <SubType>Designer</SubType>
@@ -531,6 +551,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CRelatorioLivro\CRelatorioLivro2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRelatorioReserva\CRelatorioReserva.wsdl" />
+    <None Include="Service References\CRelatorioReserva\CRelatorioReserva.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRelatorioReserva\CRelatorioReserva1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRelatorioReserva\CRelatorioReserva2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CReserva\CReserva.wsdl" />
@@ -568,8 +598,10 @@
     <WCFMetadataStorage Include="Service References\CRelatorioAluno\" />
     <WCFMetadataStorage Include="Service References\CRelatorioAutor\" />
     <WCFMetadataStorage Include="Service References\CRelatorioEditora\" />
+    <WCFMetadataStorage Include="Service References\CRelatorioEmprestimo\" />
     <WCFMetadataStorage Include="Service References\CRelatorioGenero\" />
     <WCFMetadataStorage Include="Service References\CRelatorioLivro\" />
+    <WCFMetadataStorage Include="Service References\CRelatorioReserva\" />
     <WCFMetadataStorage Include="Service References\CReserva\" />
   </ItemGroup>
   <ItemGroup>
@@ -769,6 +801,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CRelatorioLivro\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRelatorioEmprestimo\CRelatorioEmprestimo.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRelatorioEmprestimo\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRelatorioEmprestimo\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRelatorioEmprestimo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRelatorioReserva\CRelatorioReserva.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRelatorioReserva\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRelatorioReserva\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRelatorioReserva\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

@@ -30,23 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelLivrosEmprestados));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnPesquisarAluno = new System.Windows.Forms.Button();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.dtgReservas = new System.Windows.Forms.DataGridView();
+            this.btnPesquisarEmprestimo = new System.Windows.Forms.Button();
+            this.rdbAluno = new System.Windows.Forms.RadioButton();
+            this.rdbId = new System.Windows.Forms.RadioButton();
+            this.dtgRelatorio = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgReservas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRelatorio)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnPesquisarAluno);
-            this.groupBox2.Controls.Add(this.txtNome);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.btnPesquisarEmprestimo);
+            this.groupBox2.Controls.Add(this.rdbAluno);
+            this.groupBox2.Controls.Add(this.rdbId);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(764, 80);
@@ -54,67 +50,49 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Classificar por:";
             // 
-            // btnPesquisarAluno
+            // btnPesquisarEmprestimo
             // 
-            this.btnPesquisarAluno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPesquisarAluno.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btnPesquisarAluno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisarAluno.BackgroundImage")));
-            this.btnPesquisarAluno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPesquisarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPesquisarAluno.Location = new System.Drawing.Point(694, 34);
-            this.btnPesquisarAluno.Name = "btnPesquisarAluno";
-            this.btnPesquisarAluno.Size = new System.Drawing.Size(26, 21);
-            this.btnPesquisarAluno.TabIndex = 107;
-            this.btnPesquisarAluno.UseVisualStyleBackColor = false;
+            this.btnPesquisarEmprestimo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPesquisarEmprestimo.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnPesquisarEmprestimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisarEmprestimo.BackgroundImage")));
+            this.btnPesquisarEmprestimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPesquisarEmprestimo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPesquisarEmprestimo.Location = new System.Drawing.Point(720, 32);
+            this.btnPesquisarEmprestimo.Name = "btnPesquisarEmprestimo";
+            this.btnPesquisarEmprestimo.Size = new System.Drawing.Size(26, 21);
+            this.btnPesquisarEmprestimo.TabIndex = 107;
+            this.btnPesquisarEmprestimo.UseVisualStyleBackColor = false;
+            this.btnPesquisarEmprestimo.Click += new System.EventHandler(this.btnPesquisarEmprestimo_Click);
             // 
-            // txtNome
+            // rdbAluno
             // 
-            this.txtNome.Location = new System.Drawing.Point(291, 31);
-            this.txtNome.MaxLength = 50;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(366, 20);
-            this.txtNome.TabIndex = 105;
+            this.rdbAluno.AutoSize = true;
+            this.rdbAluno.Location = new System.Drawing.Point(126, 34);
+            this.rdbAluno.Name = "rdbAluno";
+            this.rdbAluno.Size = new System.Drawing.Size(52, 17);
+            this.rdbAluno.TabIndex = 2;
+            this.rdbAluno.TabStop = true;
+            this.rdbAluno.Text = "Aluno";
+            this.rdbAluno.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdbId
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(209, 34);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(67, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "por título";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdbId.AutoSize = true;
+            this.rdbId.Location = new System.Drawing.Point(33, 34);
+            this.rdbId.Name = "rdbId";
+            this.rdbId.Size = new System.Drawing.Size(36, 17);
+            this.rdbId.TabIndex = 0;
+            this.rdbId.TabStop = true;
+            this.rdbId.Text = "ID";
+            this.rdbId.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // dtgRelatorio
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(126, 34);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(67, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "por autor";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(33, 34);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(76, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "por gênero";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // dtgReservas
-            // 
-            this.dtgReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgReservas.Location = new System.Drawing.Point(8, 113);
-            this.dtgReservas.Name = "dtgReservas";
-            this.dtgReservas.Size = new System.Drawing.Size(764, 336);
-            this.dtgReservas.TabIndex = 106;
+            this.dtgRelatorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgRelatorio.Location = new System.Drawing.Point(8, 113);
+            this.dtgRelatorio.Name = "dtgRelatorio";
+            this.dtgRelatorio.Size = new System.Drawing.Size(764, 336);
+            this.dtgRelatorio.TabIndex = 106;
             // 
             // frmRelLivrosEmprestados
             // 
@@ -122,13 +100,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dtgReservas);
+            this.Controls.Add(this.dtgRelatorio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmRelLivrosEmprestados";
             this.Text = "RELATÓRIO DE LIVROS EMPRESTADOS";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgReservas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRelatorio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,11 +114,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnPesquisarAluno;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.DataGridView dtgReservas;
+        private System.Windows.Forms.Button btnPesquisarEmprestimo;
+        private System.Windows.Forms.RadioButton rdbAluno;
+        private System.Windows.Forms.RadioButton rdbId;
+        private System.Windows.Forms.DataGridView dtgRelatorio;
     }
 }

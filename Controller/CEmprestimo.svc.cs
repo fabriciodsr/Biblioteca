@@ -18,5 +18,10 @@ namespace Controller
         {
             EmprestimoMethod.Emprestar(idAluno, idLivro);
         }
+
+        public List<EMPRESTIMO> listaTodosEmprestimosAluno(int idAluno)
+        {
+            return EmprestimoMethod.ListaTodosEmprestimosAluno(idAluno);
+        }
     }
 }

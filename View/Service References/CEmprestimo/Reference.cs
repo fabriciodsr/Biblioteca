@@ -20,6 +20,12 @@ namespace View.CEmprestimo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICEmprestimo/Emprestar", ReplyAction="http://tempuri.org/ICEmprestimo/EmprestarResponse")]
         System.Threading.Tasks.Task EmprestarAsync(int idAluno, int idLivro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICEmprestimo/listaTodosEmprestimosAluno", ReplyAction="http://tempuri.org/ICEmprestimo/listaTodosEmprestimosAlunoResponse")]
+        Model.EMPRESTIMO[] listaTodosEmprestimosAluno(int idAluno);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICEmprestimo/listaTodosEmprestimosAluno", ReplyAction="http://tempuri.org/ICEmprestimo/listaTodosEmprestimosAlunoResponse")]
+        System.Threading.Tasks.Task<Model.EMPRESTIMO[]> listaTodosEmprestimosAlunoAsync(int idAluno);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +61,14 @@ namespace View.CEmprestimo {
         
         public System.Threading.Tasks.Task EmprestarAsync(int idAluno, int idLivro) {
             return base.Channel.EmprestarAsync(idAluno, idLivro);
+        }
+        
+        public Model.EMPRESTIMO[] listaTodosEmprestimosAluno(int idAluno) {
+            return base.Channel.listaTodosEmprestimosAluno(idAluno);
+        }
+        
+        public System.Threading.Tasks.Task<Model.EMPRESTIMO[]> listaTodosEmprestimosAlunoAsync(int idAluno) {
+            return base.Channel.listaTodosEmprestimosAlunoAsync(idAluno);
         }
     }
 }

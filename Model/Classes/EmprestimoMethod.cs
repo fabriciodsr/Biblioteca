@@ -41,5 +41,36 @@ namespace Model
 
 
         }
+
+
+
+
+
+
+        public static List<EMPRESTIMO> ListaTodosEmprestimosAluno(int idAluno)
+        {
+            using (var oDB = new BibliotecaVirtualEntities())
+            {
+
+
+                var Lista = (from p in oDB.EMPRESTIMO
+                             where p.ID_ALUNO == idAluno
+                             select p);
+
+
+                return Lista.ToList();
+
+
+            }
+        }
+
+
+
+
+
+
+
+
+
     }
 }

@@ -221,6 +221,7 @@ namespace View._4BI.Movimentacao
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
+            dtgEmprestimos.Rows.Clear();
 
             var aluno = Convert.ToInt32(txtID.Text);
 
@@ -236,7 +237,35 @@ namespace View._4BI.Movimentacao
 
                 MessageBox.Show("Empréstimo realizado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                
+                CEmprestimo.CEmprestimoClient oProxyE = new CEmprestimo.CEmprestimoClient();
+                oProxyE.Open();
+
+
+
+                var listaEmprestimos = oProxyE.listaTodosEmprestimosAluno(aluno);
+                int i = 0;
+                foreach (var item in listaEmprestimos)
+                {
+                    var Al = listaEmprestimos[i].ID_ALUNO;
+                    var Li = listaEmprestimos[i].ID_LIVRO;
+
+                    CAluno.CAlunoClient oProxyAl = new CAluno.CAlunoClient();
+                    oProxyAl.Open();
+                    var oAlu = oProxyAl.Selecionar(Al);
+
+                    CLivro.CLivroClient oProxyLi = new CLivro.CLivroClient();
+                    oProxyLi.Open();
+                    var oLi = oProxyLi.SelecionarID(Li);
+
+                    
+
+                    dtgEmprestimos.Rows.Add(listaEmprestimos[i].ID_EMPRESTIMO, oLi.TITULO, listaEmprestimos[i].SITUACAO, listaEmprestimos[i].DATA_DEVOL, listaEmprestimos[i].DATA_EMP, oAlu.NOME);
+
+                    dtgEmprestimos.Refresh();
+
+                    i++;
+                    
+                }
 
                 oProxy.Close();
 

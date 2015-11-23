@@ -26,6 +26,7 @@
     <MetadataFile FileName="CEmprestimo.disco" MetadataType="Disco" ID="272e8f1c-8584-452c-83c2-df776f7d80f2" SourceId="1" SourceUrl="http://localhost:26759/CEmprestimo.svc?disco" />
     <MetadataFile FileName="CEmprestimo1.xsd" MetadataType="Schema" ID="fbcb7367-cf15-473a-803b-9a4326840ba1" SourceId="1" SourceUrl="http://localhost:26759/CEmprestimo.svc?xsd=xsd1" />
     <MetadataFile FileName="CEmprestimo.wsdl" MetadataType="Wsdl" ID="ba42c81f-2045-4e29-b386-c69c720ec84d" SourceId="1" SourceUrl="http://localhost:26759/CEmprestimo.svc?wsdl" />
+    <MetadataFile FileName="CEmprestimo2.xsd" MetadataType="Schema" ID="fb88ec97-bc45-423d-b659-9de6fb2f9763" SourceId="1" SourceUrl="http://localhost:26759/CEmprestimo.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

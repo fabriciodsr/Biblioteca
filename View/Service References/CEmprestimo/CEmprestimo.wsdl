@@ -4,6 +4,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:26759/CEmprestimo.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:26759/CEmprestimo.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:26759/CEmprestimo.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICEmprestimo_Emprestar_InputMessage">
@@ -12,16 +13,35 @@
   <wsdl:message name="ICEmprestimo_Emprestar_OutputMessage">
     <wsdl:part name="parameters" element="tns:EmprestarResponse" />
   </wsdl:message>
+  <wsdl:message name="ICEmprestimo_listaTodosEmprestimosAluno_InputMessage">
+    <wsdl:part name="parameters" element="tns:listaTodosEmprestimosAluno" />
+  </wsdl:message>
+  <wsdl:message name="ICEmprestimo_listaTodosEmprestimosAluno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listaTodosEmprestimosAlunoResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICEmprestimo">
     <wsdl:operation name="Emprestar">
       <wsdl:input wsaw:Action="http://tempuri.org/ICEmprestimo/Emprestar" message="tns:ICEmprestimo_Emprestar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICEmprestimo/EmprestarResponse" message="tns:ICEmprestimo_Emprestar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listaTodosEmprestimosAluno">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICEmprestimo/listaTodosEmprestimosAluno" message="tns:ICEmprestimo_listaTodosEmprestimosAluno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICEmprestimo/listaTodosEmprestimosAlunoResponse" message="tns:ICEmprestimo_listaTodosEmprestimosAluno_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICEmprestimo" type="tns:ICEmprestimo">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="Emprestar">
       <soap:operation soapAction="http://tempuri.org/ICEmprestimo/Emprestar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaTodosEmprestimosAluno">
+      <soap:operation soapAction="http://tempuri.org/ICEmprestimo/listaTodosEmprestimosAluno" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

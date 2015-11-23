@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmprestimo));
             this.dtgEmprestimos = new System.Windows.Forms.DataGridView();
             this.btnInserir = new System.Windows.Forms.Button();
@@ -67,14 +68,33 @@
             this.txtAutor2 = new System.Windows.Forms.TextBox();
             this.txtEditora = new System.Windows.Forms.TextBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
+            this.eMPRESTIMOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ID_EMPRESTIMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TITULO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SITUACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_DEVOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_EMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmprestimos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eMPRESTIMOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgEmprestimos
             // 
+            this.dtgEmprestimos.AllowUserToAddRows = false;
+            this.dtgEmprestimos.AllowUserToDeleteRows = false;
+            this.dtgEmprestimos.AllowUserToOrderColumns = true;
+            this.dtgEmprestimos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgEmprestimos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEmprestimos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_EMPRESTIMO,
+            this.TITULO,
+            this.SITUACAO,
+            this.DATA_DEVOL,
+            this.DATA_EMP,
+            this.NOME});
             this.dtgEmprestimos.Location = new System.Drawing.Point(10, 250);
             this.dtgEmprestimos.Name = "dtgEmprestimos";
             this.dtgEmprestimos.Size = new System.Drawing.Size(764, 195);
@@ -463,6 +483,50 @@
             this.txtGenero.Size = new System.Drawing.Size(307, 20);
             this.txtGenero.TabIndex = 151;
             // 
+            // eMPRESTIMOBindingSource
+            // 
+            this.eMPRESTIMOBindingSource.DataSource = typeof(Model.EMPRESTIMO);
+            // 
+            // ID_EMPRESTIMO
+            // 
+            this.ID_EMPRESTIMO.DataPropertyName = "ID_EMPRESTIMO";
+            this.ID_EMPRESTIMO.HeaderText = "ID EMP";
+            this.ID_EMPRESTIMO.Name = "ID_EMPRESTIMO";
+            this.ID_EMPRESTIMO.Width = 64;
+            // 
+            // TITULO
+            // 
+            this.TITULO.HeaderText = "LIVRO";
+            this.TITULO.Name = "TITULO";
+            this.TITULO.Width = 64;
+            // 
+            // SITUACAO
+            // 
+            this.SITUACAO.HeaderText = "SITUAÇÃO";
+            this.SITUACAO.Name = "SITUACAO";
+            this.SITUACAO.Width = 86;
+            // 
+            // DATA_DEVOL
+            // 
+            this.DATA_DEVOL.DataPropertyName = "DATA_DEVOL";
+            this.DATA_DEVOL.HeaderText = "DATA DE DEVOLUÇÃO";
+            this.DATA_DEVOL.Name = "DATA_DEVOL";
+            this.DATA_DEVOL.Width = 135;
+            // 
+            // DATA_EMP
+            // 
+            this.DATA_EMP.DataPropertyName = "DATA_EMP";
+            this.DATA_EMP.HeaderText = "DATA DO EMPRÉSTIMO";
+            this.DATA_EMP.Name = "DATA_EMP";
+            this.DATA_EMP.Width = 141;
+            // 
+            // NOME
+            // 
+            this.NOME.DataPropertyName = "NOME";
+            this.NOME.HeaderText = "Nome do Aluno";
+            this.NOME.Name = "NOME";
+            this.NOME.Width = 96;
+            // 
             // frmEmprestimo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -507,6 +571,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eMPRESTIMOBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -552,5 +617,12 @@
         private System.Windows.Forms.TextBox txtAutor2;
         private System.Windows.Forms.TextBox txtEditora;
         private System.Windows.Forms.TextBox txtGenero;
+        private System.Windows.Forms.BindingSource eMPRESTIMOBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_EMPRESTIMO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TITULO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SITUACAO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_DEVOL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_EMP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
     }
 }

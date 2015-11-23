@@ -376,6 +376,7 @@
     <None Include="Properties\DataSources\Model.ALUNO.datasource" />
     <None Include="Properties\DataSources\Model.AUTOR.datasource" />
     <None Include="Properties\DataSources\Model.EDITORA.datasource" />
+    <None Include="Properties\DataSources\Model.EMPRESTIMO.datasource" />
     <None Include="Properties\DataSources\Model.GENERO.datasource" />
     <None Include="Properties\DataSources\Model.LIVRO.datasource" />
     <None Include="Service References\CAluno\CAluno.wsdl" />
@@ -413,6 +414,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CEmprestimo\CEmprestimo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CEmprestimo\CEmprestimo2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CGenero\CGenero.wsdl" />

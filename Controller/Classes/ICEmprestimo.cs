@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Model;
 
 namespace Controller
 {
@@ -13,5 +14,8 @@ namespace Controller
     {
         [OperationContract]
         void Emprestar (int idAluno, int idLivro);
+
+        [OperationContract]
+        List<EMPRESTIMO> listaTodosEmprestimosAluno(int idAluno);
     }
 }

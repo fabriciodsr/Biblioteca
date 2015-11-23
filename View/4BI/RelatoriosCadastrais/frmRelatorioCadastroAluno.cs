@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
+using Controller;
 
 namespace View._4BI.RelatoriosCadastrais
 {
@@ -20,6 +22,20 @@ namespace View._4BI.RelatoriosCadastrais
         private void frmRelatorioCadastroAluno_FormClosed(object sender, FormClosedEventArgs e)
         {
            
+        }
+
+        private void btnPesquisarAluno_Click(object sender, EventArgs e)
+        {
+            if(rdbId.Checked)
+            {
+                dtgRelatorio.DataSource = RelatoriosMetod.GerarRelatorioAlunoID();
+                dtgRelatorio.Refresh();
+            }
+            else if (rdbNome.Checked)
+            {
+                dtgRelatorio.DataSource = RelatoriosMetod.GerarRelatorioAlunoNome();
+                dtgRelatorio.Refresh();
+            }
         }
     }
 }
